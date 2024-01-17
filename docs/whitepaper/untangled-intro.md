@@ -1,5 +1,5 @@
 ---
-slidebar-position: 2
+slidebar-position: 1
 ---
 # Protocol overview (whitepaper)
 Untangled Protocol is a decentralized funding and liquidity protocol that bridges crypto liquidity pools with real world assets (RWA).  RWA collaterals, once tokenized into NFTs, can be refinanced or packaged in a seamless way, without any frictions. Investors hold note tokens which represent interests in cash flows from collateral pools. 
@@ -12,3 +12,10 @@ Fundraise through securitisation is complex and expensive with multiple service 
 Legacy systems of transferring value are slow, cumbersome and laden with friction and inefficiencies. Just as the internet was transformative for the mobility of information, digital assets will be revolutionary for the way in which value is transferred. We are witnessing entirely new financial rails being engineered and for the first time being able to handle users at scale.
 Extending DeFi lending collateral universe
 The current crypto lending is mostly collateralised by native crypto assets. This excludes a vast majority of borrowers and projects from accessing crypto credit, particularly those financing real world assets such as renewable energy projects or trade finance.
+### Extending DeFi lending collateral universe
+The current crypto lending is mostly collateralised by native crypto assets. This excludes a vast majority of borrowers and projects from accessing crypto credit, particularly those financing real world assets such as renewable energy projects or trade finance.
+Value locked in DeFi has been limited to crypto. In order to grow, diversify and be regulatory-proof, Defi needs to tap into the multi-trillion dollar real world assets where businesses such as SMEs in global trade have a real need for capital such as:
+Trade finance solutions involving multinationals trading with emerging markets suppliers 
+Revenue-based financing for on-chain and off-chain records of activities 
+Fintech capital for both consumer and SME borrowers 
+Green financing schemes such as renewable energy, urban mobility or sustainable agriculture. 
