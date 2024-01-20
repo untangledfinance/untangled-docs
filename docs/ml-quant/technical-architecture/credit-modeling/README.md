@@ -34,12 +34,12 @@ Credit Modeling Machine Learning (ML) models can be a powerful tool to gain insi
 
 We involves leveraging both on-chain user behavior and historical loan data to model the month-by-month behavior of Real World Asset (RWA) loans. The combination of on-chain data and monthly loan history provides a comprehensive view of a borrower's creditworthiness and repayment patterns.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Unified credit model architecture</p></figcaption></figure>
+<img src="../../.gitbook/assets/image (4).png" alt=""><p>Unified credit model architecture</p></img>
 
-{% content-ref url="factors/" %}
+<!-- {% content-ref url="factors/" %} -->
 [factors](factors/)
-{% endcontent-ref %}
+<!-- {% endcontent-ref %} -->
 
-{% content-ref url="modelling/" %}
+<!-- {% content-ref url="modelling/" %} -->
 [modelling](modelling/)
-{% endcontent-ref %}
+<!-- {% endcontent-ref %} -->

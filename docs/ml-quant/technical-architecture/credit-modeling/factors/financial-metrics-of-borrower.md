@@ -2,12 +2,12 @@
 
 * Debt to Income
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image (5).png" alt=""></img>
 
 * Mortgage Debt to Income
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image (6).png" alt=""></img>
 
 * Primary Income
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image (7).png" alt=""></img>

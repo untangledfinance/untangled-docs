@@ -6,12 +6,12 @@
 
 * Fico Credit Score
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image.png" alt=""></img>
 
 * Delinquent Quantity
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image (2).png" alt=""></img>
 
 * Percent of No Delinquent Account
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<img src="../../../.gitbook/assets/image (1).png" alt=""></img>
