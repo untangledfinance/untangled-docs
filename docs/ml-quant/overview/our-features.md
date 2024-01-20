@@ -1,5 +1,3 @@
-# ✨ Our Mission
-
 # Features
 
 ## Pool parameters Recommendation

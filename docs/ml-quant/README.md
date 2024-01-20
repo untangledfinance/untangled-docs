@@ -22,9 +22,3 @@ Untangled offers comprehensive risk solutions for on-chain Real World Asset (RWA
 * **Data Confidentiality:** Prioritizes privacy-preserving techniques, safeguarding the security and confidentiality of portfolio data.
 
 Untangled's approach not only addresses the complexities of on-chain RWA credits but also provides a secure and thorough risk management solution. For further details on how Untangled can optimize risk assessment for your specific needs, please reach out to the Untangled team.
-
-
-
-{% content-ref url="overview/our-features.md" %}
-[our-features.md](overview/our-features.md)
-{% endcontent-ref %}
