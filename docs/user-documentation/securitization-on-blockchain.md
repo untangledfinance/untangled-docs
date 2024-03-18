@@ -33,3 +33,64 @@ Validator is an entity responsible for verifying the quality and authenticity of
 
 ### Liquidity provider (or Investor)
 Liquid providers or Investor are those who provide liquidity to the pool. Investor can invest in senior or junior tranche, depending on how they structure their portfolio. While SOT can have limited sale time if SOT sale is Dutch auction, JOT is open for sale until the investment capacity is fulfilled.
+
+## Protocol mechanics
+### Tokenized RWA
+#### Risk scorecard
+The risk scorecard serves as a tool for evaluating and quantifying the risk associated with loan assets, particularly in terms of default probability. Within the framework of Untangled Protocol, this risk scorecard is developed through a data model aimed at predicting the likelihood of default and potential loss for loans. Consequently, it serves as a pivotal component for the valuation of asset portfolios.
+Each lending pool is equipped with a singular risk scorecard, which serves as the basis for classifying loan assets according to their respective "days past due" metrics. The determination of an asset's score occurs at the point of collateral pledging by the Originator for the loan. Subsequently, all calculations regarding the asset's value for the loan are contingent upon its assigned risk score.
+For every risk score, a distinct set of valuation parameters is employed to determine the financing amount, interest rate, and asset value. These parameters typically include the advance rate, interest rate, discount rate, probability of default, and loss given default.
+The configuration of the risk scorecard falls under the purview of the Pool Admin and may be subject to occasional updates by the said administrator, albeit infrequently and typically in response to significant financial events.
+#### Asset valuation
+Asset Valuation is the process of determining the current worth of an asset or portfolio by assigning a monetary value. The value of a portfolio of assets is often also expressed as the net asset value (NAV).
+An NAV is usually required when a portfolio is sold or when investors want to join/exit an existing pool. Then the portfolio value ultimately determines the investment/redemption price. Note that for these purposes the portfolio value may be different to the book value or accounting value of a portfolio.
+Determining the value of illiquid assets is difficult because – by definition – there isn’t a liquid secondary market to determine the value, unlike many stocks, bonds or most fungible tokens. For illiquid asset portfolios the valuation methodology is thus often based on a fair value valuation utilizing a financial model. This often comes down to valuing the present value of future cash flows expected to receive based on these financings under discounted cash flow (“DCF”) method.
+Fair value DCF
+- **Derive Expected Cash flows**: For every outstanding financing (LAT) of collateral, the expected cash flow is calculated. The current implementation allows to calculate the Expected Repayment of simple bullet loan structures which are common in invoice financing and trade finance. The Expected Cash Flow is calculated based on (i) the expected repayment dates and (ii) the expected repayment amounts. (i) The expected repayment date is derived on contractual obligations associated with the financing, e.g. the due date of the underlying collateral. This is provided through an API call (oracle) for each NFT minted. (ii) The expected repayment amount is projected based on the outstanding financings by applying the financing fee (interest rate on the LAT) on the current debt until the repayment date.
+- **Risk-adjusted expected cash flows**: The expected Cash Flow is risk-adjusted for credit risk by the Expected loss. Every financing is allocated a risk class that has a Probability of Default (PD) and Loss Given Default (LGD) assigned to it. The Expected Loss is calculated as Expected loss = Expected Cash Flow * PD * LGD and subtracted from the expected repayment amount to adjust for credit risk. Note that PDs are often communicated per annum and may need to be adjusted to the term of the underlying collaterals..
+- **Discount risk-adjusted expected cash flows**: The risk-adjusted expected cash-flows are discounted with an appropriate discount rate (this depends on asset class and pool) to derive the present value of a financing. The discount rate usually reflects the rate of return an investor could earn in the marketplace on an investment of comparable size, tenor and risk. Note that the discount rate is the same for every financing of a pool. The standard formula to calculate the PV of a cash flow is
+PV=CF/(1+r)tPV=CF/(1+r)t
+with r = discount rate and t = period of cash flows. As we deal with intra-year cash flows, the formula becomes
+
+
+- **Calculate NAV**: Adding up the present values of the risk-adjusted expected cash flows for all financings in the pool leads to the (portfolio) NAV. The NAV plus the liquidity currently in the Reserve of the Pool gives the Pool Value.​
+- **Operational costs**
+Average loan maintenance/running costs (such as legal, SPV, servicing) could be subtracted from the PV. 
+#### Liquidation via collateral auction
+This is a liquidation where all collaterals in the pool will be auctioned off to repay investors. The pool status will be set such that it: 
+- is unable to accept new investment subscriptions 
+- is unable to lock new collaterals in order to further drawdown from the pool reserve 
+- uses the pool reserve to redeem SOT investors 
+- returns any remaining amount to JOT investor 
+The collateral auction starts with minting a single NFT to represent the all collaterals in the pool. It follows an English auction where the highest bidder wins.
+If the auction fails, pool issuer/admin can pursue recovery off-chain such as through a back-up servicer or debt collection services. Given that the collaterals are hived off to a separate legal entity in the real world, this process is similar to how TraFi deals with securitisation defaults.
+
+### JOT & SOT pricing
+As loan assets in the pool are revolving, it also continuously receives subscriptions and makes redemption to Investors. In the absence of a secondary market for SOT and JOT, their pricing has to be determined by the Protocol, based on such factors as NAV. The Protocol will quote the price of SOT and JOT on a live basis to allow investors to subscribe or to redeem. 
+
+**SeniorAsset**: The seniorAsset is the amount which belongs to the senior investor (SOT) in a pool.
+- seniorAsset=min(expectedSeniorAsset,poolValue)
+- Expected SeniorAsset=seniorDebt + seniorBalance
+
+**SeniorDebt**: SeniorDebt is the amount which accrues interest for the senior tranche.
+- seniorDebt = beginningSeniorDebt(1+seniorInterestRate/n)^n (n is compounding period in a year)
+
+**SeniorBalance**: SeniorBalance is the amount of the seniorTranche which is not used for interest accumulation.
+- seniorBalance = reserve * seniorAssetRatio
+
+**Pool Value**: poolValue = NAV + Reserve = SOT Value + JOT Value
+- SOT price = seniorAsset/SOT supply 
+
+**Junior Asset**: juniorAsset = poolValue - seniorAsset
+- JOT price = juniorAsset/JOT supply
+
+If loans are defaulting, the juniorAsset would cover the losses. In other words, when Assets are not performing, NAV will decline which will first wipe out the junior tranche (therefore it is called the first-loss tranche) before the senior tranche is being affected. If the entire juniorAsset is loss, the poolValue could be lower than the expectedSeniorAsset.
+
+### Epoch
+The parameter known as **Epoch** is established by the Issuer to regulate withdrawal timeframes within the pool. The withdrawal mechanism for investors is strategically crafted to strike a balance between maintaining pool stability and meeting investors' demands for immediate liquidity.
+
+Withdrawal requests are processed in batches, drawing from a predetermined portion of the pool's liquidity to ensure equitable distribution among investors. Investors have the flexibility to claim their share at any time during the subsequent periods. Unfulfilled withdrawal requests within an epoch are automatically rolled over to the following epoch.
+
+Furthermore, investors retain the option to cancel their withdrawal requests at any point, albeit potentially incurring a cancellation fee.
+
+
