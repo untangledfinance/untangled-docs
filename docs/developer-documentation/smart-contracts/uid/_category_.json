@@ -1,0 +1,8 @@
+{
+  "label": "UID",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Unique Identity contract"
+  }
+}
