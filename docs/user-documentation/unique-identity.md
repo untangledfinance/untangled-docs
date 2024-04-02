@@ -36,11 +36,21 @@ Please sign with your wallet address to continue.
 **Step 2 Select investor type**
 ![Select investor type](./img/kyc/select-investor-type.png)
 
-**Step 3 Identity verification**
+**Step 3 Opt-out**
+
+Please read carefully the opt-out notification for professional client status, then select your category. You are required to sign on the document to confirm your understanding and your category selection.
+![Opt-out notification](./img/kyc/indive-step3-opt-out-1.png)
+![Opt-out notification](./img/kyc/indive-step3-opt-out-2.png)
+
+**Step 4 Identity verification**
 ![Identity verification](./img/kyc/identity-verification.png)
 
 
 The personal information you submit will undergo verification by Shuftipro once you click "Next." It's important to provide accurate information that matches the details on your National ID card, Driving License, or Passport. This step is a vital part of our KYC verification process, ensuring the accuracy and security of your identity verification.
+:::warning
+When ShuftiPro popup is open, please do not click out of the popup or close the window.
+Your progress is not saved. You will have to do the KYC again from the beginning.
+:::
 
 ![Verify identity](./img/kyc/verify-identity.png)
 
@@ -50,23 +60,24 @@ You can also scan the QR code to do the verification on the other device.
 
 After successfully verifying your identity, close the popup window to return to the Untangled interface.
 
-:::note
-You must verify your email address to continue with Self-certification or Accreditation
-:::
 
-**Step 4 Self certification (non-US individual investors)**
+**Step 5 Email verification (non-US individual investors)**
 
-Investment opportunities within the Untangled Protocol are exclusively available to accredited or professional investors. By choosing your investor category, you affirm that you meet these qualifications. Should you have any doubts regarding your eligibility, we strongly advise consulting with financial or legal advisors in your area. This step is part of our KYC verification process to ensure compliance and suitability for our investment offerings.
+Once you have completed Step 4, a verification email will be sent to your email address. Please check and click the verification URL in the email.
 
-![Self-certification](./img/kyc/self-certificate.png)
+![Email verification](./img/kyc/indiv-nonus-step5-email-verification.png)
 
 :::note
-You must verify your email address to complete this step. 
+You can resend email or change your email address if you cannot access to the email address provided before. 
 :::
 
-**Step 4 Accreditation  (US individual investors)**
+**Step 5 Accreditation  (US individual investors)**
 
 Investors holding US citizenship are required to undergo a manual accreditation verification process as part of our KYC procedures. This involves the submission of pertinent documents for manual review by the KYC team, ensuring compliance and eligibility for investment on our platform.
+
+:::note
+You must verify your email address before you can submit your documents. 
+:::
 
 ![Accreditation](./img/kyc/accreditation.png)
 
@@ -77,10 +88,11 @@ Depending on the options selected, you will be required to upload supporting doc
 - **A document issued in the recent three months confirming your positions**, if you are a director, executive officer, or general partner of the company selling the securities, or any director, executive, or general partner of a general partner of that company.
 - **The CRD number** if you are an individual holding in good standing any of the general securities representative license (Series 7), the investment representative license (Series 65), or the private securities offerings representative license (Series 82).
 
+![Accreditation Shuftipro](./img/kyc/accreditation-shuftipro.png)
 
 After you submit your documents, our KYC team will conduct a manual review. Should your documents fail to meet our requirements or if further information is needed, we will contact you via your verified email address. In these instances, we may ask for additional or corrected documentation to proceed with the verification process.
 
-**Step 5 Status**
+**Step 6 Status**
 
 Once approved, you will be able to generate the Identity Passport, which will allow you to access a wide range of investment opportunities on the protocol.  
 ![Success](./img/kyc/status-2.png)
@@ -88,17 +100,15 @@ Once approved, you will be able to generate the Identity Passport, which will al
 ### Entity Onboarding Flow
 
 **Step 1 Link Wallet**
+
 **Step 2 Select investor type**
+
 **Step 3 Business information**
+Please provide the identity information of your entity.
+
 ![Provide business info](./img/kyc/provide-information-about-business.png)
 
-**Step 4 Confirm ultimate beneficial owners**
-Ultimate Beneficial Owners (UBOs) are individuals or entities that ultimately own or control a customer or entity, typically through direct or indirect ownership of a significant percentage of the shares or voting rights. This can also include those who benefit from the entity or have the ultimate control over the management and operations. In most jurisdictions, the threshold for significant ownership is often set at 25% or more of the shares or voting rights, but this can vary.
-
-![Confirm ultimate beneficial owner](./img/kyc/confirm-ultimate-beneficial-owners.png)
-
-
-**Step 5 Authorized signer verification**
+**Step 4 Authorized signer verification**
  
 Please provide personal information of the entity’s authorized signer (the person who controls the wallet).
 ![Verify authorized signer](./img/kyc/authorized-signer-verification.png)
@@ -117,24 +127,20 @@ You can also scan the QR code to do the verification on the other device.
 After successfully verifying your identity, close the popup window to return to the Untangled interface.
 
 
-**Step 6 Corporate documentation**
+**Step 5 Detailed due diligence**
 
 At this stage, you must submit your corporate documents for a manual review conducted by the KYC team.
 
 ![Submit corporate documents](./img/kyc/corporate-documentation.png)
 
 :::note
-You must verify your email address to continue
+You can click "Save progress" on Shuftipro window to save your progress and back to update later. However, your draft can be saved up to 2 weeks, after that the draft will be expired and you are required to start from the beginning.
 :::
 
-**Accreditation (For US entity only)**
-Select entity accreditation category
+![DDD Shuftipro](./img/kyc/detailed-due-diligence.png)
 
-![Accreditation](./img/kyc/shuftipro-accreditation.png)
 
-Depending on the options selected, you will be required to upload supporting documentation to verify your choices.
-
-**Step 7 Status**
+**Step 6 Status**
 
 The review of your corporate documents by the KYC team may take up to a few hours to a couple of days. If the submitted documents do not meet the requirements, we will contact you via your verified email address to request further or corrected information or documents. 
 
