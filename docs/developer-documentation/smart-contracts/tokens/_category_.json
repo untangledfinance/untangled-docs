@@ -1,0 +1,8 @@
+{
+  "label": "Tokens",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Token standard used in Untangled"
+  }
+}
