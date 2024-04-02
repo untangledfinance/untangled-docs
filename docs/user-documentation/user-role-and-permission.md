@@ -31,12 +31,14 @@ Step 1: Connect wallet
 If this is the first time you visit the Untangled Issuer app, you must connect your wallet by clicking the button “Connect wallet” on the top right of the screen and confirming your connection on your wallet.
 
 If you don’t have any web3 wallet, just create one with Metamask.
+
 Step 2: Sign up
 Click button ‘Log in’ to redirect to Sign up screen at /sign-up
 
 You can enter your email address and password to sign up with your email address.
 
 Or you can sign up with Google account
+
 Step 3: Create company profile
 Provide information of the company
 You can update your company profile later on your Profile page.
