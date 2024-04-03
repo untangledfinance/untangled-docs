@@ -66,9 +66,10 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
+        title: "Untangled",
         logo: {
-          alt: "Untangled Finance",
-          src: "img/logo.svg",
+          alt: "Untangled",
+          src: "img/small_logo.png",
         },
         items: [
           {
@@ -83,9 +84,8 @@ const config = {
             position: "left",
             label: "Developer Documentation",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/untangledfinance",
             label: "GitHub",
             position: "right",
           },
@@ -98,9 +98,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                // to: '/docs/intro',
-                to: "/",
+                label: "Documentation",
+                to: "/docs/user-documentation/introduction",
               },
             ],
           },
@@ -108,8 +107,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Website",
+                href: "https://untangled.finance/",
               },
               {
                 label: "Discord",
@@ -117,7 +116,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/UntangledFin",
               },
             ],
           },
@@ -135,7 +134,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Untangled Finance, Inc.`,
       },
       prism: {
         theme: prismThemes.github,
