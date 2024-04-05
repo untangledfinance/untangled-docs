@@ -66,7 +66,7 @@ Step 2: Enter the withdrawal amount.
 ![Enter amount](./img/invest/enter-withdrawal-amount.png)
 
 Step 3: Approve and submit your withdrawal request.
-The withdrawal is submitted and will be executed automatically when the [epoch]() ends.
+The withdrawal is submitted and will be executed automatically when the [epoch](./securitization-on-blockchain#epoch) ends.
 
 ![Approve](./img/invest/approve-withdrawal.png)
 
