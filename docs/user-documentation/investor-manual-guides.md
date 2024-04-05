@@ -3,35 +3,83 @@ sidebar_position: 5
 ---
 
 # Investor manual guides
-Invest in a pool
-Navigate to Investor app to see all the pools open for investment.
-Select a pool to view its detail and make investment in SOT or JOT of the pool
-Prerequisite: 
-Investor has connected wallet and had UID: View Register on Investor app
-SOT sale period is open
-Investment capacity is not full
-Initial JOT investment amount is fulfilled: Some pools require an amount of initial JOT investment before SOT investment can be made.
-Step 1: Click Add liquidity on JOT/SOT token
+## Invest in a Pool
 
-Step 2: Enter the investment amount
-The amount of token you can get depends on the token price at that moment.
-Note: SOT investment amount is validated to ensure it doesn’t break the minimum first loss and debt ceiling
+On [Untangled Finance](https://untangled.finance) you can explore all pools currently open for investment.
+Please choose a pool from the list to view its details and to make investments in either SOT or JOT tokens.
+
+### Prerequisites
+
+- Ensure your wallet is connected and you've registered your [UID](./unique-identity) on the Investor app.
+- The investment capacity for the selected pool is not already filled.
+- Ensure the initial JOT investment requirement is met; note that some pools may necessitate an initial JOT investment before SOT investments are allowed.
+
+### Investment Process
+
+Step 1: Click on "Add Liquidity" on the JOT/SOT that you'd like to make investment.
+![Add liquidity](./img/invest/add-liquid.png)
+
+Step 2: Enter the desired investment amount. 
+The quantity of tokens you receive is contingent upon the current token price. 
+Please note, SOT investment amounts are validated to ensure they comply with the [minimum first loss](./securitization-on-blockchain#minimum-first-loss) and [debt ceiling](./securitization-on-blockchain#debt-ceiling) parameter.
+![Enter investment amount](./img/invest/enter-investment-amount.png)
+
+Step 3: Sign the note subscription agreement.
+Please read carefully and sign the note subscription agreement to continue.
+![Preview](./img/invest/preview-1.png)
+![Sign subscription agreement](./img/invest/sign-subscription-agreement.png)
+
+:::tip
+When you have already signed the note token subscription agreement, you are not required to sign the subscription when invest in the note token again, unless the agreement is updated by the Issuer.
+:::
+
+Step 4: Approve the investment amount to be transferred from your wallet by Untangled smart contract.
+Please ensure you have some USDC as gas fee for the transaction.
+![Approve spent amount](./img/invest/preview-2.png)
+
+:::tip
+This step will be skipped if you have already approved the greater amount than the investement amount.
+:::
+
+Step 5: Review and confirm your investment.
+Please ensure you have some USDC as gas fee for the transaction.
+![Confirm](./img/invest/confirm-investment.png)
+
+:::tip
+Once you have invested successfully, you can import the contract address of the pool's note token and verify its balance in your wallet.
+:::
+
+## Manage Your Portfolio
+
+### View Your Investments
+View all your investments on Untangled via the Investor app's Portfolio section.
+![Portfolio](./img/invest/portfolio.png)
+
+### Withdrawal Process
+If you hold pool note tokens (JOT or SOT), you have the option to withdraw and reclaim your capital and earnings.
 
 
-Step 3: Review and confirm the investment
+Step 1: From your Portfolio, select the investment you wish to withdraw. Alternatively, from a pool's page, click on the "Withdraw" option for pool notes.
+![Withdraw](./img/invest/withdrawal-trigger-1.png)
 
-You can import the contract address of pool SOT token and check its balance in your wallet
+Step 2: Enter the withdrawal amount.
+![Enter amount](./img/invest/enter-withdrawal-amount.png)
 
-Manage portfolio
-All your investments on Untangled can be found at Untangled Investor app > Portfolio
-//image
-Withdraw 
-If you are the investors who are holding the pool note tokens (JOT or SOT), you can withdraw to get back your capital and income. 
+Step 3: Approve and submit your withdrawal request.
+The withdrawal is submitted and will be executed automatically when the [epoch]() ends.
 
-Step 1: From Portfolio, select the investment you want to withdraw. Or from a pool page, click Withdraw on pool note
+![Approve](./img/invest/approve-withdrawal.png)
 
-Step 2: Enter the amount of token for withdraw
+:::tip
+You can make only 01 withdrawal request for each pool note token.
+If you want to change the withdrawal request, please cancel the existing one and create another request.
+:::
 
-Step 3: Submit withdrawal request and wait for execution
+Step 4: Manage your withdrawal requests
+All you withdrawal requests can be found under the tab Withdraw.
+![Withdraw](./img/invest/withdraw-list.png)
 
-Step 4: 
+It may take several epochs until your withdrawal is fully paid, based on the pool reserve.
+Unfulfilled withdrawal amount will be rolled over to the next epoch until it is fully paid, or cancelled by the Investor.
+
+![Cancel Withdrawal](./img/invest/cancel-withdrawal.png)

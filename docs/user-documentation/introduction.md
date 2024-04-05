@@ -8,4 +8,4 @@ Untangled Protocol is a decentralized funding and liquidity protocol that bridge
 
 Untangled has developed a liquidation mechanism. If asset quality within a collateral pool deteriorated below a certain threshold, the liquidation process would be triggered. Relevant collaterals would be auctioned - either on-chain or off-chain - to repay investors. When assets are performing and investors would like to exit for liquidity reasons, the protocol facilitates a on-chain Dutch auction that helps new investors take over the exited portion.
 
-Two applications have been developed on Untangled Protocol: **Binkabi** 'originate' assets and **Untangled Finance** "distribute' them. An independent security audit has also been completed for Untangled Protocol's smart contracts. 
+Two applications have been developed on Untangled Protocol: **[Binkabi](https://binkabi.io/)** 'originate' assets and **[Untangled Finance](https://www.untangled.finance/)** "distribute' them. An independent security audit has also been completed for Untangled Protocol's smart contracts. 

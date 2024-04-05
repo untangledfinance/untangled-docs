@@ -16,8 +16,8 @@ The pool life cycle is not fixed. Investors can invest any time as long as the n
 ### Tranches
 Investors can choose to invest in either senior or junior tranches based on your risk tolerance and return objectives. Senior tranches are for those seeking stable income streams with lower risk, while junior tranches are for those willing to accept higher risk in exchange for potentially higher returns.
 
-- SOT or Senior Obligation Token represent the senior tranche in the pool. SOT token holders earn a fixed interest rate through the increase in SOT token prices (interest accruals)
-- JOT or Junior Obligation Token represent the junior tranche (or unitranche) in the pool. JOT token holders earn a variable interest based on residual cash flow in a pool. A pool needs to maintain a minimum JOT amount as a minimum first loss.
+- **SOT** or **Senior Obligation Token** represent the senior tranche in the pool. SOT token holders earn a fixed interest rate through the increase in SOT token prices (interest accruals)
+- **JOT** or **Junior Obligation Token** represent the junior tranche (or unitranche) in the pool. JOT token holders earn a variable interest based on residual cash flow in a pool. A pool needs to maintain a minimum JOT amount as a minimum first loss.
 
 SOT holders are prioritized for payment on withdrawal.
 There is no duration for pool tokens, i.e., perpetual - as long as investors keep money in the pool they will earn interest from the underlying assets. Investment periods are however enforceable through off chain agreements.
@@ -33,6 +33,18 @@ Validator is an entity responsible for verifying the quality and authenticity of
 
 ### Liquidity provider (or Investor)
 Liquid providers or Investor are those who provide liquidity to the pool. Investor can invest in senior or junior tranche, depending on how they structure their portfolio. While SOT can have limited sale time if SOT sale is Dutch auction, JOT is open for sale until the investment capacity is fulfilled.
+
+### Minimum first loss
+A pool parameter that reflects minimum currrency amount of JOT over Pool value.
+Minimum first loss is the parameter to protect SOT investors in the event of liquidity withdrawal.
+Once the first loss is equal to or less than Minumum first loss, Investors cannot invest in SOT or withdraw JOT.
+The more risky the pool assets get, the higher minimum first loss should be set to prevent JOT investors from withdrawal.
+
+### Debt ceiling
+Debt ceiling is the parameter set and can be updated by Pool Admin, reflecting the maximum amount of pool investments allowed, including JOT and SOT.
+:::tip
+If the Pool Admin needs to stop a pool from selling notes, he can set the debt ceiling to a small number. Investors can no longer bid for JOT/SOT, regardless of the available investment capacity.
+:::
 
 ## Protocol mechanics
 ### Tokenized RWA
@@ -97,5 +109,4 @@ The parameter known as **Epoch** is established by the Issuer to regulate withdr
 Withdrawal requests are processed in batches, drawing from a predetermined portion of the pool's liquidity to ensure equitable distribution among investors. Investors have the flexibility to claim their share at any time during the subsequent periods. Unfulfilled withdrawal requests within an epoch are automatically rolled over to the following epoch.
 
 Furthermore, investors retain the option to cancel their withdrawal requests at any point, albeit potentially incurring a cancellation fee.
-
 
