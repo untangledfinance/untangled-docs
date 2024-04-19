@@ -8,8 +8,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Untangled",
-  tagline: "Untangled Finance",
+  title: "Untangled Protocol Documentation",
+  tagline: "Institutional-grade RWA credit investment on-chain",
   favicon: "img/small_logo.png",
 
   // Set the production url of your site here
@@ -111,8 +111,8 @@ const config = {
                 href: "https://untangled.finance/",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Forum",
+                href: "https://forum.untangled.finance/",
               },
               {
                 label: "Twitter",
@@ -129,7 +129,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/untangledfinance",
               },
             ],
           },
