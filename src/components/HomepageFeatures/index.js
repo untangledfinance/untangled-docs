@@ -1,40 +1,38 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Use",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-       Step by step guide on how to use the protocol through Untangled UI. Get onboard. Invest. Withdraw.
+        Step by step guide on how to use the protocol through Untangled UI. Get
+        onboard. Invest. Withdraw.
       </>
     ),
   },
   {
-    title: 'Build',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-       Explore smart contracts to learn how the protocol works.
-      </>
-    ),
+    title: "Build",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    description: <>Explore smart contracts to learn how the protocol works.</>,
   },
   {
-    title: 'Contribute',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Contribute",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Contribute to the development of Untangled protocol simply follow the links below.
+        Contribute to the development of Untangled protocol simply follow the
+        links below.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
