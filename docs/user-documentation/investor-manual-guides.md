@@ -15,9 +15,10 @@ Click on a pool to view its details.
 
 :::tip
 Pool collateral data is only visible to verified investors who have completed the KYC.
+![Hidden collateral data](./img/invest/collateral-hidden.png)
 :::
 
-![Hidden collateral data](./img/invest/collateral-hidden.png)
+
 
 ## Invest in a Pool
 
