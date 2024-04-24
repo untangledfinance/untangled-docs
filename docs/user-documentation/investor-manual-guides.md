@@ -5,7 +5,7 @@ sidebar_position: 5
 # Investor manual guides
 ## Explore a pool
 
-On Untangled dashboard, you can see the pools with their summary.
+On [Untangled Finance](https://untangled.finance) you can explore all pools currently open for investment.
 
 ![Pool](./img/invest/pool-list.png)
 
@@ -14,7 +14,8 @@ Click on a pool to view its details.
 ![Pool details](./img/invest/pool-details.png)
 
 :::tip
-Pool collateral data is only visible to verified investors who have completed the KYC.
+Pool collateral data is only visible to verified investors who have completed [the KYI process](./unique-identity.md#our-kyc-process).
+
 ![Hidden collateral data](./img/invest/collateral-hidden.png)
 :::
 
@@ -22,7 +23,6 @@ Pool collateral data is only visible to verified investors who have completed th
 
 ## Invest in a Pool
 
-On [Untangled Finance](https://untangled.finance) you can explore all pools currently open for investment.
 Please choose a pool from the list to view its details and to make investments in either SOT or JOT tokens.
 
 ### Prerequisites
@@ -47,7 +47,7 @@ Click on the "signing terms & conditions" to read and confirm your agreement bef
 
 ![Signing terms and conditions](./img/invest/signing-terms-and-conditions.png)
 
-![Confirm Signing terms and conditions](./img/invest/enter-investment-amount.png)
+![Confirm Signing terms and conditions](./img/invest/signing-terms-and-conditions-full.png)
 
 
 Step 3: Sign the note subscription agreement.
