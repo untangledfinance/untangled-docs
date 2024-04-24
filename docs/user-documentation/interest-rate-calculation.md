@@ -1,18 +1,22 @@
 # Interest rate calculation
 
-In the Untangled Protocol, interest is compounded and calculated every second as per the norm. Transactions occur continuously, day or night, necessitating an interest rate mechanism capable of accurately determining interest at any given moment.
+Untangled Protocol leverages an advanced methodology for calculating interest, employing real-time compounding every second to ensure precise and equitable computations in financial transactions that are executed continuously, 24/7.
 
-## Background
+## Introduction to Interest Calculation
 
-This section provides a broad overview of interest compounding and distinguishes between APYs and APRs. If you're already acquainted with these ideas, feel free to bypass this section and delve into how they're implemented on-chain below.
+This section provides a foundational understanding of interest compounding and the distinctions between Annual Percentage Rate (APR) and Annual Percentage Yield (APY). Readers well-versed in these concepts can proceed directly to the detailed on-chain implementation section.
 
-### Compound interest
+### Detailed Example of Compounding Interest
 
-Compound interest is a financial concept where interest is calculated not only on the initial principal amount but also on the accumulated interest from previous periods. In other words, it's interest on interest. The benefit of compound interest lies in its ability to accelerate the growth of an investment or savings account over time. As interest is continually reinvested, the base amount increases, leading to exponential growth. Over long periods, compound interest can significantly boost the value of an investment, allowing it to grow faster than simple interest, which only applies to the initial principal. This compounding effect is often referred to as the "miracle of compound interest" because even small contributions can accumulate into substantial sums over time, making it a powerful tool for wealth accumulation and financial planning.
+To align with the instantaneous transaction capabilities of blockchain technology, Untangled Protocol compounds interest every second. Here's how it works in a practical example:
 
-Imagine you invest 1000$ and earn 6% APR then you will earn 1000 * 6% = 60$ at the end of year one.
+Suppose an investment of $100 with an APR of 17.00%. Under simple annual compounding, the interest calculation is: $100 × 17.00% = $17.00 . This results in a total of $117.00 at the end of one year.
 
-Let's say you have $1000 with a 6% interest rate, compounded monthly. In the first month, you'd apply the monthly interest rate (6.00%/12=0.50%) to your balance, resulting in $5 interest, leaving you with $1005. The next month, you repeat the process, factoring in the previous interest earned, resulting in slightly more interest: $1005 * 0.5% = $5.025. Continuing this pattern for 12 months yields $1061.678 at the year's end. Despite the same 6.00% interest rate, compounding monthly yields slightly more than annual compounding, showcasing the "power of compounding".
+For monthly compounding, the interest rate per month is 17.00% / 12 = 1.4167%. This rate compounded monthly over a year yields: $100 × (1 + 1.4167%)^12 = $118.39
+
+Compounding every second, the formula adjusts the interest rate to a per-second increment: $100 × (1 + 17%/31536000)^31536000 ≈ $118.53 
+
+Here, 31536000 represents the total number of seconds in a year, calculated as: 60 * 60 * 24 * 365 = 31536000 
 
 ### Distinguish between APR and APY
 
@@ -29,19 +33,19 @@ Interest on a debt is computed on a flat percentage and is not compounded. Upon 
 
 We have the formular for debt calculation:
 
-*totalDebt = currentPrinciple \* (1  + interestRate \* (currentTimestamp - lastRepaymentTimestamp) / secondsPerYear)*
+*totalDebt = currentPrinciple × (1  + interestRate × (currentTimestamp - lastRepaymentTimestamp) / secondsPerYear)*
 
 *updatedPrinciple = totalDebt - repaymentAmount*
 
 To further understand the calculation, please have a look at the below example:
 
-On Jan 1st, the Originator had 600k$ drawdown with 17% interest per year.
+On Jan 1st, the Originator had $600k drawdown with 17% interest per year.
 
-On Jan 31st, the total repay is expected to be 600k$ * (1+ 17% * 31/365) = 608,663$
+On Jan 31st, the total repay is expected to be $600k × (1+ 17% × 31/365) = $608,663
 
-Feb 7th, the total repay is 600k$ * (1+ 17% * 38/365) = 610,619$
+Feb 7th, the total repay is $600k × (1+ 17% × 38/365) = $610,619
 
-Suppose Originator repay 100k$ for January, so they are expected to have the new principle to be 508,663$.
+Suppose Originator repay $100k for January, so they are expected to have the new principle to be $508,663.
 
-But since the repayment only made it to the smart contract until Feb 7th, that make the new principle turn out to be 510,619$. Hence the next repayment will be calculated base on this new principle.
+But since the repayment only made it to the smart contract until Feb 7th, that make the new principle turn out to be $510,619. Hence the next repayment will be calculated base on this new principle.
 
