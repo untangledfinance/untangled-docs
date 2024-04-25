@@ -3,9 +3,26 @@ sidebar_position: 5
 ---
 
 # Investor manual guides
-## Invest in a Pool
+## Explore a pool
 
 On [Untangled Finance](https://untangled.finance) you can explore all pools currently open for investment.
+
+![Pool](./img/invest/pool-list.png)
+
+Click on a pool to view its details.
+
+![Pool details](./img/invest/pool-details.png)
+
+:::tip
+Pool collateral data is only visible to verified investors who have completed [the KYI process](./unique-identity.md#our-kyc-process).
+
+![Hidden collateral data](./img/invest/collateral-hidden.png)
+:::
+
+
+
+## Invest in a Pool
+
 Please choose a pool from the list to view its details and to make investments in either SOT or JOT tokens.
 
 ### Prerequisites
@@ -23,6 +40,15 @@ Step 2: Enter the desired investment amount.
 The quantity of tokens you receive is contingent upon the current token price. 
 Please note, SOT investment amounts are validated to ensure they comply with the [minimum first loss](./securitization-on-blockchain#minimum-first-loss) and [debt ceiling](./securitization-on-blockchain#debt-ceiling) parameter.
 ![Enter investment amount](./img/invest/enter-investment-amount.png)
+
+Step 3: Read and confirm the signing terms & conditions.
+
+Click on the "signing terms & conditions" to read and confirm your agreement before you can move on.
+
+![Signing terms and conditions](./img/invest/signing-terms-and-conditions.png)
+
+![Confirm Signing terms and conditions](./img/invest/signing-terms-and-conditions-full.png)
+
 
 Step 3: Sign the note subscription agreement.
 Please read carefully and sign the note subscription agreement to continue.

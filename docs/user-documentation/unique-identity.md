@@ -104,6 +104,7 @@ Once approved, you will be able to generate the Identity Passport, which will al
 **Step 2 Select investor type**
 
 **Step 3 Business information**
+
 Please provide the identity information of your entity.
 
 ![Provide business info](./img/kyc/provide-information-about-business.png)
