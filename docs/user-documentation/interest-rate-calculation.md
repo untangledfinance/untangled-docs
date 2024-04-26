@@ -29,23 +29,23 @@ In the realm of the Untangled Protocol, rates are typically presented as APRs. F
 
 ## Debt calculation
 
-Interest on a debt is computed on a flat percentage and is not compounded. Upon receiving a repayment, the Untangled pool automatically calculates the accrued interest up to that point and combines it with the remaining portion of the original debt to determine the total repayment due from the Originator. With the total debt owed up to that point established, the smart contract recalculates the principal balance of the debt following the Originator's repayment by deducting the repayment amount from the total debt.
+Interest on a debt is compounded on a secondly basis. Upon receiving a repayment, the Untangled pool automatically calculates the accrued interest up to that point and combines it with the remaining portion of the original debt to determine the total repayment due from the Originator. With the total debt owed up to that point established, the smart contract recalculates the principal balance of the debt following the Originator's repayment by deducting the repayment amount from the total debt.
 
 We have the formular for debt calculation:
 
-*totalDebt = currentPrinciple × (1  + interestRate × (currentTimestamp - lastRepaymentTimestamp) / secondsPerYear)*
+*totalDebt = currentPrincipal × (1  + interestRate / secondsPerYear) ^ (currentTimestamp - lastRepaymentTimestamp)*
 
-*updatedPrinciple = totalDebt - repaymentAmount*
+*updatedPrincipal = totalDebt - repaymentAmount*
 
 To further understand the calculation, please have a look at the below example:
 
 On Jan 1st, the Originator had $600k drawdown with 17% interest per year.
 
-On Jan 31st, the total repay is expected to be $600k × (1+ 17% × 31/365) = $608,663
+On Jan 31st, the total repay is expected to be $600k × (1+ 17%/31536000) ^ (31 × 24 × 60 × 60) = $608,725
 
-Feb 7th, the total repay is $600k × (1+ 17% × 38/365) = $610,619
+Feb 7th, the total repay is $600k × (1+ 17%/31536000)^ (38 × 24 × 60 × 60) = $610,713
 
-Suppose Originator repay $100k for January, so they are expected to have the new principle to be $508,663.
+Suppose Originator repay $100k for January, so they are expected to have the new principal to be $608,725.
 
-But since the repayment only made it to the smart contract until Feb 7th, that make the new principle turn out to be $510,619. Hence the next repayment will be calculated base on this new principle.
+But since the repayment only made it to the smart contract until Feb 7th, that make the new principal turn out to be $610,713. Hence the next repayment will be calculated base on this new principal.
 
