@@ -18,15 +18,6 @@ Compounding every second, the formula adjusts the interest rate to a per-second 
 
 Here, 31536000 represents the total number of seconds in a year, calculated as: 60 * 60 * 24 * 365 = 31536000 
 
-### Distinguish between APR and APY
-
-To truly grasp Untangled Protocol interest rates and yields, it's crucial to understand the distinction between an Annual Percentage Rate (APR) and Annual Percentage Yield (APY). The key difference lies in how APY accounts for compounded interest, unlike APR. Consequently, while APR and APY are equal for annual compounding, the latter surpasses the former with higher compounding frequencies such as monthly or daily.
-
-Let's take the example we discussed earlier. While the APR remains at 6.00%, the APY for monthly compounding reaches 6.1678%, and for secondly compounding, it's 6.1837%. The more frequent the compounding, the higher the equivalent APY.
-
-In the realm of the Untangled Protocol, rates are typically presented as APRs. For instance, if you're examining an asset's financing fee on-chain, you'll likely encounter an APR figure. Given that this APR is applied every second, the most accurate representation of the resulting yield, considering accrued interest, aligns with an APY compounded secondly. As a result, in the Untangled App, you'll often input rates as APRs, while displayed interest rates and yields typically appear as APYs, making it easier to gauge returns over time.
-
-
 ## Debt calculation
 
 Interest on a debt is compounded on a secondly basis. Upon receiving a repayment, the Untangled pool automatically calculates the accrued interest up to that point and combines it with the remaining portion of the original debt to determine the total repayment due from the Originator. With the total debt owed up to that point established, the smart contract recalculates the principal balance of the debt following the Originator's repayment by deducting the repayment amount from the total debt.
