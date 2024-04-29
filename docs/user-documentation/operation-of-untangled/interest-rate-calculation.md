@@ -1,4 +1,4 @@
-# Interest rate calculation
+# Interest Rate Calculation
 
 Untangled Protocol leverages an advanced methodology for calculating interest, employing real-time compounding every second to ensure precise and equitable computations in financial transactions that are executed continuously, 24/7.
 
