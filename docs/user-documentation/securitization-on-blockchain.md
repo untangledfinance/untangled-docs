@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Securitization on the blockchain
+# Securitization on the Blockchain
 
 ## Merging Defi and TradFi 
 
