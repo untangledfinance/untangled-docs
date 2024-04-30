@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/user-documentation/introduction"
+            to="/docs/user-documentation/welcome-to-untangled"
           >
             Getting Started
           </Link>
