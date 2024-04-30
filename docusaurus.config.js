@@ -99,7 +99,7 @@ const config = {
             items: [
               {
                 label: "Documentation",
-                to: "/docs/user-documentation/introduction",
+                to: "/docs/user-documentation/welcome-to-untangled",
               },
             ],
           },
