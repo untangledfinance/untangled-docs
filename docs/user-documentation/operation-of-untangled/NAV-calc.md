@@ -2,7 +2,14 @@
 Originator drawdown by minting financing token (LAT)
 
 # Risk scorecard
-The risk scorecard will be used for on-going Net Asset Value Calculation (NAV Calc). Net Asset Value Calculation is based on the Discounted Cash Flow (DCF) method. DCF is used because there are no active secondary markets for loan financings (LAT). Each loan financing (LAT) has a risk core based on the performance of the underlying collateral backing it up. Each risk score corresponds to a Probability of Default and Loss Given Default for the assets in question. 
+The risk scorecard will be used for on-going Net Asset Value Calculation (NAV Calc). 
+
+![Pool](../img/Risk-scorecard.png)
+
+
+
+# NAV
+Net Asset Value Calculation is based on the Discounted Cash Flow (DCF) method. DCF is used because there are no active secondary markets for loan financings (LAT). Each loan financing (LAT) has a risk core based on the performance of the underlying collateral backing it up. Each risk score corresponds to a Probability of Default and Loss Given Default for the assets in question. 
 
 From this, Expected Loss (EL) is calculated: `Expected Loss = Probability of Default * Loss Given Default * Exposure At Default`
 
@@ -10,7 +17,6 @@ From this, Expected Loss (EL) is calculated: `Expected Loss = Probability of Def
 
 Any permissioned user can call to repay a loan financing using its ID and the repayment amount will be routed to the Pool. Once a loan financing is fully repaid the token representing the financing (LAT) will be burned and the locked collaterals returned to originator (off-chain)
 
-# NAV
 Asset Valuation is the process of determining the current worth of an asset or portfolio by assigning a monetary value. The value of a portfolio of assets is often also expressed as the net asset value (NAV)
 
 A NAV is usually required when a portfolio is sold or when investors want to join/exit an existing pool. Then the portfolio value ultimately determines the investment/redemption price. Note that for these purposes the portfolio value may be different to the book value or accounting value of a portfolio.
