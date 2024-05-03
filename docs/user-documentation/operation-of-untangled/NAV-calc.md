@@ -11,9 +11,9 @@ The risk scorecard will be used for on-going Net Asset Value Calculation (NAV Ca
 # NAV
 Net Asset Value Calculation is based on the Discounted Cash Flow (DCF) method. DCF is used because there are no active secondary markets for loan financings (LAT). Each loan financing (LAT) has a risk core based on the performance of the underlying collateral backing it up. Each risk score corresponds to a Probability of Default and Loss Given Default for the assets in question. 
 
-From this, Expected Loss (EL) is calculated: `Expected Loss = Probability of Default * Loss Given Default * Exposure At Default`
+From this, Expected Loss (EL) is calculated: $$\text{Expected Loss} = \text{Probability of Default} * \text{Loss Given Default} * \text{Exposure At Default}$$
 
-`Net Asset Value = Present Value of Cash Flows from financings - Expected Loss` 
+$$\text{Net Asset Value} = \text{Present Value of Cash Flows from financings} - \text{Expected Loss}$$ 
 
 Any permissioned user can call to repay a loan financing using its ID and the repayment amount will be routed to the Pool. Once a loan financing is fully repaid the token representing the financing (LAT) will be burned and the locked collaterals returned to originator (off-chain)
 
@@ -30,9 +30,15 @@ For every outstanding financing (LAT) of collateral, the expected cash flow is c
 The expected Cash Flow is risk-adjusted for credit risk by the Expected loss. Every financing is allocated a risk class that has a Probability of Default (PD) and Loss Given Default (LGD) assigned to it. The Expected Loss is calculated as `Expected loss = Expected Cash Flow x PD x LGD` and subtracted from the expected repayment amount to adjust for credit risk. Note that PDs are often communicated per annum and may need to be adjusted to the term of the underlying collaterals..
 
 Discount risk-adjusted expected cash flows: The risk-adjusted expected cash-flows are discounted with an appropriate discount rate (this depends on asset class and pool) to derive the present value of a financing. The discount rate usually reflects the rate of return an investor could earn in the marketplace on an investment of comparable size, tenor and risk. Note that the discount rate is the same for every financing of a pool. The standard formula to calculate the PV of a cash flow is
-`PV=CF/(1+r)^t` with r = discount rate and t = period of cash flows.
 
-### Calculate NAV: 
+
+$$
+\text{Present Value} = \frac{\text{Expected Cashflow}}{(\text{1} + \text{r})^\text{t}}
+$$
+
+where r = `discount rate` and t = `period of cash flows`
+
+### Calculate NAV:
 Adding up the present values of the risk-adjusted expected cash flows for all financings in the pool leads to the (portfolio) NAV. The NAV plus the liquidity currently in the Reserve of the Pool gives the Pool Value.​
 
 ### Write-offs
