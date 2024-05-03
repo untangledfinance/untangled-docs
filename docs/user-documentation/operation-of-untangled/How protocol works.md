@@ -24,3 +24,31 @@ Borrow pool can have up to two pool tokens:
 - JOT or Junior Obligation Token represents the junior tranche (or unitranche if the pool issues only one token) in a pool. JOT token holders earn a variable return based on residual cash flow in a pool. A pool needs to maintain a minimum JOT amount as a minimum first loss (or first loss buffer).
 - SOT or Senior Obligation Token represents the senior tranche in a pool. SOT token holders earn a fixed interest rate through the increase in SOT token prices (interest accruals)
 - There is no duration for pool tokens, i.e., perpetual - as long as investors keep money in the pool they will earn a return from the pool’s financings. Investment periods could however be enforced through off-chain agreements.
+
+# Key terms
+
+## Originator 
+typically a fintech who specialize in certain types of lending such as SME loans or trade finance. 
+
+## Collaterals 
+RWA collaterals tokenized as NFTs.
+
+## Asset Pool 
+a smart contract instance that lends against collaterals with its reserve in stable coins. Asset Pool borrows (therefore also called Borrow Pool) from Liquidity Pool (automatically) and credit investors (manually) in order to lend to Originator. Asset pool is operated by an Issuer with designated Originator(s).
+
+## Validator 
+a trusted entity that provides validation services re collaterals: e.g. performing due diligence on collaterals being locked into an Asset Pool such as loans, invoices or carbon credits.
+
+## Pool Tranches
+- Senior tranche is represented by SOT, an ERC-20 token with a currency value of 1 but is continuously accruing interest. 
+- Junior tranche is represented by JOT, an ERC-20 token acting as the first loss piece in a pool. 
+
+## Minimum First Loss 
+a Asset Pool’s parameter that reflects minimum currency amount of JOT over Pool Value
+
+## Reserve 
+
+the value of stablecoins in an Asset Pool
+
+## Pool Value 
+equals Reserve plus Net Asset Value
