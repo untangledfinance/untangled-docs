@@ -6,8 +6,6 @@ The risk scorecard will be used for on-going Net Asset Value Calculation (NAV Ca
 
 ![Pool](../img/Risk-scorecard.png)
 
-
-
 # NAV
 Net Asset Value Calculation is based on the Discounted Cash Flow (DCF) method. DCF is used because there are no active secondary markets for loan financings (LAT). Each loan financing (LAT) has a risk core based on the performance of the underlying collateral backing it up. Each risk score corresponds to a Probability of Default and Loss Given Default for the assets in question. 
 
