@@ -5,8 +5,9 @@ Senior Asset: seniorAsset is the amount which belongs to the senior tranche inve
 $$\text{seniorAsset} = min(\text{expectedSeniorAsset},\text{poolValue})$$
 
 <p align="center">  
-<img width="779" alt="Untangled_NAV to token pices" src="https://github.com/untangledfinance/untangled-docs/assets/69092824/07528703-628b-4dcf-a155-10a23a9b820f">
+<img width="1279" alt="Untangled_NAV to token pices" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/NAV-to-token-prices.png">
 </p>
+
 $$expectedSeniorAsset = seniorDebt + seniorBalance + seniorSupply - seniorRedeem$$
 
 Senior Debt: seniorDebt is the amount which accrues interest for the senior tranche.
