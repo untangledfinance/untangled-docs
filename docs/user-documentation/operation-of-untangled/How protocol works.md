@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Pool admin
 Pool admin is a role that is able to create new pools and set parameters such as first-loss buffer (min first loss), borrow cap (debt ceiling), risk scorecard. Pool admin is appointed by governance.
 
