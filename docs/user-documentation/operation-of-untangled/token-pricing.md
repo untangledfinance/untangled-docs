@@ -1,25 +1,31 @@
 # Pricing of SOT
 
-SeniorAsset: The seniorAsset is the amount which belongs to the senior investor (SOT) in a pool.
+Senior Asset: seniorAsset is the amount which belongs to the senior tranche investors in a pool.
 
 $$\text{seniorAsset} = min(\text{expectedSeniorAsset},\text{poolValue})$$
 
-Expected SeniorAsset=seniorDebt + seniorBalance
+$$expectedSeniorAsset = seniorDebt + seniorBalance + seniorSupply - seniorRedeem$$
 
-SeniorDebt: SeniorDebt is the amount which accrues interest for the senior tranche.
-seniorDebt = beginningSeniorDebt(1+seniorInterestRate/n)^n (n is compounding period in a year)
+Senior Debt: seniorDebt is the amount which accrues interest for the senior tranche.
 
-SeniorBalance: SeniorBalance is the amount of the seniorTranche which is not used for interest accumulation.
-seniorBalance = reserve*seniorAssetRatio
+$$ seniorDebt = \text{beginning senior debt} * (1 + \frac{\text{SOT interest rate}}{\text{n}})^n$$
 
-Pool Value: poolValue = NAV + Reserve = SOT Value + JOT Value
+SeniorBalance: seniorBalance is the amount of the senior tranche which is not used for earning interest.
 
-SOT price = seniorAsset/SOT supply 
+$$seniorBalance = seniorAsset - seniorDebt $$
 
-# Pricing of SOT
+$$ seniorAssetRatio = \frac{seniorAsset}{reserve} $$
 
-Junior Asset: juniorAsset = poolValue - seniorAsset
+Pool Value: $$poolValue = NAV + Reserve = \text{SOT Value} + \text{JOT Value}$$
 
-$$\text{JOT price} = frac(\text{juniorAsset}\text{JOT supply}
+$$\text{SOT price} = \frac{\text{seniorAsset}}{\text{SOT supply}}$$
 
-If loans are defaulting, the juniorAsset would cover the losses. If the entire juniorAsset is lost, the poolValue could be lower than the expectedSeniorAsset. (edited) 
+# Pricing of JOT
+
+Junior Asset: $$juniorAsset = poolValue - seniorAsset$$
+
+$$\text{JOT price} = \frac{\text{juniorAsset}}{\text{JOT supply}}$$
+
+If loans are defaulting, the juniorAsset would cover the losses. If the entire juniorAsset is lost, the poolValue could be lower than the expectedSeniorAsset. 
+
+If a pool only has only one tranche (unitranche) then juniorAsset = poolValue
