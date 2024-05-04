@@ -1,7 +1,8 @@
 # Pricing of SOT
 
 SeniorAsset: The seniorAsset is the amount which belongs to the senior investor (SOT) in a pool.
-seniorAsset=min(expectedSeniorAsset,poolValue)
+
+$$\text{seniorAsset} = min(\text{expectedSeniorAsset},\text{poolValue})$$
 
 Expected SeniorAsset=seniorDebt + seniorBalance
 
@@ -19,6 +20,6 @@ SOT price = seniorAsset/SOT supply
 
 Junior Asset: juniorAsset = poolValue - seniorAsset
 
-JOT price = juniorAsset/JOT supply
+$$\text{JOT price} = frac(\text{juniorAsset}\text{JOT supply}
 
 If loans are defaulting, the juniorAsset would cover the losses. If the entire juniorAsset is lost, the poolValue could be lower than the expectedSeniorAsset. (edited) 
