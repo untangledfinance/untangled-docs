@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Pool tranche tokens
 Each pool can have up to two pool tokens:
 
