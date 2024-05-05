@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # From NAV to token price
 
 <p align="center">  
