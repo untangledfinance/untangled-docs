@@ -26,5 +26,11 @@ Untangled  supports a pool to invest in another pool. For example, an investor p
 
 ### Tranched pool
 
+<p align="center">  
+<img width="1279" alt="Untangled_NAV to token pices" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/Waterfall - SOT and JOT.png.png">
+</p>
 
 ### Unitranche pool
+<p align="center">  
+<img width="1279" alt="Untangled_NAV to token pices" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/Waterfall-Unitranche.png">
+</p>
