@@ -14,7 +14,7 @@ When reserves are deployed in yield-generating assets, the token price will begi
 
 If assets underperform, their value (NAV) will decrease, impacting the value of JOT tokens first. When the value of JOT tokens reaches zero, the value of SOT tokens will begin to decrease, directly leading to a reduction in SOT prices.
 
-Pool value is the sum of asset value (NAV) and reserve. Pool value is also the value of senior tranche tokens (SOT value or Senior Asset) and junior tranche token (JOT value or Junior Asset). Obviously, if a pool only has only one tranche (unitranche) then the entire pool value is attributable to JOT value. 
+Pool value is the sum of asset value (NAV) and reserve. Pool value is also the value of senior tranche tokens (SOT value or Senior Asset) and junior tranche token (JOT value or Junior Asset). Obviously, if a pool only has only one tranche (unitranche) then the entire pool value is attributable to JOT value.
 
 $$poolValue = NAV + Reserve = \text{seniorAsset} + \text{juniorAsset}$$
 
@@ -30,7 +30,7 @@ In which: $$expectedSeniorAsset = seniorDebt + seniorBalance$$
 
 - Senior Debt is the amount which accrues interest for the senior tranche.
 
-$$ seniorDebt = \text{beginning senior debt} * (1 + \frac{\text{SOT interest rate}}{\text{n}})^n$$
+$$ seniorDebt = \text{beginning senior debt} \* (1 + \frac{\text{SOT interest rate}}{\text{n}})^n$$
 
 - Senior Balance is the amount of the senior tranche which is not used for earning interest (cash drag). It is part of Reserve that belongs to SOT investor.
 
@@ -47,6 +47,5 @@ Junior Asset is the amount which belongs to the junior tranche investors in a po
 $$juniorAsset = poolValue - seniorAsset$$
 
 $$\text{JOT price} = \frac{\text{juniorAsset}}{\text{JOT supply}}$$
- 
-If loans are defaulting, the juniorAsset would cover the losses. If the entire juniorAsset is lost, the poolValue could be lower than the expectedSeniorAsset, thus reducing the SOT price. 
 
+If loans are defaulting, the juniorAsset would cover the losses. If the entire juniorAsset is lost, the poolValue could be lower than the expectedSeniorAsset, thus reducing the SOT price.
