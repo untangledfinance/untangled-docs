@@ -23,18 +23,13 @@ A pool might have a single token JOT (first loss ratio is 100%). This is also re
 Untangled  supports a pool to invest in another pool. For example, an investor pool might purchase a SOT token in an investee pool and itself issues a unitranch token. That unitranche token effectively repreferents fractional interests in the investee’s SOT token. Therefore, it is in effect a senior token.
 
 ## Cash flow waterfall
+![Cash flow waterfall](../img/waterfall.png)
 
 ### Tranched pool
 
-<p align="center">  
-<img width="379" alt="Tranched pool waterfall" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/Waterfall_SOT-and-JOT.png">
-</p>
-
-![Tranched pool waterfall](../img/Waterfall_SOT-and-JOT.png)
 
 ### Unitranche pool
-<p align="center">  
-<img width="379" alt="Unitranche waterfall" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/Waterfall%20-%20Unitranche.png">
-</p>
 
-![Unitranche waterfall](../img/Waterfall%20-%20Unitranche.png)
+
+
+
