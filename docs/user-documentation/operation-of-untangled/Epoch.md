@@ -5,7 +5,7 @@ sidebar_position: 3
 # Epoch
 The investor withdrawal mechanics are designed to balance pool stability with investor’s need for instant liquidity. Withdrawal requests are “batched” against a fixed portion of the pool liquidity for equitable distribution, which lenders claim at any point in the following periods. Withdrawal requests not being fulfilled in an epoch are carried over to the next epoch. Withdrawal requests can also be canceled at any time for a cancellation fee (if any).
 
-![Untangled_How it works](../img/Income-and-capital-reserve-at-epoch.png)
+![Untangled_How it works](../img/Epoch-requests-as-a-state-machine.png)
 
 # How it works
 Withdrawal requests are sent to the pool during the epoch duration pool tokens are locked/approved 
@@ -19,7 +19,7 @@ At epoch end, withdrawal requests will be fulfilled as follows:
 ## Cashflow waterfall
 - monthly interest repayment from originators should be used for investors to withdraw, relative to their token holdings
 - Additional drawdown request amounts need to be met by new investment, principal repayment or loan buy back by originator
-
+![Untangled_How it works](../img/Income-and-capital-reserve-at-epoch.png)
 # Reserve
 Reserve is the currency amount of stablecoins in a Pool which is used to 
 - Meet withdrawal requests of SOT holders 
