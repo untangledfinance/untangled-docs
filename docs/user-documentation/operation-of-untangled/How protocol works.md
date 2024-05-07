@@ -6,9 +6,8 @@ sidebar_position: 1
 
 Here we summarize how Untangled protocol works.
 
-<p align="center">  
-<img width="1279" alt="Untangled_NAV to token pices" src="https://github.com/untangledfinance/untangled-docs/blob/untangled-docs-quntangled/docs/user-documentation/img/Untangled_How-it-works.png"/>
-</p>
+![Untangled_How it works](../img/Untangled_How-it-works.png)
+
 
 ## Participants
 
