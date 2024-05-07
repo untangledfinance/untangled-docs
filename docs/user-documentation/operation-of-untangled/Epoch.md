@@ -2,88 +2,108 @@
 sidebar_position: 3
 ---
 
-# Introduction to epoch
-The investor withdrawal mechanics are designed to balance pool stability with investor’s need for instant liquidity. Withdrawal requests are “batched” against a fixed portion of the pool liquidity for equitable distribution, which lenders claim at any point in the following periods. Withdrawal requests not being fulfilled in an epoch are carried over to the next epoch. Withdrawal requests can also be canceled at any time for a cancellation fee (if any).
+# Epoch
 
-![Untangled_How it works](../img/Income-and-capital-reserve-at-epoch.png)
-# How it works
-Withdrawal requests are sent to the pool during the epoch duration pool tokens are locked/approved 
+Withdrawal requests are queued during an epoch and executed at the epoch's end. This distribution mechanic is more equitable compared to 'first come, first serve' as RWAs are illiquid and there isn't a secondary market for tranched tokens.
 
-At epoch end, withdrawal requests will be fulfilled as follows:
-- From the tokenholder's balance within the Income Reserve. The protocol calculates income reserve but the split of Income Reserve into balances of SOT vs. JOT holders is handled by the back end.  
-- Any remaining amount: fulfilled by Capital Reserve where requests are fulfilled on a pro-rata basis according to the existing implementation. 
-- Any unmet requests will be transferred to the next epoch.
-- At the next epoch’s end, the process d i) -> iii) will continue. Token holders do not need to call to request withdrawals again.
+
+Epoch is set by issuer in days and can be changed dynamically.
+
+### Income Reserve vs. Capital reserve
+To ensure that investors can always withdraw their share of a pool's income, the pool reserve is consisted of of Income Reserve and Capital Reserve. The protocol keeps track of income balance of each investor. Income reserve is not reinvested in assets but set aside to meet withdrawal requests. Capital reserve on the otherhand includes capital invested into the pool which is waiting to be deployed, repayment of principal from originators.   
+
+So a withdrawal request is first met with the investor's income balance within the income reserve before any remaining amount to be fulfilled by capital reserve, subject to available liquidity at the epoch's end.
+
+When the originator makes a loan repayment, the smart contract will calculate the amount that should go to the Income Reserve vs. Capital Reserve. The protocol will further calculate income belong to SOT vs. JOT holders. The system will further keep track of Income Reserve balance of each individual SOT and JOT holders 
+
+- This epoch’s income amount belonging to SOT holders = beginning senior debt * senior interest rate during the compounding period. This amount will then be split according SOT token supply.
+
+- This epoch’s income amount belonging to JOT holders = Total income amount - SOT holder’s income amount. This amount will then be split by JOT token supply.
+
+- Tokenholder income balance = opening balance - income amount withdrawn + this epoch’s income amount for each holder
+
+Later, fees/spread to Untangled, other service providers, pool’s operational expenses could be taken out of Income Reserve before distributing to JOT holders.
 
 ## Cashflow waterfall
-- monthly interest repayment from originators should be used for investors to withdraw, relative to their token holdings
-- Additional drawdown request amounts need to be met by new investment, principal repayment or loan buy back by originator
 
-# Reserve
-Reserve is the currency amount of stablecoins in a Pool which is used to 
-- Meet withdrawal requests of SOT holders 
-- Advance to originator based on the value of collaterals locked (called loan financings - LATs)
+![Untangled_How it works](../img/Income-and-capital-reserve-at-epoch.png)
 
-## 2 types of reserve
-The Reserve is consisted of Income Reserve and Capital Reserve
+Note that each withdrawal request can be understood to include a income part and/or capital part. The income part of the request will be met with investor's balance within the income reserve and the capital part of the request will be met with available liquidity within capital reserve. 
 
-### Income Reserve 
-assuming that the originator pays back interest from their loans, the smart contract will calculate the amount that should go to the Income Reserve vs Capital Reserve
+The distibution for withdraw requests are part of the pool's cash flow waterfall:
 
-The protocol will further calculate income belong to SOT vs. JOT holders
+- At the beginning of an epoch the reserve will start out with a income balance and a capital balance
 
-- This epoch’s amount belonging to SOT holders = beginning senior debt*senior interest rate during the compounding period (need to take into account effect of compounding)
+Epoch's income reserve changes
 
-- This epoch’s amount belonging to JOT holders = Total income amount - SOT holder’s income amount
+- Interest payment of a LAT repayment is added to income reserve in the manner described above.
 
-The back end will further split Income Reserve into individual balances for each SOT and JOT holders 
+- Income reserve is used to meet part/all of an investor's withdraw request (both SOT and JOT investors) according to the investor's income balance as calculated as above.  
 
-- Token holder income balance = opening balance - income amount withdrawn + this epoch’s income amount for each holder
+Epoch's capital reserve changes
 
-- This epoch’s income amount for each holder = This epoch’s income amount/Token supply (i.e., SOT Supply and JOT Supply
-Later, fees/spread to Untangled, other service providers, pool’s operational expenses can be taken out of Income Reserve before JOT holders.
+- Principal payment of a LAT repayment is added to the capital reserve in the manner described above.
+  
+- The capital part (if any) of an withdrawal request will be fulfilled with avalable liquidity within the reserve. Apart from principal payment, capital reserve is increased by investment from JOT and SOT investors and reduced by originator's drawdown, SOT withdrawal and JOT withdrawal, in this order of execution. 
+  
+## Epoch execution
+![Untangled_How it works](../img/Epoch-execution.png)
 
-# Worked example
-Pool has 4 token holders with the following share
+Withdrawal requests are sent to the pool during the epoch duration, tranched tokens are locked/approved. 
 
-A: 100,000 B: 200,000 C: 300,000 D: 400,000 -> token supply = 1,000,000  
+At epoch end, withdrawal requests will be fulfilled as follows:
 
-Reserve = 0
+- From the tokenholder's balance within the Income Reserve. The protocol calculates income reserve and split it into balances of SOT vs. JOT holders.  
+- Any remaining amount: fulfilled by Capital Reserve where requests are met on a pro-rata basis according to the existing implementation. 
+- Any unmet requests will be transferred to the next epoch.
+- At the next epoch’s end, the process above will continue. Token holders can cancel request at any time.
 
-NAV =$ 1,000,000 (token price = $1)
 
-At end of month 1: Originator repay $30,000 of which  interest repayment is $10,000 and principal repayment is $20,000
+## Worked example
 
-Epoch period = 1 month
+### Inputs
 
-During the epoch: B and C request to withdraw $10,000 and $20,000 respectively
+Pool has 4 token holders with the following share: A: 100,000 B: 200,000 C: 300,000 D: 400,000 -> token supply = 1,000,000  
 
-Epoch end
+- Reserve = 0
 
-Calculate Income Reserve allocation
+- NAV = $1,000,000 (token price = $1)
 
-A: $1,000 B: $2,000 C: $3,000 D: $4,000 -> total allocation = $10,000. 
+- Epoch period = 1 month
 
-B and C withdraw requests are partially filled with their Income Reserve balance 
+- During the epoch: B and C request to withdraw $10,000 and $20,000 respectively
 
-Calculate the remaining distribution:
+At end of month 1: Originator repay $30,000 of which interest repayment is $10,000 and principal repayment is $20,000
+
+### At Epoch end
+
+#### Calculate Income Reserve allocation
+
+- A: $1,000 B: $2,000 C: $3,000 D: $4,000 -> total allocation = $10,000. 
+
+- B and C withdraw requests are partially filled with their Income Reserve balance 
+
+#### Calculate the remaining distribution:
 
 Remaining requested amount
 
-B: request $10,000 and got $2,000 through income reserve balance -> the remaining amount = $8,000
+- B: request $10,000 and got $2,000 through income reserve balance -> the remaining amount = $8,000
 
-C: request $20,000 and got $3,000 through income reserve balance -> the remaining amount = $17,000
+- C: request $20,000 and got $3,000 through income reserve balance -> the remaining amount = $17,000
 
 Total remaining amount = $8,000 + $17,000 = $25,000
 
-Calculate and execute withdrawal amount from Capital Reserve:
+#### Calculate and execute withdrawal amount from Capital Reserve:
 
 Amount going to Capital Reserve = Principal amount paid by originator = $20,000. Remaining amount requested to withdraw = $25,000 
 
-This means only 80% of the remaining requests will be met: *B = $8,000 x 80% = $6,400; C = $17,000x80% = $13,600*   
+This means only 80% of the remaining requests will be met: B = $8,000 x 80% = $6,400; C = $17,000x80% = $13,600   
 
-Calculate withdrawal request to move to next epoch
+#### Calculate withdrawal requests to move to next epoch 
 A: $0
+
 B: $10,000 - $2,000 - $6,400 = $1,600
+
 C: $20,000 - $3,000 - $13,600 = = $3,400
-C: $0  
+
+D: $0  
