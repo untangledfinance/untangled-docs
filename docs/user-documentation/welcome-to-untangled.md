@@ -10,7 +10,7 @@ Our mission is to bridge the gap between TradFi and DeFi, making private credit,
 
 ## Assets and Structure
 
-Untangled collaborates with financial institutions like Fasnara and has access to over 140 fintech lenders, each vetted and funded through a comprehensive six to eight-month due diligence process. This rigorous evaluation ensures that assets brought on-chain are of institutional quality.
+Untangled collaborates with financial institutions like Fasanara and has access to over 140 fintech lenders, each vetted and funded through a comprehensive six to eight-month due diligence process. This rigorous evaluation ensures that assets brought on-chain are of institutional quality.
 
 Each investment pool is linked to a real-world securitization vehicle based in Luxembourg, a structure that has been established and trusted in TradFi for decades. Assets within the pool are completely ring-fenced from the originator’s balance sheet, enhancing investor security and protection.
 

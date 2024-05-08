@@ -1,7 +1,6 @@
 ## Pool
 
-Main entry point for senior LPs (a.k.a. capital providers)
-Automatically invests across borrower pools using an adjustable strategy.
+Tranched pool where credit investors can participate in specific credit investment opportunities.
 
 ### registry
 
