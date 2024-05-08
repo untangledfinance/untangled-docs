@@ -1,3 +1,6 @@
+---
+sidebar_position: 7
+---
 
 Security is of at most importance in the development of the Untangled Protocol. Untangled engages with external auditors to review all smart contract code. Untangled Finance also maintains its own internal audit process for all smart contract code.
 
