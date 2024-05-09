@@ -15,7 +15,7 @@ const config = {
   favicon: "img/small_logo.png",
 
   // Set the production url of your site here
-  url: "https://app-test.untangled.finance",
+  url: "https://app.untangled.finance",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -144,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Untangled Finance, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Untangled Foundation`,
       },
       prism: {
         theme: prismThemes.github,
