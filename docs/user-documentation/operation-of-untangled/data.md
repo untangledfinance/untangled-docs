@@ -4,9 +4,10 @@ sidebar_position: 8
 
 # The Graph
 
-Untangled maintains a subgraph on The Graph that indexes useful state about the Untangled Protocol. This subgraph is used by the [Untangled app](https://app.untangled.finance/#/celo) and may be used by anyone.
+Untangled maintains a subgraph on The Graph that indexes useful state about the Untangled Protocol. This subgraph is used by the [Untangled app](https://app.untangled.finance/#/celo).
 
-The GraphQL schema of the subgraph is as follows:
+<details>
+<summary>The GraphQL schema of the subgraph</summary>
 
 ```
 type NoteTokenPurchased @entity(immutable: true) {
@@ -78,4 +79,6 @@ type UserInvestment @entity {
   id: ID!
   investments: [UserPoolInvestment!] @derivedFrom(field: "investor")
 }
+
 ```
+</details>
