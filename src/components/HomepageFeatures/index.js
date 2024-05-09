@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Step by step guide on how to use the protocol through Untangled UI. Get
+        Step by step guide on how to use the protocol through [Untangled UI](https://app.untangled.finance/#/celo). Get
         onboard. Invest. Withdraw.
       </>
     ),
