@@ -99,6 +99,12 @@ const config = {
             label: "Developer Documentation",
           },
           {
+            type: "docSidebar",
+            sidebarId: "OracleDoc",
+            position: "left",
+            label: "Credit Oracle",
+          },
+          {
             href: "https://github.com/untangledfinance",
             label: "GitHub",
             position: "right",
