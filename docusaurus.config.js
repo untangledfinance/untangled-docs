@@ -100,7 +100,7 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "OracleDoc",
+            sidebarId: "oracleDoc",
             position: "left",
             label: "Credit Oracle",
           },
