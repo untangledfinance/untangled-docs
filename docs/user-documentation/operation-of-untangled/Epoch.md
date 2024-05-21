@@ -54,8 +54,11 @@ Withdrawal requests are sent to the pool during the epoch duration, tranched tok
 At epoch end, withdrawal requests will be fulfilled as follows:
 
 - From the tokenholder's balance within the Income Reserve. The protocol calculates income reserve and split it into balances of SOT vs. JOT holders.  
+
 - Any remaining amount: fulfilled by Capital Reserve where requests are met on a pro-rata basis according to the existing implementation. 
+
 - Any unmet requests will be transferred to the next epoch.
+
 - At the next epoch’s end, the process above will continue. Token holders can cancel request at any time.
 
 
@@ -64,46 +67,65 @@ At epoch end, withdrawal requests will be fulfilled as follows:
 ### Inputs
 
 Pool has 4 token holders with the following share: A: 100,000 B: 200,000 C: 300,000 D: 400,000 -> token supply = 1,000,000  
-
 - Reserve = 0
 
-- NAV = $1,000,000 (token price = $1)
+- NAV = $1,000,000, given the token price = $1
 
 - Epoch period = 1 month
 
 - During the epoch: B and C request to withdraw $10,000 and $20,000 respectively
 
-At end of month 1: Originator repay $30,000 of which interest repayment is $10,000 and principal repayment is $20,000
+At end of month 1: Originator repay $30,000 
+of which:
+
+- interest repayment is $10,000 
+
+- principal repayment is $20,000
 
 ### At Epoch end
 
 #### Calculate Income Reserve allocation
 
-- A: $1,000 B: $2,000 C: $3,000 D: $4,000 -> total allocation = $10,000. 
+- A: $1,000
 
-- B and C withdraw requests are partially filled with their Income Reserve balance 
+- B: $2,000
+
+- C: $3,000
+
+- D: $4,000
+
+- -> total allocation = $10,000 
+
+- B and C withdraw requests are partially filled with their Income Reserve balance. 
 
 #### Calculate the remaining distribution:
 
 Remaining requested amount
 
-- B: request $10,000 and got $2,000 through income reserve balance -> the remaining amount = $8,000
+- B: requested $10,000 and got $2,000 through income reserve balance -> the remaining amount = $8,000
 
-- C: request $20,000 and got $3,000 through income reserve balance -> the remaining amount = $17,000
+- C: requested $20,000 and got $3,000 through income reserve balance -> the remaining amount = $17,000
 
 Total remaining amount = $8,000 + $17,000 = $25,000
 
 #### Calculate and execute withdrawal amount from Capital Reserve:
 
-Amount going to Capital Reserve = Principal amount paid by originator = $20,000. Remaining amount requested to withdraw = $25,000 
+Amount going to Capital Reserve = Principal amount paid by originator = $20,000. 
 
-This means only 80% of the remaining requests will be met: B = $8,000 x 80% = $6,400; C = $17,000x80% = $13,600   
+Remaining amount requested to withdraw = $25,000 
+
+This means only 80% of the remaining requests will be met: 
+
+- B = $8,000 x 80% = $6,400
+
+- C = $17,000 x 80% = $13,600   
 
 #### Calculate withdrawal requests to move to next epoch 
-A: $0
 
-B: $10,000 - $2,000 - $6,400 = $1,600
+- A: $0
 
-C: $20,000 - $3,000 - $13,600 = = $3,400
+- B: $10,000 - $2,000 - $6,400 = $1,600
 
-D: $0  
+- C: $20,000 - $3,000 - $13,600 = = $3,400
+
+- D: $0  
