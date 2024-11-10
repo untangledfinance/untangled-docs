@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Vision 
 Non-custodial, cross-chain, automated asset management solution - a data-driven, automated vault to attract liquidity from and invest in any opportunities on any EVM network to fit any risk/return appetite
 
