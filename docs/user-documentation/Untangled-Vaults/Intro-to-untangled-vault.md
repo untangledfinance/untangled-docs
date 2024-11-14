@@ -55,6 +55,8 @@ Untangled Vault is built on Safe, a tokenized vault standard with extensions for
 ## Architecture and work flow
 Untangled Vault is built on Safe, a tokenized vault standard with extensions for a wide range of use cases.
 
+![Untangled_How it works](../img/Untangled-Vault-Architecture.png)
+
 1. A new vault is issued with a new Safe. The multisig wallet can be deployed on multiple chains with the same address, enabling cross-chain execution and asset management.
 2. Using Untangled CLI, the Vault Owner launches a roles contract. Appropriate roles and permissions are set up, including a Manager role granted to a Safe wallet (Manager Safe). With Zodiac Roles (a Safe extension), fine-grained roles and permissions can be established, such as an allowlist of protocols, functions, call parameters, and transaction limits. The roles smart contract is viewable/monitored by anyone and prevents the Manager from any actions that have not been pre-approved, such as withdrawing funds. Roles and permissions are consistent across all Vault Safes (source chain or cross-chain).
 3. Manager Safe can further delegate specific permissions to EOAs (Externally Owned Wallets) controlled by humans or AI Agents to ensure that certain actions can be executed swiftly and safely in response to changes in market conditions.
