@@ -53,7 +53,7 @@ Untangled Vault is built on Safe, a tokenized vault standard with extensions for
 - Fee setting: Function allow an external manager/curator to set and receive fees for their service 
 
 ## Architecture and work flow
-Untangled Vault is built on Safe, a tokenized vault standard with extensions for a wide range of use cases.
+Untangled Vault is built on Safe and the tokenized vault standard with extensions for a wide range of use cases.
 
 ![Untangled_How it works](../img/Untangled-Vault-Architecture.png)
 
