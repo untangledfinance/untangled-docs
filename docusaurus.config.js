@@ -102,7 +102,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "oracleDoc",
             position: "left",
-            label: "Credit Oracle",
+            label: "Credio",
           },
           {
             href: "https://github.com/untangledfinance",
