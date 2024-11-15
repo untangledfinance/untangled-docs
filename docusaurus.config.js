@@ -10,8 +10,8 @@ import rehypeKatex from "rehype-katex";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Untangled Protocol Documentation",
-  tagline: "Institutional-grade RWA credit investment on-chain",
+  title: "Untangled Documentation",
+  tagline: "Institutional-grade credit investment on-chain",
   favicon: "img/small_logo.png",
 
   // Set the production url of your site here
@@ -90,13 +90,13 @@ const config = {
             type: "docSidebar",
             sidebarId: "userDoc",
             position: "left",
-            label: "User Documentation",
+            label: "User Docs",
           },
           {
             type: "docSidebar",
             sidebarId: "devDoc",
             position: "left",
-            label: "Developer Documentation",
+            label: "Developer Docs",
           },
           {
             type: "docSidebar",
