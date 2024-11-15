@@ -2,9 +2,9 @@
 sidebar_position: 0
 ---
 
-# Welcome to Untangled 
+# Introducing Untangled Pool 
 
-Untangled is a RWA credit infrastructure project that facilitates the tokenization, issuance, investment, monitoring, and redemption of RWAs on the blockchain. 
+Untangled Pool is a RWA credit infrastructure project that facilitates the tokenization, issuance, investment, monitoring, and redemption of RWAs on the blockchain. 
 
 Our mission is to bridge the gap between TradFi and DeFi, making private credit, previously accessible only to large financial institutions, available to DeFi investors worldwide in a risk-adjusted manner. By doing so, we enhance access to private credit for DeFi investors and simultaneously broaden financing avenues for the backbones of economic growth—SMEs, providing them with more diverse funding options beyond traditional channels.
 
