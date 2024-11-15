@@ -4,31 +4,38 @@ sidebar_position: 1
 
 # Welcome to Untangled 
 
-Untangled is a RWA credit infrastructure project that facilitates the tokenization, issuance, investment, monitoring, and redemption of RWAs on the blockchain. 
+Untangled Finance build and execute yield strategies through our in-house credit investment management,risk modelling and smart contract capabilities:
 
-Our mission is to bridge the gap between TradFi and DeFi, making private credit, previously accessible only to large financial institutions, available to DeFi investors worldwide in a risk-adjusted manner. By doing so, we enhance access to private credit for DeFi investors and simultaneously broaden financing avenues for the backbones of economic growth—SMEs, providing them with more diverse funding options beyond traditional channels.
+### Proven credit strategies
+Backed by Fasanara Capital, a leading institutional asset manager and a fintech investing pioneer, we specialise in creating on-chain credit and delta-neutral yield strategies involving both RWAs and crypto natives.
 
-## Assets and Structure
+### Superior risk monitoring
 
-Untangled collaborates with financial institutions like Fasanara and has access to over 140 fintech lenders, each vetted and funded through a comprehensive six to eight-month due diligence process. This rigorous evaluation ensures that assets brought on-chain are of institutional quality.
+We transform data on risk, security and protocol incentives, using both quantitative and qualitative methods, into powerful analytics, real-time monitoring and risk oracles, delivering custom risk data and reserve validation via zero-knowledge proof.
 
-Each investment pool is linked to a real-world securitization vehicle based in Luxembourg, a structure that has been established and trusted in TradFi for decades. Assets within the pool are completely ring-fenced from the originator’s balance sheet, enhancing investor security and protection.
+### Robust credit infrastructure
 
-On-chain securitization allows for the pooling of a diverse portfolio of assets—from SME loans to receivables—into structured products that can be segmented according to risk and return profiles. This granularity enables investors to tailor their investments precisely, aligning their risk tolerance and investment objectives with specific segments of an asset pool. 
+We designed and built Untangled Pool, a RWA tokenisation issuance and distribution platform focusing on private credits and Untangled Vault, a non-custodial, automated portfolio management tool for DAO treasuries and institutions.
 
-## Credit Oracle Infrastructure
+## Products
 
-The RWA DeFi sector has experienced a high rate of defaults due to a lack of robust credit risk management and monitoring tools. Untangled is addressing this challenge by pioneering a decentralized Credit Oracle Infrastructure. By leveraging both on-chain and off-chain data, along with zero-knowledge proof technology and AI, this infrastructure delivers real-time credit pricing data. This enhances the ability of protocols and investors to dynamically manage risks. For more information, visit: [RWA Wise](https://rwawise.xyz). 
+Complementary credit infrastructure solutions: Untangled Pool, Untangled Vault and Credio
 
-## Liquidity and Liquidation
+### Untangled Pool
+Tokenization platform focusing on private credits: Short-term assets such as working capital for SMEs or trade finance are tokenized into NFTs, providing collateral backing in a transparent manner.
 
-Version 1 of the Untangled Protocol facilitates redemption through a monthly EPOCH process. Redemption requests are fulfilled from the reserve within the pool, subject to availability and capacity. After the initial subscription period, new investors may occasionally have the opportunity to add liquidity. In specific instances, as detailed in pool-specific documentation, originators may agree to fulfill all or part of the redemption requests, albeit at a cost.
+Investors hold a unitranche, JOT or a senior tranche SOT, according to their risk appetite.
+We work with DAO treasuries and institutions to construct and execute non-custodial credit and yield strategies that safely incorporate both RWAs and bluechip crypto natives to suit investors' risk/return appetite.
 
-In Version 2, Untangled is developing a liquidation mechanism to enhance security and response to asset performance issues. If the quality of assets within a collateral pool deteriorates below a predetermined threshold, a liquidation process is triggered. Relevant collaterals will be auctioned, either on-chain or off-chain, to repay investors. Additionally, when assets are performing well but investors seek to exit for liquidity reasons, the protocol will facilitate an on-chain Dutch auction. This mechanism allows new investors to seamlessly take over the portion exited, ensuring continuity and stability in the investment landscape.
 
-## Invest in Untangled pools 
+### Untangled Vault 
+Non-custodial, data-driven, automated, risk-first portfolio management solution catering for any risk/return appetite by DAO treasuries and institutional investors.
 
-The Untangled protocol is designed for accredited investors, professional investors, and high net-worth individuals. To ensure both accessibility and the integrity of investments, a minimum investment threshold has been established. Prospective investors are required to undergo the Verification Process before they can participate. Once verified, investors gain access to detailed analytics and documentation for specific investment opportunities within the protocol
+Built on tokenized vault and Safe smart account technologies, Untangled Vault attracts liquidity and invests cross-chain in both RWAs and crypto-native yield opportunities.
 
-In the documents that follow, you will find detailed introductions to key concepts of the protocol, user guides, and developer documentation.
+### Credio 
+Risk analytics, simulation and monitoring solution powering both Untangled Pool and Untangled Vault, unlocking real-time risk management delivered through zero-knowledge proof.
 
+Risk oracle feeding machine learning model inferences and custom data points directly to smart contracts in a decentralised, automated and privacy-preserving manner.
+
+In this site we will deep-dive into Untangled Pool and Untangled Vault. Those interested in Credio's technical documentation should go to [Credio Docs](https://docs.credio.network/)
