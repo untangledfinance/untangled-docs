@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Introducing Untangled Vault
 
+We introduce Untangled Vault, a non-custodial, cross-chain portfolio management solution: a data-driven, automated vault designed to attract liquidity and invest in opportunities across any EVM network to match diverse risk/return appetites.
+
 Earlier this year, we launched Untangled Pool, a tokenized private credit platform that bridges institutional-grade assets to DeFi. It enables RWA originators of invoice finance, SME loans, and emerging market credits to access the global capital market via crypto infrastructure.
 
 Tokenized private credit is among the growing yield opportunities in DeFi. However, other yield opportunities also exist, such as over-collateralized lending, liquid staking, restaking, and liquidity provision, all of which are accessible to DeFi investors. The growth of DeFi has attracted TradFi investors to this new asset class as well.
@@ -14,8 +16,6 @@ Investors, regardless of their background—crypto-native or TradFi—often seek
 - Ability to react quickly to fast-changing market conditions and security incidents such as hacks
 - Regulatory compliance, particularly regarding RWAs or TradFi investors
 - Avoidance of principal-agent problems when third parties are advising or managing assets on their behalf
-
-Today, we introduce Untangled Vault, a non-custodial, cross-chain portfolio management solution: a data-driven, automated vault designed to attract liquidity and invest in opportunities across any EVM network to match diverse risk/return appetites.
 
 ## Specifications
 
