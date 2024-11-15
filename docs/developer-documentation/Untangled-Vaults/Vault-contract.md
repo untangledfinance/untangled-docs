@@ -28,25 +28,27 @@ Extensions from ERC4626 include asynchronous withdrawal and retrieving informati
 | tokenInfo         | mapping(address => Investment) | Stores information (balance, price, decimal) of tokens invested by this vault |
 | remoteSafeAddress | mapping(uint => address)       | Stores information of the safe wallet on other chains                     |
 | isTransmitter     | mapping(address => bool)       | Stores information on whether an address is a transmitter contract or not |
-| fulfillment       | mapping(uint256 => uint256)    | Stores the fulfillment percentage of an epoch                            |
+| fulfillment       | mapping(uint256 => uint256)    | Stores the fulfillment percentage of an epoch                             |
 | tokenInvested     | address[]                      | List of tokens invested by this vault                                     |
 
 ## Methods
 
-| Method                   | Type     | Description                                                                                                         |
-| ------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| `deposit`                | external | Deposit liquidity into the vault in exchange for vault shares                                                       |
-| `withdraw`               | external | Request to withdraw liquidity from the pool                                                                        |
-| `claimableRequest`       | view     | View the amount of liquidity available to claim from a withdrawal request                                           |
-| `cancelWithdraw`         | external | Set the withdrawal amount of the corresponding request to 0                                                        |
-| `claimWithdraw`          | external | Claim the amount of liquidity available to claim from a withdrawal request                                          |
-| `totalAssets`            | view     | Return vault liquidity + the value of investments                                                                  |
-| `closeEpoch`             | external | Temporarily disable creating withdrawal requests to snapshot and fulfill `withdrawRequest` in the current epoch     |
-| `fulfillWithdrawRequest` | external | Fulfill all `withdrawRequest` in the current epoch and move to the new epoch                                        |
-| `addAsset`               | external | Add a token to the investment list of the current vault                                                            |
-| `removeToken`               | external | Add a token to the investment list of the current vault                                                            |
-| `addToken`               | external | Add a token to the investment list of the current vault                                                            |
-
-| `totalInvestmentValue`   | view     | Return the total value of all the tokens in the investment list                                                    |
-| `requestTokenInfor`      | external | Create a 2-way cross-chain request for token information on different chains                                       |
-| `getTokenInfor`          | external | Get information of a token within the same chain                                                                  |
+| Method                   | Type     | Description                                                                                                       |
+| ------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------|
+| `deposit`                | external | Deposit liquidity into the vault in exchange for vault shares                                                     |
+| `withdraw`               | external | Request to withdraw liquidity from the pool                                                                       |
+| `claimableRequest`       | view     | View the amount of liquidity available to claim from a withdrawal request                                         |
+| `cancelWithdraw`         | external | Set the withdrawal amount of the corresponding request to 0                                                       |
+| `claimWithdraw`          | external | Claim the amount of liquidity available to claim from a withdrawal request                                        |
+| `totalAssets`            | view     | Return vault liquidity + the value of investments                                                                 |
+| `closeEpoch`             | external | Temporarily disable creating withdrawal requests to snapshot and fulfill `withdrawRequest` in the current epoch   |
+| `fulfillWithdrawRequest` | external | Fulfill all `withdrawRequest` in the current epoch and move to the new epoch                                      |
+| `addAsset`               | external | Add a token to the investment list of the current vault                                                           |
+| `removeAsset`            | external | Remove a token to the investment list of the current vault                                                        |
+| `updateAsset`            | external | Update information (balance, price, decimals) of a token in the portfolio                                         |
+| `setRemoteSafeAddres`    | external | Set the safe wallet to represent the vault to invest on a given chain id                                          |
+| `setCrosschainHook`      | external | Whitelist a cross-chain hook contract to allow user from different chain deposit into the vault                   |
+| `setBeneficiary`         | external | Set the beneficiary of the fee accrued from the vault                                                             |
+| `setFeeIndex`            | external | Set the fee index to calculate fee                                                                                |
+| `claimFee`               | external | Claim the accrued fee to the beneficiary                                                                          |
+| `execute`                | external | Axelar GMP execution function                                                                                     |
