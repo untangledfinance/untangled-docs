@@ -10,10 +10,10 @@ Extensions from ERC4626 include asynchronous withdrawal and retrieving informati
   - At the end of the epoch, the safe wallet will decide the fulfillment percentage of all withdrawal requests in that epoch. 
   - After the epoch is fulfilled, users can call `claimWithdraw` to burn their shares and receive their assets back.
 
-- **Retrieve information cross-chain:**
-  - The safe wallet will create a 2-way GMP call to the transmitter contract at the destination chain.
-  - The transmitter contract will query the information given in the GMP call and send it back to the caller (vault contract).
-  - The vault contract receives and updates the information of the given token.
+- **cross-chain interactions:**
+  - Allow investors to deposit to a Vault that opens on a different chain
+  - Cross-chain state is synchronised by Axelar GMP service.
+
 
 ## Variables
 
@@ -43,7 +43,10 @@ Extensions from ERC4626 include asynchronous withdrawal and retrieving informati
 | `totalAssets`            | view     | Return vault liquidity + the value of investments                                                                  |
 | `closeEpoch`             | external | Temporarily disable creating withdrawal requests to snapshot and fulfill `withdrawRequest` in the current epoch     |
 | `fulfillWithdrawRequest` | external | Fulfill all `withdrawRequest` in the current epoch and move to the new epoch                                        |
+| `addAsset`               | external | Add a token to the investment list of the current vault                                                            |
+| `removeToken`               | external | Add a token to the investment list of the current vault                                                            |
 | `addToken`               | external | Add a token to the investment list of the current vault                                                            |
+
 | `totalInvestmentValue`   | view     | Return the total value of all the tokens in the investment list                                                    |
 | `requestTokenInfor`      | external | Create a 2-way cross-chain request for token information on different chains                                       |
 | `getTokenInfor`          | external | Get information of a token within the same chain                                                                  |
