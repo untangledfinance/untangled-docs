@@ -1,6 +1,6 @@
 
 
-# Installation
+# Untangled Vault Role and Permission CLI
 ## Prerequisite
 
  `node` version must be >= 16;
