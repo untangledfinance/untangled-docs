@@ -136,7 +136,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/UntangledFin",
+                href: "https://twitter.com/UntangledFi",
               },
             ],
           },
