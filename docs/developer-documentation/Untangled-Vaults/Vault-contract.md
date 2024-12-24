@@ -2,7 +2,7 @@
 
 ## Overall Architecture
 
-![Overall architecture](./docs/img/Vault%20Modular%20Architecture.png)
+![Overall architecture](../img/Vault%20Modular%20Architecture.png)
 
 Untangled Vault consists of 2 main parts:
 
