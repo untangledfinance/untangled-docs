@@ -1,4 +1,6 @@
-
+---
+sidebar_position: 2
+---
 
 # Untangled Vault Role and Permission CLI
 ## Prerequisite
