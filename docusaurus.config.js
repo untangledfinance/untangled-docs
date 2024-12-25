@@ -100,7 +100,7 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "OracleDoc",
+            sidebarId: "oracleDoc",
             position: "left",
             label: "Credio",
           },
@@ -136,7 +136,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/UntangledFin",
+                href: "https://twitter.com/UntangledFi",
               },
             ],
           },
