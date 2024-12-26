@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Untangled Vault Role and Permission CLI
+# Roles CLI
 ## Prerequisite
 
  `node` version must be >= 16;
@@ -19,7 +19,7 @@ npm i --save @gnosis-guild/eth-sdk @gnosis-guild/eth-sdk-client zodiac-roles-sdk
 
 ## Configuration 
 
-The next step is to create a config file that lists all the contracts we want to permit calling.
+The next step is to create a config file that lists all the contracts you want to permit calling.
 
 Create a folder named `eth-sdk` in your project root (where your package.json is located). Inside this folder, create a `config.js` file with the following content structure:
 
@@ -57,7 +57,7 @@ This command will fetch the ABIs of the contracts listed in the config file and 
 
 Before you can use any functionality in the CLI, you need to login. Run `npx login` in the terminal to login. 
 
-There're 2 types of account that can be use: EOA and Safe wallet
+There're 2 types of account that can be used: EOA and Safe wallet
 
 With EOA, you will need to enter you private key (with "0x" prefix) 
 
@@ -65,7 +65,7 @@ With Safe wallet, you will need an extra step of entering the safe address. And 
 
 ## Logout 
 
-After using the CLI, we suggested that you should logout.
+After using the CLI, we suggest that you logout.
 
 Run `npx logout` to logout
 
@@ -85,7 +85,7 @@ Demo video: https://jam.dev/c/51116e83-68fa-4d7c-b399-f6db40686427
 
 ### Setup role 
 
-Before you can actually setup the roles with CLI you need to granted the roles for at least one address for it to be appear on the subgraph. Here is how you do it: https://jam.dev/c/2c57eda8-49c5-476f-a353-25239075ae39
+Before you can actually setup the roles with the CLI you need to grant the roles for at least one address for it to appear on the subgraph. Here is how you do it: https://jam.dev/c/2c57eda8-49c5-476f-a353-25239075ae39
 
 Now, the role `CURATOR` has been created, you can use the CLI to setup permissions for this role. 
 
@@ -95,7 +95,7 @@ Demo video: https://jam.dev/c/767a2ffb-fae0-4d61-9d25-d87797a4105c
 
 ### Apply role
 
-This options allow you to apply a given role for a given set of address. You can extend, replace or remove the current members list of this role. 
+This options allows you to apply a given role for a given set of addresses. You can extend, replace or remove the current members list of this role. 
 
 Demo video: https://jam.dev/c/2fab0a61-772a-47b0-8f53-383bbcda2e4d
 
