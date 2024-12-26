@@ -160,3 +160,13 @@ const config = {
 };
 
 export default config;
+
+export default {
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+  },
+};
