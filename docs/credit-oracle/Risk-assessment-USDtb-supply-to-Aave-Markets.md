@@ -1,6 +1,6 @@
 # Ethena USDtb on Aave: Risk and Supply Analysis
 
-## Formular
+## Formula
 
 Illiquidity risk for USDtb on Aave is defined as the risk that borrowers cannot access sufficient liquidity at a competitive borrowing rate. To manage this risk, the amount of USDtb supplied into Aave must be dynamically controlled to ensure:
 
