@@ -2,10 +2,10 @@
 sidebar_position: 3
 ---
 
-# Invest and Withdraw
-## Explore a pool
+# Deposit and Withdraw
+## Explore a vault on Stellar
 
-On [Untangled Finance](https://untangled.finance) you can explore all pools currently open for investment.
+On [Untangled App](https://stellar.untangled.finance) you can explore all strategy vaults currently open for investment.
 
 ![Pool](../img/invest/pool-list.png)
 
