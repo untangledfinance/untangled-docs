@@ -48,7 +48,7 @@ Choose a vault from the list to view its details and to make deposit.
 
 ### View Your Balance
 To view your balance in the vault, click on "Your performance" tab:
-![Portfolio](../img/invest/Untangled-Vault-Your-Performance.png)
+![Your Performance](../img/invest/Stellar-Vault-Your-Performance.png)
 
 ### Withdrawal Process
 If you hold vault share tokens (e.g. USDyc), you have the option to withdraw and claim your capital and earnings. Note that each vault has it own withdrawal epoch. For USDyc, it is maximum 24 hours.
