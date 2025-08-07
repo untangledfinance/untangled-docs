@@ -7,73 +7,42 @@ sidebar_position: 3
 
 On [Untangled App](https://stellar.untangled.finance) you can explore all strategy vaults currently open for investment.
 
-![Pool](../img/invest/pool-list.png)
+![Vault](../img/invest/Stellar-Vault-list.png)
 
-Click on a pool to view its details.
+Click on a vault to view its summary sheet.
 
-![Pool details](../img/invest/pool-details.png)
+![Vault Summary Sheet](../img/invest/Stellar-Vault-Summary-Sheet.png)
 
-:::tip
-Pool collateral data is only visible to verified investors who have completed [the KYI process](./verification-process#our-kyc-process).
-
-![Hidden collateral data](../img/invest/collateral-hidden.png)
-:::
+Apart from the vault's summary information such as active Chain, Deposit Asset, TVL, APY and Age, its summary sheet also show performance charts (PnL, Share Price, Balance and Max Drawdown during the last 7, 30, 90 days.
 
 
+## Select a Vault
 
-## Invest in a Pool
+Choose a vault from the list to view its details and to make deposit.
 
-Please choose a pool from the list to view its details and to make investments in either SOT or JOT tokens.
+### Connect wallet
 
-### Prerequisites
-
-- Ensure your wallet is connected and you've registered your [UID](./verification-process#unique-identity) on the Investor app.
-- The investment capacity for the selected pool is not already filled.
-- Ensure the initial JOT investment requirement is met; note that some pools may necessitate an initial JOT investment before SOT investments are allowed.
-
-### Investment Process
-
-Step 1: Click on "Add Liquidity" on the JOT/SOT that you'd like to make investment.
-![Add liquidity](../img/invest/add-liquid.png)
-
-Step 2: Enter the desired investment amount. 
-The quantity of tokens you receive is contingent upon the current token price. 
-Please note, SOT investment amounts are validated to ensure they comply with the [minimum first loss](../securitization-on-blockchain#minimum-first-loss) and [debt ceiling](../securitization-on-blockchain#debt-ceiling) parameter.
-![Enter investment amount](../img/invest/enter-investment-amount.png)
-
-Step 3: Read and confirm the signing terms & conditions.
-
-Click on the "signing terms & conditions" to read and confirm your agreement before you can move on.
-
-![Signing terms and conditions](../img/invest/signing-terms-and-conditions.png)
-
-![Confirm Signing terms and conditions](../img/invest/signing-terms-and-conditions-full.png)
+- On Stellar we support [Freighter wallet](https://chromewebstore.google.com/detail/freighter/bcacfldlkkdogcmkkibnjlakofdplcbk?hl=en). You might need to download the Chrome extension and complete the account opening and funding process before connecting the wallet to the app
 
 
-Step 3: Sign the note subscription agreement.
-Please read carefully and sign the note subscription agreement to continue.
-![Preview](../img/invest/preview-1.png)
-![Sign subscription agreement](../img/invest/sign-subscription-agreement.png)
 
-:::tip
-When you have already signed the note token subscription agreement, you are not required to sign the subscription when invest in the note token again, unless the agreement is updated by the Issuer.
-:::
+- Connect your wallet   
+<p align="center">
+  <img src="../img/invest/Stellar-vault-Freighter.png" alt="Freighter Wallet" width="400"/>
+</p>
 
-Step 4: Approve the investment amount to be transferred from your wallet by Untangled smart contract.
-Please ensure you have some USDC as gas fee for the transaction.
-![Approve spent amount](../img/invest/preview-2.png)
 
-:::tip
-This step will be skipped if you have already approved the greater amount than the investement amount.
-:::
+### Deposit 
+- The investment capacity for the selected vault is not already filled.
+![Connect Wallet](../img/invest/Stellar-Vault-Connect-Wallet.png)
 
-Step 5: Review and confirm your investment.
-Please ensure you have some USDC as gas fee for the transaction.
-![Confirm](../img/invest/confirm-investment.png)
+- Enter the amount you would like to deposit in the deposit box
+  ![Connect Wallet](../img/invest/Stellar-Vault-Deposit.png)
 
-:::tip
-Once you have invested successfully, you can import the contract address of the pool's note token and verify its balance in your wallet.
-:::
+- Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit  
+<p align="center">
+  <img src="../img/invest/Stellar-vault-Freighter.png" alt="Freighter Wallet" width="400"/>
+</p>
 
 ## Manage Your Portfolio
 
