@@ -41,40 +41,21 @@ Choose a vault from the list to view its details and to make deposit.
 
 - Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit  
 <p align="center">
-  <img src="../img/invest/Stellar-vault-Freighter.png" alt="Freighter Wallet" width="400"/>
+  <img src="../img/invest/Stellar-Vault-Freighter-Signing.png" alt="Freighter Wallet Signing" width="400"/>
 </p>
 
 ## Manage Your Portfolio
 
-### View Your Investments
-View all your investments on Untangled via the Investor app's Portfolio section.
-![Portfolio](../img/invest/portfolio.png)
+### View Your Balance
+To view your balance in the vault, click on "Your performance" tab:
+![Portfolio](../img/invest/Untangled-Vault-Your-Performance.png)
 
 ### Withdrawal Process
-If you hold pool note tokens (JOT or SOT), you have the option to withdraw and reclaim your capital and earnings.
+If you hold vault share tokens (e.g. USDyc), you have the option to withdraw and claim your capital and earnings. Note that each vault has it own withdrawal epoch. For USDyc, it is maximum 24 hours.
 
+Step 1: Make withdrawal request
+Navigate to a vault's page, click on the "Withdraw" tab, enter the withdrawal amount and approve and submit your withdrawal request.
+![Withdraw](../img/invest/Stellar-Vault-Withdraw.png)
 
-Step 1: From your Portfolio, select the investment you wish to withdraw. Alternatively, from a pool's page, click on the "Withdraw" option for pool notes.
-![Withdraw](../img/invest/withdrawal-trigger-1.png)
-
-Step 2: Enter the withdrawal amount.
-![Enter amount](../img/invest/enter-withdrawal-amount.png)
-
-Step 3: Approve and submit your withdrawal request.
-The withdrawal is submitted and will be executed automatically when the [epoch](../securitization-on-blockchain#epoch) ends.
-
-![Approve](../img/invest/approve-withdrawal.png)
-
-:::tip
-You can make only 01 withdrawal request for each pool note token.
-If you want to change the withdrawal request, please cancel the existing one and create another request.
-:::
-
-Step 4: Manage your withdrawal requests
-All you withdrawal requests can be found under the tab Withdraw.
-![Withdraw](../img/invest/withdraw-list.png)
-
-It may take several epochs until your withdrawal is fully paid, based on the pool reserve.
-Unfulfilled withdrawal amount will be rolled over to the next epoch until it is fully paid, or cancelled by the Investor.
-
-![Cancel Withdrawal](../img/invest/cancel-withdrawal.png)
+Step 2: Manage your withdrawal requests
+You can cancel your withdraw request any time up until the epoch close. After the epoch is open again, you will be able to see the available liquidity ready for withdrawal. You can click claim to move the liquidity to your wallet
