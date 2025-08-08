@@ -1,4 +1,4 @@
-Restaking Vault Strategy
+# Restaking Vault Strategy
 
 The vault targets high-yield opportunities, including “slashable” networks that offer higher returns but risk collateral loss, and safer, non-slashable networks with lower yields. Key objectives include:
 
