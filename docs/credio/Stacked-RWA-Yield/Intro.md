@@ -1,5 +1,13 @@
+---
+sidebar_position: 2
+---
 
 # Boosting RWA returns with delta-neutral yield stacking strategy
+
+<p align="center">
+  <img src="../img/Untangled-Symbiotic-OETH.png" alt="Symbiotic Restaking" width="800"/>
+</p>
+
 
 Untangled has launched the first levered, delta-neutral RWA vault. The strategy allows tokenized money market fund, private credit and other RWA holders to unlock additional returns via DeFi-native, delta-neutral yield sources. Further, liquidity providers could supply USDC directly to earn institutional-grade, uncorrelated yield through Untangled app, fintech wallets or lending vaults.
 
