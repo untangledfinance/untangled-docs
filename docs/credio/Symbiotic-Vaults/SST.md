@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Future development - Synthetic Stake Token
 
 Ethereum blockchain has just one single stake token - ETH - but a network on Symbiotic has to deal with multiple delegated collaterals, making it complex for optimisation. This vault will change that. Untangled Credio x OETH Vault brings risk-adjusted restaking yield to OETH deposits with a novel mechanism to abstract all collateral delegations to a network into a single token - Synthetic Stake Token - enabling new opportunities for networks and stakers to optimize risk/reward.
