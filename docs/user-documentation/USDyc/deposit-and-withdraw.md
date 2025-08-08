@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Deposit and Withdraw
+# How to Supply
 ## Explore a vault on Stellar
 
 On [Untangled App](https://stellar.untangled.finance) you can explore all strategy vaults currently open for investment.
