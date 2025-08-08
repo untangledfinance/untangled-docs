@@ -1,11 +1,6 @@
 Untangled Credio OETH Vault on Symbiotic
 
-0x245eB1c385798A07c8b6df8Ee22b7bE6E1e97313
-Untangled
-0x245e
-May 16th, 2025
 
-Mint
 Curation Strategy for Restaking Vaults on Symbiotic
 
 Introduction
@@ -14,6 +9,10 @@ Untangled Credio is launching an OETH restaking vault on Symbiotic, a protocol e
 You could access the vault here:  Untangled Credio x OETH Vault 
 
 Restaking primer
+<p align="center">
+  <img src="../img/Restaking-primer.png" alt="Restaking Primer" width="800"/>
+</p>
+
 Since the launch in June 2023, restaking has rapidly evolved into a fully-fledged competitive sector. Restaking protocols like Eigen Layer, Symbiotic and Karak allow users to leverage Ethereum’s security by restaking their ETH and liquid staking tokens (LSTs) across multiple decentralized services (or networks).
 
 
@@ -21,6 +20,9 @@ Operators (or Actively Validated Services/AVSs) are essential in the restaking e
 
 Overview of Symbiotic
 Symbiotic provides a modular and flexible framework for restaking:
+<p align="center">
+  <img src="../img/Stellar-Vault-Freighter-Signing.png" alt="Freighter Wallet Signing" width="400"/>
+</p>
 
 Vaults (with curator) delegate any collaterals (ERC20) to networks via operators with one of the following models: (1) Multiple networks, multiple operators (2) Multiple networks, single operator (3)Single network, multiple operators and (4) Single network, single operator
 Single-token vaults comprise mainly of ETH/ETH derivatives, wBTC and some yielding stablecoins. Thus most of the collaterals are volatile.
