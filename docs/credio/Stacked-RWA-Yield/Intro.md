@@ -5,7 +5,7 @@ sidebar_position: 2
 # Boosting RWA returns with delta-neutral yield stacking strategy
 
 <p align="center">
-  <img src="../img/Untangled-Symbiotic-OETH.png" alt="Symbiotic Restaking" width="800"/>
+  <img src="../img/usdn.untangled.finance-USDn2.png" alt="RWA Staking Vault " width="1050"/>
 </p>
 
 
