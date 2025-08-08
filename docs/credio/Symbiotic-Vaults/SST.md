@@ -21,7 +21,7 @@ We propose Synthetic Stake Token (SST) to abstract all collateral delegations in
 ## How it works
 
 <p align="center">
-  <img src="../img/SST.png" alt="SST" width="800"/>
+  <img src="../img/SST.png" alt="SST" width="600"/>
 </p>
 
 - Operators stake into networks and receive SST, representing their share of the network’s total delegated stakes.
