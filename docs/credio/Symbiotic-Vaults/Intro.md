@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 
 # Untangled Credio OETH Vault on Symbiotic
 
