@@ -19,7 +19,7 @@ Operators (or Actively Validated Services/AVSs) are essential in the restaking e
 ## Overview of Symbiotic
 Symbiotic provides a modular and flexible framework for restaking:
 <p align="center">
-  <img src="../img/Untangled-Symbiotic-OETH.png" alt="Symbiotic Restaking" width="800"/>
+  <img src="../img/Group-1171274996.svg" alt="Symbiotic Restaking" width="800"/>
 </p>
 
 Vaults (with curator) delegate any collaterals (ERC20) to networks via operators with one of the following models: 
