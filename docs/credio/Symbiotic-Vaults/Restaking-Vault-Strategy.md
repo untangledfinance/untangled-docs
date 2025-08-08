@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Restaking Vault Strategy
 
 <p align="center">
