@@ -22,3 +22,5 @@ Beyond direct redemption, both USDn and sRWA tokens are composable across DeFi, 
 
 ### Any time, Any Network 
 Liquidity providers can access directly via our apps or your trusted fintech apps, or via your existing vault curators 
+
+This strategy USDn2 is live on Arbitrum mainnet. You can access it [here](https://app.untangled.finance/USDn2/42161).
