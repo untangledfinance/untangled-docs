@@ -14,7 +14,7 @@ Performance resilience across market cycles
 A representative implementation is the **Hedged Liquidity Pool Model**:
 
 <p align="center">
-  <img src="../img/Hedge-LP-Shares.png" alt="DHedge-LP-Shares" width="600"/>
+  <img src={require("../img/Hedge-LP-Shares.png").default} alt="DHedge-LP-Shares" width="600"/>
 </p>
 
 - LPs deposit into a perp exchange liquidity pool (e.g., JLP on Jupiter)

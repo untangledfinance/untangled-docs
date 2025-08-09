@@ -5,7 +5,7 @@ sidebar_position: 2
 # Restaking Vault Strategy
 
 <p align="center">
-  <img src="../img/Untangled-Symbiotic-OETH.png" alt="Symbiotic Restaking" width="800"/>
+  <img src={require("../img/Untangled-Symbiotic-OETH.png").default} alt="Symbiotic Restaking" width="800"/>
 </p>
 
 The vault targets high-yield opportunities, including “slashable” networks that offer higher returns but risk collateral loss, and safer, non-slashable networks with lower yields. Key objectives include:

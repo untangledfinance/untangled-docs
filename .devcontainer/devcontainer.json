@@ -1,4 +1,8 @@
 {
+  "runArgs": [
+    "--init",
+    "--network=host"
+  ],
   "build": {
     "context": ".",
     "dockerfile": "Dockerfile",
