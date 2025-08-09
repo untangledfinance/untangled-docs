@@ -7,6 +7,6 @@ To be able to use Untangled, you need to connect your wallet to the platform. We
  ![Untangled_How it works](../img/Connect-wallet.png)
 3. Select the wallet of your choice
 
-<img src="../img/Connect-to-a-wallet.png" alt="Untangled_How it works" width="500" />
+<img src="../../user-documentation/img/Connect-to-a-wallet.png" alt="Untangled_How it works" width="500" />
 
 4. Choose a wallet address, if you have many, and proceed to connect your wallet.
