@@ -9,7 +9,7 @@ Untangled USDyc has a wide variety of applicable use cases for crypto-native and
 
 - L1 & L2 Ecosystems: Blockchains looking to bootstrap their DeFi ecosystem by offering native yield opportunities.
 
-- Wallet Providers & Exchanges: Platforms with existing crypto-native user bases can integrate USDyc to offer their users seamless access to yield strategies directly within their familiar interface, enhancing user retention and engagement.
+- Wallet Providers & Exchanges: enables users of fintech and wallet apps can earn passive returns from their idle stablecoin balances, right in their apps.
 
 - RWA (Real-World Asset) Issuers & Platforms: Entities tokenizing real-world assets can partner with Untangled to create yield-bearing products that combine RWAs with DeFi-native strategies. See our RWA stacked yield strategy.
 
