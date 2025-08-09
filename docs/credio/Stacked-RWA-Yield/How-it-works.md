@@ -14,3 +14,7 @@ sidebar_position: 2
 <p align="center">
   <img src="../img/RWA-stacked-yield-strategy.png" alt="RWA Stacking" width="1050"/>
 </p>
+
+Credio, Untangled’s curation service, acts as a curator on both isolated lending markets and USDn2. Credio employs a proprietary optimisation engine to monitor and rebalance allocations among whitelisted markets. This strategy aims to earn a minimum yield equivalent to what lending protocols like Aave offer. During bull market cycles, the vault allocates more to perps to take advantage of high funding rates. In a market downturn, the vault allocates more to stable return options like Aave or RWAs.
+
+USDn2 is live on Arbitrum mainnet. You can access it [here](https://app.untangled.finance/USDn2/42161).
