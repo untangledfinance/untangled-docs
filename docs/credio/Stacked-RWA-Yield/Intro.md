@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Boosting RWA returns with delta-neutral yield stacking strategy
