@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Here we summarize how Untangled protocol works.
 
-![Untangled_How it works](../img/Untangled_How-it-works.png)
+![Untangled_How it works](../../user-documentation/img/Untangled_How-it-works.png)
 
 
 ## Participants
