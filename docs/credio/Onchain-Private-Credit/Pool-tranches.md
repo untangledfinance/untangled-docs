@@ -25,7 +25,7 @@ JOT is the first loss capital in a specific pool. First loss capital is a safety
 A pool might have a single token JOT (first loss ratio is 100%). This is also referred to as unitranche pool/unitranche token. All token holders in the pool receive a pro rata share of the pool value in case of default. 
 
 ## Cash flow waterfall
-![Cash flow waterfall](../img/waterfall.png)
+![Cash flow waterfall](../../user-documentation/img/waterfall.png)
 
 ### Tranched pool
 Tranched pools consists of both SOT and JOT tokens. Income from the tranched pool asset will first be accrued to SOT holders at a fixed rate. Any remaining income will go towards JOT investors. If a pool suffers losses from its assets the losses will first be absorbed by JOT tranche before SOT tranche being affected. This is referred to as `cash flow waterfall`, a proven structure in TradFi.
