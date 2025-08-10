@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # From NAV to token price
 
-![Untangled_How it works](../img/Untangled_How-it-works.png)
+![Untangled_How it works](../../user-documentation/img/Untangled_How-it-works.png)
 
 When a pool is just launched, tranche tokens SOT and JOT start at a price of \$1. When investors supply liquidity, they will receive SOT or JOT tokens minted, and their stablecoins will be deposited into the pool's capital reserve. If the capital is not deployed, no income will be accrued, and the token price will remain at $1. Thus, investors will not earn anything, a situation referred to as "cash drag."
 
