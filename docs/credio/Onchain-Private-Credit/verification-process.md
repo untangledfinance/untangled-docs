@@ -29,6 +29,7 @@ Remember, you can switch your connected wallet anytime. However, each new wallet
 ### Individual Onboarding Flow 
 **Step 1 Link wallet**
 ![Link wallet](../img/kyc/link-wallet.png)
+![Link wallet](../../img/kyc/link-wallet.png)
 
 Please sign with your wallet address to continue.
 ![Wallet sign](../img/kyc/wallet-sign.png)
