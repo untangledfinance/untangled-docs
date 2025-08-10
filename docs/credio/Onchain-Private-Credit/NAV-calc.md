@@ -42,7 +42,7 @@ Adding up the present values of the risk-adjusted expected cash flows for all fi
 ## Risk scorecard
 The risk scorecard will be used for on-going Net Asset Value Calculation (NAV Calc). 
 
-![Pool](../img/Risk-scorecard.png)
+![Pool](../../user-documentation/img/Risk-scorecard.png)
 
 
 
