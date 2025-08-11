@@ -154,5 +154,5 @@ Once approved, you will be able to generate the Identity Passport, which will al
 As an Individual or Entity investor, if you're seeing this screen, congratulations! You're verified and can now mint your UID at no extra charge from Untangled. Remember, while minting is free, you'll need to cover a small amount of the network’s gas fee, so ensure you have enough CELO/USDC  in your wallet for the transaction.
 ![UID minted txn](../../user-documentation/img/kyc/uid-minted.png)
 Once your UID is minted, you can now explore pools and make your first investment!
-![UID Minted](../img/kyc/status-3.png)
+![UID Minted](../../user-documentation/img/kyc/status-3.png)
 
