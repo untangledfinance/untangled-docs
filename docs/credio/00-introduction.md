@@ -1,4 +1,4 @@
-## Credio Risk Curation
+# Credio Risk Curation
 
 Credio is a risk curator and credit oracle provider. With our proprietary, automated risk and optimization engines we provide curation service focusing on the following strategies: 
 
