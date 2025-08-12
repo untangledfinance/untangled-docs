@@ -2,7 +2,7 @@
 id: welcome-to-untangled
 title: Welcome to Untangled
 sidebar_label: Welcome
-description: Start here for an overview and quick links to key Untangled docs.
+description: Start here for an overview and quick links to key Untangled docs and resources.
 ---
 
 import Link from '@docusaurus/Link';
@@ -10,9 +10,11 @@ import styles from './cards.module.css';
 
 # Welcome to Untangled
 
-Kick off with the essentials, then dive into product docs, user guides, and technical architecture.
+Kick off with the essentials, then explore yield strategies, curation tools, developer resources, and our story.
 
-## Getting Started
+---
+
+## Get Started
 
 <div className={styles.cardGrid}>
 
@@ -21,121 +23,118 @@ Kick off with the essentials, then dive into product docs, user guides, and tech
     <p>High-level overview of the platform, components, and how it all fits together.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/user-documentation/quickstart">
-    <h3>Quick Start</h3>
-    <p>Create a wallet, connect, deposit, and withdraw—end to end in minutes.</p>
+  <Link className={styles.card} to="https://app.untangled.finance" target="_blank" rel="noopener noreferrer">
+    <h3>Untangled App (EVM)</h3>
+    <p>Access our EVM-based yield and vault products.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/user-documentation/wallets">
-    <h3>Wallet Setup</h3>
-    <p>Freighter, MetaMask, and multi-sig (Safe) basics.</p>
+  <Link className={styles.card} to="https://stellar.untangled.finance" target="_blank" rel="noopener noreferrer">
+    <h3>Untangled App (Stellar)</h3>
+    <p>Access our Stellar-based yield and vault products.</p>
+  </Link>
+
+  <Link className={styles.card} to="https://curator.untangled.finance" target="_blank" rel="noopener noreferrer">
+    <h3>Vault Curator (EVM)</h3>
+    <p>Create, manage, and monitor vaults on EVM.</p>
+  </Link>
+
+  <Link className={styles.card} to="https://curator-stellar.untangled.finance" target="_blank" rel="noopener noreferrer">
+    <h3>Vault Curator (Stellar)</h3>
+    <p>Create, manage, and monitor vaults on Stellar.</p>
   </Link>
 
 </div>
 
-## Products
+---
+
+## Earn
 
 <div className={styles.cardGrid}>
 
-  <Link className={styles.card} to="/docs/category/usdyc">
+  <Link className={styles.card} to="/docs/credio/01-USDyc/">
     <h3>USDyc</h3>
     <p>Ultra-Short Duration yield coin—mechanics, risks, and strategies.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/category/usdn">
+  <Link className={styles.card} to="/docs/credio/02-USDn/">
     <h3>USDn</h3>
-    <p>Delta-neutral yield token (overview, parameters, FAQs).</p>
+    <p>Delta-neutral yield token—overview, parameters, and FAQs.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/user-documentation/Onchain-Private-Credit">
-    <h3>Onchain Private Credit</h3>
-    <p>How private credit portfolios are structured and risk-managed on-chain.</p>
+  <Link className={styles.card} to="/docs/credio/03-Stacked-RWA-Yield/">
+    <h3>Stacked Yield RWA</h3>
+    <p>RWA-based structured yields with stacking strategies.</p>
+  </Link>
+
+  <Link className={styles.card} to="/docs/credio/04-Symbiotic-Vaults/">
+    <h3>Symbiotic Vaults</h3>
+    <p>Stake and restake strategies built on Symbiotic protocol.</p>
+  </Link>
+
+  <Link className={styles.card} to="/docs/credio/05-Drift-Vaults/">
+    <h3>Drift Vaults</h3>
+    <p>Delta-neutral vaults on Drift exchange.</p>
   </Link>
 
 </div>
 
-## User Guides
+---
+
+## Curate
 
 <div className={styles.cardGrid}>
 
-  <Link className={styles.card} to="/docs/user-documentation/Untangled-Pools/invest-and-withdraw">
-    <h3>Invest & Withdraw</h3>
-    <p>Step-by-step flows, fees, and settlement timelines.</p>
+  <Link className={styles.card} to="/docs/user-documentation/Curate/create-stellar-vault">
+    <h3>Curate on Stellar</h3>
+    <p>Create and manage credit vaults on Stellar.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/user-documentation/kyc-aml">
-    <h3>KYC / AML</h3>
-    <p>Verification process, supported regions, and troubleshooting.</p>
-  </Link>
-
-  <Link className={styles.card} to="/docs/user-documentation/wallet-security">
-    <h3>Security Basics</h3>
-    <p>Best practices for keys, approvals, and multisig operations.</p>
+  <Link className={styles.card} to="/docs/user-documentation/Curate/create-evm-vault">
+    <h3>Curate on EVM</h3>
+    <p>Create and manage credit vaults on EVM.</p>
   </Link>
 
 </div>
 
-## Technical Docs
+---
+
+## Resources
 
 <div className={styles.cardGrid}>
 
-  <Link className={styles.card} to="/docs/credio/overview">
-    <h3>Credio Risk Oracle</h3>
-    <p>Architecture, data pipeline, model provenance (ZK), and on-chain feeds.</p>
+  <Link className={styles.card} to="/docs/developer-documentation/Untangled-Vaults/Deployment">
+    <h3>Addresses</h3>
+    <p>Official deployment addresses for Untangled Vaults.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/credio/Onchain-Private-Credit">
-    <h3>Credit Vaults</h3>
-    <p>Vault design (ERC-4626), epochs, rebalancing, and Safe integrations.</p>
+  <Link className={styles.card} to="/docs/developer-documentation/Untangled-Vaults/">
+    <h3>Developer Docs</h3>
+    <p>Integration guides, SDK usage, and smart contract references.</p>
   </Link>
 
-  <Link className={styles.card} to="/docs/developer/integrations">
-    <h3>Integrations</h3>
-    <p>SDK/API, supported chains (EVM & Stellar), and reference examples.</p>
+  <Link className={styles.card} to="/docs/developer-documentation/Untangled-Vaults/Security">
+    <h3>Audits</h3>
+    <p>Security audits and findings for Untangled smart contracts.</p>
   </Link>
 
-</div>
-
-## Operations & Risk
-
-<div className={styles.cardGrid}>
-
-  <Link className={styles.card} to="/docs/risk/overview">
-    <h3>Risk Framework</h3>
-    <p>Market, credit, liquidity, and protocol risk methodologies.</p>
-  </Link>
-
-  <Link className={styles.card} to="/docs/risk/monitoring">
-    <h3>Monitoring & Alerts</h3>
-    <p>What we track (funding, leverage, PoR), thresholds, and responses.</p>
-  </Link>
-
-  <Link className={styles.card} to="/docs/operations/fees-and-costs">
-    <h3>Fees & Costs</h3>
-    <p>Vault fees, network fees, and cost optimization.</p>
+  <Link className={styles.card} to="https://mirror.xyz/untangledcredio.eth" target="_blank" rel="noopener noreferrer">
+    <h3>Research</h3>
+    <p>DeFi and RWA research, strategy deep dives, and thought leadership.</p>
   </Link>
 
 </div>
 
-## Help & Support
+---
 
-<div className={styles.cardGrid}>
+## About Untangled
 
-  <Link className={styles.card} to="/docs/user-documentation/faq">
-    <h3>FAQ</h3>
-    <p>Common questions on deposits, withdrawals, risks, and integrations.</p>
-  </Link>
+Untangled Finance builds and executes yield strategies through our in-house credit investment management, risk modelling, and smart contract capabilities.
 
-  <Link className={styles.card} to="/docs/user-documentation/troubleshooting">
-    <h3>Troubleshooting</h3>
-    <p>Wallet connections, KYC hiccups, and transaction failures.</p>
-  </Link>
+### Proven credit strategies
+Backed by **Fasanara Capital**, a leading institutional asset manager and fintech investing pioneer, we specialise in creating on-chain credit and delta-neutral yield strategies involving both RWAs and crypto natives.
 
-  <Link className={styles.card} to="/docs/user-documentation/contact-support">
-    <h3>Contact Support</h3>
-    <p>How to reach us and what info to include for fast resolution.</p>
-  </Link>
+### Superior risk monitoring
+We transform data on risk, security, and protocol incentives, using both quantitative and qualitative methods, into powerful analytics, real-time monitoring, and risk oracles—delivering custom risk data and reserve validation via zero-knowledge proof.
 
-</div>
-
-> 🔎 **Note:** If any paths differ in your repo, just adjust each card’s `to` prop to the correct route. The styling will remain intact.
+### Robust credit infrastructure
+We designed and built **Untangled Pool**, a RWA tokenisation issuance and distribution platform focusing on private credits, and **Untangled Vault**, a non-custodial, automated portfolio management tool for DAO treasuries and institutions.
