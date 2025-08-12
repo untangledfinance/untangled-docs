@@ -26,9 +26,9 @@ Choose a vault from the list to view its details and to make deposit.
 
 
 
-- Connect your wallet   
+- Connect your wallet
 <p align="center">
-  <img src={require("../img/Stellar-vault-Freighter.png").default} alt="Freighter Wallet" width="400"/>
+  <img src="../../credio/img/Stellar-vault-Freighter.png" alt="Freighter Wallet" width="400"/>
 </p>
 
 
@@ -40,8 +40,9 @@ Choose a vault from the list to view its details and to make deposit.
   ![Connect Wallet](../../credio/img/Stellar-Vault-Deposit.png)
 
 - Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit  
+
 <p align="center">
-  <img src={require("../../credio/img/Stellar-Vault-Freighter-Signing.png").default} alt="Freighter Wallet Signing" width="400"/>
+  <img src="../../credio/img/Stellar-Vault-Freighter-Signing.png" alt="Freighter Wallet Signing" width="400"/>
 </p>
 
 ## Manage Your Portfolio
