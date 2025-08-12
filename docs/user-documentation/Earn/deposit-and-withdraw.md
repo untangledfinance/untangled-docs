@@ -15,7 +15,6 @@ Click on a vault to view its summary sheet.
 
 Apart from the vault's summary information such as active Chain, Deposit Asset, TVL, APY and Age, its summary sheet also show performance charts (PnL, Share Price, Balance and Max Drawdown during the last 7, 30, 90 days.
 
-
 ## Select a Vault
 
 Choose a vault from the list to view its details and to make deposit.
@@ -24,13 +23,7 @@ Choose a vault from the list to view its details and to make deposit.
 
 - On Stellar we support [Freighter wallet](https://chromewebstore.google.com/detail/freighter/bcacfldlkkdogcmkkibnjlakofdplcbk?hl=en). You might need to download the Chrome extension and complete the account opening and funding process before connecting the wallet to the app
 
-
-
 - Connect your wallet
-<p align="center">
-  <img src="/img/Stellar-vault-Freighter.png" alt="Freighter Wallet" width="400"/>
-</p>
-
 
 ### Deposit 
 - The investment capacity for the selected vault is not already filled.
@@ -40,10 +33,6 @@ Choose a vault from the list to view its details and to make deposit.
   ![Connect Wallet](../../credio/img/Stellar-Vault-Deposit.png)
 
 - Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit  
-
-<p align="center">
-  <img src="/img/Stellar-Vault-Freighter-Signing.png" alt="Freighter Wallet Signing" width="400"/>
-</p>
 
 ## Manage Your Portfolio
 
