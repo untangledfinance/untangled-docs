@@ -11,7 +11,7 @@ On [Untangled App](https://stellar.untangled.finance) you can explore all strate
 
 Click on a vault to view its summary sheet.
 
-![Vault Summary Sheet](../img/Stellar-Vault-Summary-Sheet.png)
+![Vault Summary Sheet](../../credio/img/Stellar-Vault-Summary-Sheet.png)
 
 Apart from the vault's summary information such as active Chain, Deposit Asset, TVL, APY and Age, its summary sheet also show performance charts (PnL, Share Price, Balance and Max Drawdown during the last 7, 30, 90 days.
 
