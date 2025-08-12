@@ -1,33 +1,16 @@
+## Credio Risk Curation
 
-# Introduction to Credio
-Untangled is developing Credio, a real-time credit oracle powering on-chain lending with AI-driven risk models and zero-knowledge proof. We build Untangled on the conviction that much of RWA financing will be tokenized requiring robust credit infrastructure to scale. The credit oracle is a major missing piece in RWA DeFi today.
+Credio is a risk curator and credit oracle provider. With our proprietary, automated risk and optimization engines we provide curation service focusing on the following strategies: 
 
-## Health factor in DeFi lending
-In any collateralised lending, it is important to establish the price of collaterals as it directly impacts the recoverability of the loan. This is the concept of collateral ratio (value of collateral / loan amount). When collateral ratio drops to a certain level, say from 150% to 110%, collateral will be liquidated and the proceeds being used to repay the loan. 
+## Real World Assets
+Particular focus on treasury/money markets and private credits - We build tokenization engine, machine learning risk model and credit oracles to onchain RWA markets. We also enable RWA holders to earn more through leverred and delta-neutral strategies ([Read more](https://mirror.xyz/untangledcredio.eth/Mp247txuTxBamgkcXWXnjEzNO6ae8RyiwP9ifhlhm3I)). We are curators on a number of lending protocols.
 
-All major DeFi lending protocols like Aave, Compound, Maker work in this way. However, in order to work out the collateral ratio, they need to know the current price of collateral. This is where price oracles such as Chainlink comes in. In the case of Chainlink, they provide price feed on a real-time basis so that the protocols can maintain their financial health through the monitoring of the collateral ratio. 
+Partnership with Moody’s: Credio completed a project with Moody’s, a global rating agency, on bringing credit ratings onchain through Credio’s credit oracle service ([Read annoucement](https://credio.network/posts/2025-03-18-Moody's-issuing-blockchain-based-credit-ratings))
 
-The above protocols have one thing in common: their collaterals are crypto-native i.e. ETH or BTC. Whilst the collateral themselves are volatile in prices, there are deep markets for them, making prices highly observable. 
+## Delta neutral/leverage strategy
+Adviser to Ethena: Credio is a member of risk committee advising on proposal on protocol integration and back assets for both USDe and USDtb (new stable coin).
 
-## Current stage of RWA collateral monitoring
-RWA lending protocols, like the above, also need to monitor their health through the collateral ratios. However, the difference is that RWAs, while less volatile, do not have on-chain or secondary markets where prices can be easily observed. 
+## Restaking 
+Manage vaults on Symbiotic: We are a risk curator for symbiotic vaults. Our first vault uses Origin Protocol’s OETH as a delegated stake for shared economic security. Read about our staking vault strategy [here](https://mirror.xyz/untangledcredio.eth/z4TnJ7rXNky31mWR68TmD5dFg9zwi_WVgO8Q4XxoFEY) 
 
-So if these proctocols want to value collaterals they need to use a ‘fair value’ approach based on credit modeling using statistical or machine learning approaches. These models generate ‘prices’ (or probability of default) for the credit collaterals which could then be fed into the collateral ratio above.  
-
-The issue is that not many RWA lending protocols do or have the ability to value and monitor these RWA collaterals. The lack of collateral monitoring and pricing is a major contributing factor many defaults among many RWA pools to date. 
-
-## Credit modeling 
-In TradFi, the credit modeling or rating function is performed by rating agencies such as Moody’s, S&P and Fitch. Any public debt issuance will need to have a credit rating. In DeFi this is non-existent. 
-
-A number of players have started to provide credit rating, modeling in DeFi. Untangled also build a machine learning based credit modeling capability that is providing credit prices for credit pools listing on Untangled protocol. This is a differentiation among existing RWA credit offerings in DeFi. 
-
-Read more about our work on credit modelling at [Credio.network](https://credio.network/)
-
-## Credit oracle
-Just like Chainlink is not the only source of crypto pricing, Untangled is decentralizing the credit modeling/pricing such that anyone with expertise in specific asset classes or the big rating agencies of the world can provide credit prices for RWA lending protocols. In order to feed those credit prices into smart contracts, an infrastructure layer needs to be developed. Where Chainlink builds an infrastructure for feeding crypto prices, Untangled build an credit oracle infrastructure to feed credit prices directly into smart contracts in real-time. 
-
-![](./img/credit-oracle.png)
-
-Untangled also works on Proof of Reserve which can be combined with Credit Oracle. With this bundled solution, RWA lending protocols not only know the *price* of the RWA collaterals but also their *existence*. 
-
-The lack of on-chain monitoring a system validating the existence of the collateral and their prices was what stopped Maker in lending to private credits RWAs but to focus on US treasuries instead. 
+Credio is a service of Untangled Finance, a yield/credit infrastructure developer backed by Fasanara Capital, an UK-based institutional asset manager managing $4.5bn private credit exposures through a network of 140 originators across 60 countries. 
