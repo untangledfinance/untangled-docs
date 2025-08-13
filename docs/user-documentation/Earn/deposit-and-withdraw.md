@@ -3,9 +3,9 @@ sidebar_position: 1
 ---
 
 # How to Supply
-## Explore a vault on Stellar
+## Explore a vault
 
-On [Untangled App](https://stellar.untangled.finance) you can explore all strategy vaults currently open for investment.
+On [Untangled Stellar App](https://stellar.untangled.finance) or (Untangled EVM App)[https://app.untangled.finance] you can explore all strategy vaults currently open for investment.
 
 ![Vault](../../credio/img/Stellar-Vault-list.png)
 
@@ -23,6 +23,8 @@ Choose a vault from the list to view its details and to make deposit.
 
 - On Stellar we support [Freighter wallet](https://chromewebstore.google.com/detail/freighter/bcacfldlkkdogcmkkibnjlakofdplcbk?hl=en). You might need to download the Chrome extension and complete the account opening and funding process before connecting the wallet to the app
 
+- On EVM chains, we support all popular wallets including MetaMask, WalletConnect, Phantom.
+
 - Connect your wallet
 
 ### Deposit 
@@ -32,7 +34,7 @@ Choose a vault from the list to view its details and to make deposit.
 - Enter the amount you would like to deposit in the deposit box
   ![Connect Wallet](../../credio/img/Stellar-Vault-Deposit.png)
 
-- Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit  
+- Sign wallet transactions: Note there are 2 operations to sign: first is to approve spend (add Trustline on Stellar) and second is to deposit. On EVM, there are also 2 transactions for any new wallet interacting with the vault. For existing wallets, only 1 transaction: deposit is needed.  
 
 ## Manage Your Portfolio
 
