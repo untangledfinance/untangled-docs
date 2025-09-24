@@ -13,7 +13,7 @@ The Vault contract provides the following key functionalities:
 
 ## Overall Architecture
 
-![overall architecture](./img/StellarVault.drawio.png)
+![overall architecture](/img/Stellar-OctoVault-Architecture.png)
 
 ## Functions
 

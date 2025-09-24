@@ -55,7 +55,7 @@ Untangled Vault is built on Safe, a tokenized vault standard with extensions for
 ## Architecture and work flow
 Untangled Vault is built on Safe and the tokenized vault standard with extensions for a wide range of use cases.
 
-<!-- ![Untangled_How it works](../../user-documentation/img/Untangled-Vault-Architecture.png) -->
+<!-- ![Untangled_How it works](/img/Untangled-Vault-Architecture.png) -->
 <!-- TODO: Add Untangled-Vault-Architecture image -->
 
 1. A new vault is issued with a new Safe. The multisig wallet can be deployed on multiple chains with the same address, enabling cross-chain execution and asset management.
