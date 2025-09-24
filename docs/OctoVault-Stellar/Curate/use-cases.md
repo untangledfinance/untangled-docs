@@ -1,0 +1,59 @@
+# Use Cases
+
+OctoVault supports a wide range of use cases — here are 3 of them:
+
+---
+
+## Onchain Fund Management
+
+**Strategy flow:**
+
+1. LPs deposit **USDC** into Onchain Fund Vault in exchange for Vault Share via LP App  
+2. Funds are stored in a **Stellar multisig account** controlled with *m of n* signature scheme on **LOBSTR Wallet and Vault**  
+3. Vault Curator allocates to top stablecoin yield protocols on Stellar:  
+   - **OctoLend** (upcoming fixed rate lending market)  
+   - **Blend** (money market)  
+   - **Aquarius AMMs** (DEX)  
+   - **DeFiHub**  
+   - **StellarX AMMs**  
+   - **Stellar Term AMMs**  
+   - **SoroSwap AMMs**  
+4. Curator tracks **vault share price** and **portfolio NAV (Oracle)** via Curator App  
+5. Allocations are continuously monitored and rebalanced across protocols  
+6. LPs request withdrawals (**asynchronous**). After the epoch ends, the Curator processes withdrawal requests.  
+
+---
+
+## Savings
+
+**Strategy flow:**
+
+1. On fintech or wallet apps, users click **“Save”** which moves their USDC into a Savings Vault on OctoVault  
+   - This can be done **onchain** or **offchain (custodial)**  
+2. Funds are stored in a **Stellar multisig account** controlled with *m of n* signature scheme on **LOBSTR Wallet and Vault**  
+3. Vault Curator (fintech app company) allocates to top stablecoin yield protocols on Stellar:  
+   - **OctoLend** (upcoming fixed rate lending market)  
+   - **Blend** (money market)  
+   - **Aquarius AMMs** (DEX)  
+   - **DeFiHub**  
+   - **StellarX AMMs**  
+   - **Stellar Term AMMs**  
+   - **SoroSwap AMMs**  
+4. Curator tracks **vault share price** and **portfolio NAV (Oracle)** via Curator App  
+5. Allocations are continuously monitored and rebalanced across protocols  
+6. Users request withdrawals (**asynchronous**). After the epoch ends, the Curator processes withdrawal requests.  
+
+---
+
+## Lending
+
+**Strategy flow:**
+
+1. LPs (**KYC’ed and whitelisted**) deposit **USDC** into Lending Vault in exchange for Vault Share via LP App  
+2. Curator approves **Borrowers offchain** then deploys borrower contracts (Accounts) **onchain** with Curator App  
+3. Drawdown requests approved offchain → Vault Curator disburses funds to borrower accounts in exchange for the **Borrower’s Debt Tokens** (loan tokenization)  
+4. Curator tracks loans offchain and updates **Debt Token prices (Oracle)** via Curator App  
+5. Borrowers repay by depositing funds to Borrower Accounts → Curator collects payment → Equivalent Debt Token amount is **burnt**  
+6. LPs request withdrawals (**asynchronous**). After the epoch ends, the Curator processes withdrawal requests.  
+7. Funds are held on **multisig** or **MPC wallet / curating solutions**.  
+   - Idle funds can be used to earn **extra yield** from any DeFi yield sources on Stellar (including Untangled products).  
