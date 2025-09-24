@@ -1,0 +1,28 @@
+# Fees
+Set up your fee system
+
+Currently, fees are not explicitly included onchain, but **curators can factor them into the valuation and share price calculation**.
+
+Our roadmap includes the following types of fees:
+
+### Management Fees
+
+- A **periodic charge** on the assets under management (AUM)  
+- Compensates curators for managing the vault  
+- **Accumulate over time** and are collected during the vault's settlement, based on the updated valuation  
+
+### Performance Fees
+
+- Applied **exclusively to profits**  
+- Calculated only when the asset value surpasses the **high-water mark** (the highest reached price per share)  
+- Ensures fees are charged **solely on new profits**, not on recovered losses  
+
+### Maximum Fee Limits
+
+To protect depositors from excessive fees:
+
+- **Maximum Management Fees**: 10%  
+- **Maximum Performance Fees**: 50%  
+- **Maximum Protocol Fees**: 30% or 10% of vault’s performance (whichever is higher)  
+
+⚠️ **Note:** Untangled does **not currently charge any fees**.  
