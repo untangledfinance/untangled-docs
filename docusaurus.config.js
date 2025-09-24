@@ -90,19 +90,19 @@ const config = {
             type: "docSidebar",
             sidebarId: "userDoc",
             position: "left",
-            label: "User Docs",
+            label: "OctoVault Stellar",
           },
           {
             type: "docSidebar",
             sidebarId: "devDoc",
             position: "left",
-            label: "Developer Docs",
+            label: "OctoVault EVM",
           },
           {
             type: "docSidebar",
             sidebarId: "oracleDoc",
             position: "left",
-            label: "Credio",
+            label: "Credio Risk Curation",
           },
           {
             href: "https://github.com/untangledfinance",
@@ -119,7 +119,7 @@ const config = {
             items: [
               {
                 label: "Documentation",
-                to: "/docs/user-documentation/welcome-to-untangled",
+                to: "/docs/OctoVault-Stellar/welcome-to-untangled",
               },
             ],
           },

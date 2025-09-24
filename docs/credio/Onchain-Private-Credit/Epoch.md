@@ -26,7 +26,7 @@ Later, fees/spread to Untangled, other service providers, pool’s operational e
 
 ## Cashflow waterfall
 
-<!-- ![Untangled_How it works](../../user-documentation/img/Income-and-capital-reserve-at-epoch.png) -->
+<!-- ![Untangled_How it works](/img/Income-and-capital-reserve-at-epoch.png) -->
 <!-- TODO: Add Income-and-capital-reserve-at-epoch image -->
 
 Note that each withdrawal request can be understood to include a income part and/or capital part. The income part of the request will be met with investor's balance within the income reserve and the capital part of the request will be met with available liquidity within capital reserve. 
@@ -49,7 +49,7 @@ Epoch's capital reserve changes
   
 ## Epoch execution
 
-<!-- ![Untangled_How it works](../../user-documentation/img/Epoch-execution.png) -->
+<!-- ![Untangled_How it works](/img/Epoch-execution.png) -->
 <!-- TODO: Add Epoch-execution image -->
 
 Withdrawal requests are sent to the pool during the epoch duration, tranched tokens are locked/approved. 
