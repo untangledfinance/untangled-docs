@@ -111,47 +111,6 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Documentation",
-                to: "/docs/OctoVault-Stellar/welcome-to-untangled",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Website",
-                href: "https://untangled.finance/",
-              },
-              {
-                label: "Forum",
-                href: "https://forum.untangled.finance/",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/UntangledFi",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/untangledfinance",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Untangled Foundation`,
-      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
