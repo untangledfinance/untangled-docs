@@ -20,11 +20,6 @@ sidebar_position: 4
 |VaultFactory                              |0x2562883f006d04cCc2907635E38089fBFc6BE45b|	Factory|
 |ModuleFactory 	                           |0x974e1F25ae092116314bA02964625deD74a0Bc9e|	Factory|
 
-## Stellar
-|Contract name	                           |Address	                                  |Type    |
-|------------------------------------------|------------------------------------------|--------|
-|USDyc        	                           |CBLC4NWJPBHWPXDL4TTXDZJLVZ2JFWMVZHQNI4MLZRNKYGIKGX6K4DMA|	Vault|
-
 ## Arbitrum
 |Contract name	                           |Address	                                  |Type    |
 |------------------------------------------|------------------------------------------|--------|
