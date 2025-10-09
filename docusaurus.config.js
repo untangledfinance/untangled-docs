@@ -100,6 +100,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "OctoLend",
+            position: "left",
+            label: "OctoLend",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "oracleDoc",
             position: "left",
             label: "Credio Risk Curation",

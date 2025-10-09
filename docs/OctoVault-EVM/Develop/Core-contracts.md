@@ -23,8 +23,6 @@ This repository includes Solidity contracts, Hardhat configuration, deploy pipel
 
 ## Architecture
 
-![Octo Vault Architecture – Untangled Vault V2](./img/Untangled_Vault_V2.drawio.png)
-
 High level data flow:
 
 1. Users interact with a BasedVault directly or through a Hook. If a Hook is set, it intercepts ERC4626 flows.
