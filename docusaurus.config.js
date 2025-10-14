@@ -90,13 +90,13 @@ const config = {
             type: "docSidebar",
             sidebarId: "userDoc",
             position: "left",
-            label: "OctoVault Stellar",
+            label: "Vault Stellar",
           },
           {
             type: "docSidebar",
             sidebarId: "devDoc",
             position: "left",
-            label: "OctoVault EVM",
+            label: "OctoVault",
           },
           {
             type: "docSidebar",
