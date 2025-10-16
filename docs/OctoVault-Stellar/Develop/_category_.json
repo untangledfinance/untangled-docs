@@ -1,8 +1,8 @@
 {
-  "label": "Develop",
-  "position": 3,
+  "label": "OctoLend",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Developer Documentation"
+    "description": "OctoLend"
   }
 }
