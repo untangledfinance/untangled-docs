@@ -94,19 +94,19 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "userDoc",
+            sidebarId: "stellar",
             position: "left",
             label: "Vault Stellar",
           },
           {
             type: "docSidebar",
-            sidebarId: "devDoc",
+            sidebarId: "evm",
             position: "left",
             label: "OctoVault",
           },
           {
             type: "docSidebar",
-            sidebarId: "oracleDoc",
+            sidebarId: "credio",
             position: "left",
             label: "Credio Risk Curation",
           },
