@@ -86,6 +86,12 @@ const config = {
           src: "img/small_logo.png",
         },
         items: [
+         {
+            type: "docSidebar",
+            sidebarId: "intro",
+            position: "left",
+            label: "Welcome",
+          },
           {
             type: "docSidebar",
             sidebarId: "userDoc",
