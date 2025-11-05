@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "OctoLend"
+    "description": "Curated lending market with configurable interest rate model and collateral delegation"
   }
 }
