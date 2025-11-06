@@ -140,7 +140,7 @@ Process (subject to roles and timelock):
    - `addMarket(market)` → (wait timelock) → `acceptMarket(market)`
    - Guardian may `vetoMarket(market)` while pending
 2. Adjust allocations across Markets:
-   - `allocate([{ market, amount }, ...])` where `amount` is target underlying units
+   - `allocate([\{ market, amount \}, ...])` where `amount` is target underlying units
 
 ### Hook and modules
 
