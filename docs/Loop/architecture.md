@@ -1,0 +1,102 @@
+# Architecture
+
+Untangled Loop builds positions by automating looping strategies through **Blend flash loans**, executed with a swap via **Aquarius**.
+
+At a high level:
+- To open a position, Loop:
+  1. takes a flash loan (Base or Quote depending on long/short),
+  2. swaps on Aquarius,
+  3. supplies the swapped asset as collateral on Blend,
+  4. borrows the other asset on Blend,
+  5. repays the flash loan — all atomically.
+
+When closing a position, Loop reverses the sequence using a flash loan to repay debt and withdraw collateral in the same transaction.
+
+> Current implementation uses variable-rate markets (Blend), and swaps route via Aquarius.
+
+// image
+
+## Position mechanics (as implemented)
+
+Untangled Loop is deployed as two Soroban contracts working together:
+
+- **Entrypoint**: per-pair strategy initiator (e.g., XLM/USDC). Builds the flash loan + request bundle.
+- **MarginManager**: flash-loan callback handler. Executes swaps via Aquarius and leaves swapped tokens with the caller for Blend requests.
+
+### Architecture (open position)
+
+1. User calls `Entrypoint.open_long()` or `Entrypoint.open_short()`
+2. Entrypoint calls `MarginManager.set_swap_config(...)`
+3. Entrypoint calls Blend Pool `flash_loan(caller, FlashLoan{...}, requests)`
+4. Blend transfers flash loan tokens to MarginManager and calls `MarginManager.exec_op(...)`
+5. MarginManager:
+   - transfers flash-loaned tokens to caller
+   - swaps via Aquarius using the configured route and `min_amount_out`
+   - clears swap config
+6. Blend executes `requests` (supply collateral, borrow, repay)
+7. Position is opened
+
+# Long position
+
+A **long Base/Quote** position means:
+- **Collateral = Base**
+- **Debt = Quote**
+- Profit when **Base/Quote increases**
+
+## Quote currency as margin
+If a trader longs Base using Quote as margin, Loop:
+- flash loans **Quote**
+- swaps **Quote → Base**
+- supplies **Base** as collateral
+- borrows **Quote**
+- repays flash loan
+
+This is implemented by:
+- `Entrypoint.open_long(...)`
+- swap config token_out = **Base**
+- Blend requests: `SUPPLY_COLLATERAL(Base)`, `BORROW(Quote)`, `REPAY(Quote)`
+
+## Base currency as margin
+If a trader longs Base using Base as margin, Loop:
+- flash loans **Quote**
+- swaps **Quote → Base**
+- supplies **(swapped Base + margin Base)** as collateral (depending on `margin_from_quote`)
+- borrows **Quote**
+- repays flash loan
+
+> The contracts support margin being either side of the pair via `margin_from_quote` and `initial_margin`.
+
+# Short position
+
+A **short Base/Quote** position means:
+- **Collateral = Quote**
+- **Debt = Base**
+- Profit when **Base/Quote decreases**
+
+## Quote currency as margin (matches UI example)
+If a trader shorts Base using Quote as margin, Loop:
+- flash loans **Base**
+- swaps **Base → Quote**
+- supplies **(swapped Quote + margin Quote)** as collateral
+- borrows **Base**
+- repays flash loan
+
+This is implemented by:
+- `Entrypoint.open_short(...)`
+- swap config token_out = **Quote**
+- Blend requests: `SUPPLY_COLLATERAL(Quote)`, `BORROW(Base)`, `REPAY(Base)`
+
+In the UI example (XLM/USDC short):
+- User inputs **USDC** as margin
+- Loop borrows/owes **XLM** (debt) and holds **USDC** as collateral
+- Leverage controls how much Base is flash loaned and swapped into additional collateral
+
+## Base currency as margin
+If a trader shorts Base using Base as margin, Loop:
+- flash loans **Base**
+- swaps **Base → Quote**
+- supplies **swapped Quote** as collateral
+- borrows **Base** (reduced by margin if margin is Base)
+- repays flash loan
+
+---
