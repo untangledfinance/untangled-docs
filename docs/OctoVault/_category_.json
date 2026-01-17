@@ -1,0 +1,8 @@
+{
+  "label": "vault",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Set up and curate an OctoVault on Stellar or EVM"
+  }
+}
