@@ -99,21 +99,21 @@ const config = {
          // },
           {
             type: "docSidebar",
-            sidebarId: "stellar",
+            sidebarId: "vault",
             position: "left",
-            label: "Vault Stellar",
+            label: "Vault",
           },
           {
             type: "docSidebar",
-            sidebarId: "evm",
+            sidebarId: "lend",
             position: "left",
-            label: "OctoVault",
+            label: "OctoLend",
           },
           {
             type: "docSidebar",
-            sidebarId: "credio",
+            sidebarId: "loop",
             position: "left",
-            label: "Credio",
+            label: "Loop",
           },
           {
             href: "https://github.com/untangledfinance",
