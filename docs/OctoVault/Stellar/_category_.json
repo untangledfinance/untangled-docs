@@ -2,7 +2,7 @@
   "label": "OctoVault Stellar",
   "position": 1,
   "link": {
-    "type": "doc",
-    "id": "Curate or Lend on Stellar"
+    "type": "generated-index",
+    "description": "OctoVault on Stellar blockchain"
   }
 }
