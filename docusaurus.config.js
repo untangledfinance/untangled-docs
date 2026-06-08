@@ -99,6 +99,12 @@ const config = {
          // },
           {
             type: "docSidebar",
+            sidebarId: "gear",
+            position: "left",
+            label: "OctoGear",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "vault",
             position: "left",
             label: "Vault",
