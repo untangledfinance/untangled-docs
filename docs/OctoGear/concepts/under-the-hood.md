@@ -8,7 +8,9 @@ description: The technology behind OctoGear — NEAR Chain Signatures, NEAR Inte
 
 # Technology Stack
 
-OctoGear is assembled from four core infrastructure layers. You do not need to understand any of this to use the app, but it helps to know what is running behind the scenes.
+OctoGear is assembled from four core infrastructure layers: NEAR Chain Signatures, NEAR Intents, Gearbox V3 and whitelisted Adatpers. You do not need to understand any of this to use the app, but it helps to know what is running behind the scenes.
+
+![OctoGear Architecture](../img/octogear-architecture.png)
 
 ## NEAR Chain Signatures
 
