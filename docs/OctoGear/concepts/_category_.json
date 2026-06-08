@@ -1,0 +1,8 @@
+{
+  "label": "How It Works",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Core concepts behind OctoGear — the Prime Account, credit accounts, health factor, and the technology stack."
+  }
+}
