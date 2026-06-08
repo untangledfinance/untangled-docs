@@ -16,13 +16,30 @@ Examples:
 
 You can attach multiple strategies to a single pool to segment risk and offer different terms for different borrower profiles.
 
+## OctoGear adapter architecture
+
+Before configuring strategies, understand how OctoGear's adapters work together:
+
+| Adapter | Role |
+|---|---|
+| **PolymarketAdapter** | Whitelisted adapter for Polymarket CTF custody — routes buy/sell orders through the CTFExchangeV2 |
+| **PUSDOnrampAdapter** | Wraps USDC.e → pUSD (Polymarket's USDC wrapper) before placing orders |
+| **PUSDOfframpAdapter** | Unwraps pUSD → USDC.e after closing positions |
+| **PUSDTransferAdapter** | Transfers pUSD to a credit account's `SmartMaker` contract |
+
+Polymarket outcome tokens (YES/NO) are **not** held directly in the credit account. Each account gets a dedicated `SmartMaker` custody contract (tracked by the `SmartMakerRegistry`) that holds the CTF ERC-1155 tokens. The credit account's collateral value is computed from the SmartMaker's CTF holdings via price feeds set in `PriceOracleV3`.
+
+**Before enabling a prediction market as collateral**, confirm with the OctoGear team that:
+1. The market is whitelisted in the `MarketRegistry`
+2. Price feeds for its YES and NO phantom tokens exist in `PriceOracleV3`
+
 ## How to add a strategy
 
 ### Step 1 — Select a strategy bundle
 
-In the curation interface, open the **New Strategy** tab and search for the collateral token you want to support (e.g. cUSDC, YES tokens). Strategy bundles are pre-configured recipes — selecting one automatically configures the smart contract adapters needed to enable leverage for that asset.
+In the curation interface, open the **New Strategy** tab and search for the collateral token you want to support. Strategy bundles are pre-configured recipes that automatically wire the necessary adapters (PolymarketAdapter, PUSD adapters) for that asset.
 
-If no bundle exists for your target token, contact the OctoGear team to request one.
+If no bundle exists for your target token, contact the OctoGear team to request one — adapter deployment and MarketRegistry whitelisting must happen before a bundle can be created.
 
 ### Step 2 — Set leverage parameters
 

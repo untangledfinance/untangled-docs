@@ -19,6 +19,17 @@ The Curator does not touch depositor funds. Instead, they manage a set of smart 
 - **No custody** — Curators cannot withdraw LP funds or seize borrower collateral.
 - **No active allocation** — Curators set eligibility rules (e.g. "Strategy A is allowed up to $10M debt"). The protocol handles the flow based on user demand.
 
+## OctoGear-specific infrastructure
+
+Beyond standard Gearbox V3, OctoGear adds two contracts curators must understand:
+
+| Contract | Role |
+|---|---|
+| **MarketRegistry** | Whitelist of allowed prediction markets, lockdown state, and resolution tracking. A prediction market outcome token cannot be used as credit account collateral unless it is whitelisted here by the OctoGear team. |
+| **SmartMakerRegistry** | Deploys and tracks per-credit-account CTF custody contracts. Polymarket positions are not held directly in a credit account — each account gets a dedicated `SmartMaker` contract that holds CTF tokens on its behalf. |
+
+Curators do not directly control these registries. The OctoGear team manages market whitelisting and SmartMaker deployment. When configuring collateral for a new prediction market, confirm the market is already registered before setting its liquidation threshold.
+
 ## Role architecture
 
 Curator powers are split across distinct roles to balance agility with security.
