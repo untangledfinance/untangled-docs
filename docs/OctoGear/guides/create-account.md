@@ -16,7 +16,7 @@ A passkey uses your device's biometrics — Touch ID, Face ID, or Windows Hello 
 
 ### Steps
 
-1. Go to [octogear.finance](https://octogear.finance) and click **Connect**
+1. Go to [octogear.untangled.finance](https://octogear.untangled.finance) and click **Connect**
 2. Select **Passkey** from the sign-in options
 3. Your browser prompts you to register (new user) or sign in (returning user) with your device biometric
 4. Your Prime Account is created — you now have a NEAR identity and a derived Polygon address

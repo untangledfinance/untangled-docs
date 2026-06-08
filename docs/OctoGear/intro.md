@@ -55,4 +55,6 @@ The Prime Account is built for autonomous agents. Session keys and the OctoGear 
 
 ## Current state
 
-OctoGear is live on **Polygon mainnet** (Pool Alpha, USDC.e) and **HyperEVM** via Hyperliquid. The codebase is pre-audit — use small amounts until you are comfortable with the mechanics. See [Risk Disclosures](./reference/risk-disclosure) before depositing.
+OctoGear is live on **Polygon mainnet** (Pool Alpha, USDC.e) and **HyperEVM** via Hyperliquid.
+
+The core credit infrastructure is built on **Gearbox V3**, which has been independently audited and battle-tested in production. OctoGear's own **adapters and registries** — the smart contracts that connect Gearbox credit accounts to Polymarket and Hyperliquid — are pre-audit. Use small amounts until you are comfortable with the mechanics and the adapter audit is complete. See [Risk Disclosures](./reference/risk-disclosure) before depositing.
