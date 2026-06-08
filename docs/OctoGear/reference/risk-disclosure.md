@@ -8,7 +8,7 @@ description: Risk disclosures for using OctoGear — smart contract risk, levera
 
 # Risk Disclosures
 
-OctoGear is a non-custodial, pre-audit protocol. Read these disclosures before depositing or trading.
+OctoGear is a non-custodial protocol. The core credit infrastructure runs on Gearbox V3, which has been independently audited and battle-tested in production. OctoGear's own adapters — the contracts that connect Gearbox credit accounts to Polymarket and Hyperliquid — are pre-audit. Read these disclosures before depositing or trading.
 
 ## Non-custodial — you hold the keys
 
@@ -26,7 +26,7 @@ Prediction market collateral has a binary payoff. A YES position that resolves N
 
 ## Smart contract risk
 
-OctoGear's adapters and registries are pre-audit. Gearbox V3 has been audited independently; OctoGear's extensions have not. Bugs, exploits, and unexpected contract behaviour can result in partial or total loss of deposited funds. Use amounts you are prepared to lose entirely while the audit is in progress.
+OctoGear's credit infrastructure runs on **Gearbox V3**, which has been independently audited. OctoGear's own **adapters and registries** — the contracts that route interactions to Polymarket and Hyperliquid — are pre-audit. Bugs, exploits, or unexpected behaviour in the adapters can result in partial or total loss of deposited funds. Use amounts you are prepared to lose entirely while the adapter audit is in progress.
 
 ## Liquidation is autonomous
 

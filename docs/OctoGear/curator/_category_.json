@@ -1,0 +1,8 @@
+{
+  "label": "Curator Guide",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "How to deploy and manage an OctoGear lending market as a curator — configure risk parameters, launch strategies, and earn fees."
+  }
+}
