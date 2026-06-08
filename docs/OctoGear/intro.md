@@ -42,14 +42,14 @@ The Prime Account is built for autonomous agents. Session keys and the OctoGear 
 
 ## Under the hood
 
-| Layer                   | Technology                       |
-| ----------------------- | -------------------------------- |
-| Multi-chain identity    | NEAR Chain Signatures (MPC)      |
-| Cross-chain deposits    | NEAR Intents (coming soon)       |
-| Credit infrastructure   | Gearbox V3 credit accounts       |
+| Layer | Technology |
+|---|---|
+| Multi-chain identity | NEAR Chain Signatures (MPC) |
+| Cross-chain deposits | NEAR Intents (coming soon) |
+| Credit infrastructure | Gearbox V3 credit accounts |
 | Prediction market venue | Polymarket (whitelisted adapter) |
-| Perp venue              | Hyperliquid HIP-3                |
-| More venues             | Coming soon                      |
+| Perp venue | Hyperliquid HIP-3 |
+| More venues | Coming soon |
 
 ---
 
@@ -57,5 +57,4 @@ The Prime Account is built for autonomous agents. Session keys and the OctoGear 
 
 OctoGear is live on **Polygon mainnet** (Pool Alpha, USDC.e) and **HyperEVM** via Hyperliquid.
 
-The core credit infrastructure is built on **Gearbox V3**, which has been independently audited and NEAR Chain Signatures (MPC), both of which are battle-tested in production. OctoGear's own **adapters and registries** — the smart contracts that connect Gearbox credit accounts to Polymarket and Hyperliquid — are pre-audit. Use small amounts until you are comfortable with the mechanics and the adapter audit is complete. See [Risk Disclosures](./reference/risk-disclosure) before depositing.
- 
+The core credit infrastructure is built on **Gearbox V3**, which has been independently audited and battle-tested in production. OctoGear's own **adapters and registries** — the smart contracts that connect Gearbox credit accounts to Polymarket and Hyperliquid — are pre-audit. Use small amounts until you are comfortable with the mechanics and the adapter audit is complete. See [Risk Disclosures](./reference/risk-disclosure) before depositing.

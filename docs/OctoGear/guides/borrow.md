@@ -54,6 +54,8 @@ Each step is one transaction and one Touch ID or wallet prompt. After step 4, th
 
 ## Managing your position
 
+![OctoGear Borrow UI](../img/octogear-borrow-ui.png)
+
 ### Health factor
 
 Your health factor is shown on the Home and Borrow pages. If it falls below 1.0, your position is liquidated automatically.
