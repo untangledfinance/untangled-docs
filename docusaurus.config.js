@@ -36,6 +36,10 @@ const config = {
     locales: ["en"],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+
   presets: [
     [
       "classic",
@@ -61,6 +65,17 @@ const config = {
           customCss: "./src/css/custom.css",
         },
       }),
+    ],
+  ],
+
+  themes: [
+    [
+      "@docusaurus/theme-mermaid",
+      {
+        mermaid: {
+          theme: { light: "neutral", dark: "dark" },
+        },
+      },
     ],
   ],
 
@@ -120,6 +135,12 @@ const config = {
             sidebarId: "loop",
             position: "left",
             label: "Loop",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "octopos",
+            position: "left",
+            label: "OctoPos",
           },
           {
             href: "https://github.com/untangledfinance",
