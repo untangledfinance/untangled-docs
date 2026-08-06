@@ -143,6 +143,12 @@ const config = {
             label: "OctoPos",
           },
           {
+            type: "docSidebar",
+            sidebarId: "octogate",
+            position: "left",
+            label: "OctoGate",
+          },
+          {
             href: "https://github.com/untangledfinance",
             label: "GitHub",
             position: "right",
