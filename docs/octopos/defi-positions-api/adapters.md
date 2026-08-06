@@ -86,7 +86,7 @@ The Unified Pricing Service:
 ### Example Usage
 
 ```
-GET /api/v1/prices?tokens=native,CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75
+GET /v1/prices?tokens=native,CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75
 ```
 
 **Response:**

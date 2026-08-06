@@ -243,4 +243,4 @@ When a risk alert is triggered, RMS can coordinate with the Transaction Builder 
 2. **LIQUIDATE** — For liquidators: build a liquidation transaction
 3. **UNWIND** — Build a complete position close transaction
 
-See [Transaction Builder](https://docs.crediolabs.ai/docs/Credio%20Agents/8.%20txb) for details on building transactions.
+See [Transaction Builder](https://docs.crediolabs.ai/docs/Credio%20Agents/txb) for details on building transactions.

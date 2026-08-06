@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-05
 **Product:** OctoPos DeFi Position Tracking API
-**Production Endpoint:** https://octopos.credio.network
+**Production Endpoint:** https://api-octopos-mainnet.untangled.finance
 
 ---
 
@@ -16,14 +16,14 @@ The OctoPos API provides real-time DeFi portfolio tracking for Stellar addresses
 
 ### 1.1 Position Summary Endpoint
 
-**Endpoint:** `GET /api/v1/positions/{address}/summary`
+**Endpoint:** `GET /v1/positions/{address}/summary`
 
 Returns aggregated lending/borrowing metrics including total deposits, borrowed amounts, net return, and weighted average health factor.
 
 **Live Verification (2026-05-05):**
 
 ```
-Request: GET https://octopos.credio.network/api/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC/summary
+Request: GET https://api-octopos-mainnet.untangled.finance/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC/summary
 
 Response:
 {
@@ -49,13 +49,13 @@ Response:
 
 ### 2.1 Interactive Documentation (Swagger UI)
 
-**URL:** https://octopos.credio.network/docs/
+**URL:** https://octopos.untangled.finance/#/docs
 
 Self-service, no login required. Provides interactive API exploration with request/response schemas, examples, and the ability to execute requests directly from the browser.
 
 ### 2.2 OpenAPI Specification
 
-**URL:** https://octopos.credio.network/docs/openapi.json
+**URL:** https://octopos.untangled.finance/openapi/openapi-stellar-api.json
 
 OpenAPI 3.0.3 specification (44.2 KB) covering all endpoints, schemas, and authentication requirements.
 
@@ -76,7 +76,7 @@ Comprehensive guide covering:
 
 ### 3.1 30-Day Position History
 
-**Endpoint:** `GET /api/v1/positions/{address}/history`
+**Endpoint:** `GET /v1/positions/{address}/history`
 
 Query parameters:
 
@@ -86,7 +86,7 @@ Query parameters:
 **Live Verification (2026-05-05):**
 
 ```
-Request: GET https://octopos.credio.network/api/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC/history?interval=daily&days=30
+Request: GET https://api-octopos-mainnet.untangled.finance/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC/history?interval=daily&days=30
 
 Response contains 25 data points from 2026-04-06 to 2026-05-04 (29 days of history)
 ```
@@ -102,7 +102,7 @@ Each data point includes:
 
 **Note:** The `valueByProtocol` and `valueByType` fields in historical data points are populated only for addresses where these fields were tracked after the feature was implemented. Historical aggregates created prior to this feature may have empty `{}` values for these breakdown fields.
 
-**Current positions** (`GET /api/v1/positions/{address}`) include full breakdown data:
+**Current positions** (`GET /v1/positions/{address}`) include full breakdown data:
 
 ```json
 {
@@ -173,8 +173,8 @@ Unit tests verify `mapProtocolStatus()` function with 4 test cases covering all 
 - **Tool:** Custom benchmark script
 - **Workers:** 100 concurrent virtual users
 - **Duration:** 30 seconds after 5-second warmup
-- **Endpoint:** `GET /api/v1/positions/{address}/protocols`
-- **Target:** https://octopos.credio.network
+- **Endpoint:** `GET /v1/positions/{address}/protocols`
+- **Target:** https://api-octopos-mainnet.untangled.finance
 
 ### 5.2 Results
 
@@ -309,9 +309,9 @@ Response + cache update
 
 | Document             | URL/Location                                     |
 | -------------------- | ------------------------------------------------ |
-| Interactive API Docs | https://octopos.credio.network/docs/             |
-| OpenAPI Spec         | https://octopos.credio.network/docs/openapi.json |
-| Health Check         | https://octopos.credio.network/api/v1/health     |
+| Interactive API Docs | https://octopos.untangled.finance/#/docs             |
+| OpenAPI Spec         | https://octopos.untangled.finance/openapi/openapi-stellar-api.json |
+| Health Check         | https://api-octopos-mainnet.untangled.finance/v1/health     |
 | Quickstart Guide     | `docs/quickstart.md`                             |
 | Architecture         | `docs/architecture.md`                           |
 | Goldsky Integration  | `docs/goldsky-integration.md`                    |

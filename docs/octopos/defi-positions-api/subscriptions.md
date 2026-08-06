@@ -51,7 +51,7 @@ sequenceDiagram
 
 ### Subscribe (Direct Flow)
 
-**POST** `/api/v1/keys/subscribe`
+**POST** `/v1/keys/subscribe`
 
 Protected endpoint requiring X402 payment. Client must include a valid `X-PAYMENT-SIGNATURE` header.
 
@@ -105,7 +105,7 @@ For wallets that don't support raw X402 signing (like Freighter), use the two-st
 
 #### Step 1: Prepare
 
-**POST** `/api/v1/keys/subscribe/prepare`
+**POST** `/v1/keys/subscribe/prepare`
 
 Builds the USDC transfer transaction server-side.
 
@@ -129,7 +129,7 @@ Builds the USDC transfer transaction server-side.
 
 #### Step 2: Complete
 
-**POST** `/api/v1/keys/subscribe/complete`
+**POST** `/v1/keys/subscribe/complete`
 
 Submits signed transaction, settles payment, and issues API key.
 
@@ -163,7 +163,7 @@ Submits signed transaction, settles payment, and issues API key.
 
 ### Check Subscription Status
 
-**GET** `/api/v1/keys/subscribe/status?email=<email>`
+**GET** `/v1/keys/subscribe/status?email=<email>`
 
 Check if an email has an active subscription.
 

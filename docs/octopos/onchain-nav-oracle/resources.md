@@ -10,7 +10,7 @@ sidebar_position: 9
 
 ## Live Data
 
-- OctoPos vault feed: https://octopos.credio.network/api/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC
+- OctoPos vault feed: https://api-octopos-mainnet.untangled.finance/v1/positions/GAFBNJTWT6WX3A65IY62ZOUWPFC5VQAHC5PCB5SV23ZKOMHKEFJFQSGC
 
 ## Contract Addresses
 

@@ -1,16 +1,16 @@
 # OctoPos API
 
-## Interactive Documentation (Swagger UI)
+## Interactive Documentation
 
-**URL:** https://octopos.credio.network/docs/
+**URL:** https://octopos.untangled.finance/#/docs
 
-Self-service, no login required. Provides interactive API exploration with request/response schemas, examples, and the ability to execute requests directly from the browser.
+Self-service, no login required. Provides interactive API exploration with request/response schemas, examples, and the ability to execute requests directly from the browser. Covers the Stellar, EVM, Portfolio and RMS surfaces.
 
 ## OpenAPI Specification
 
-**URL:** https://octopos.credio.network/docs/openapi.json
-
-OpenAPI 3.0.3 specification covering all endpoints, schemas, and authentication requirements.
+The interactive docs are rendered from the per-surface OpenAPI specs, served
+alongside them — for example
+https://octopos.untangled.finance/openapi/openapi-stellar-api.json.
 
 ## Developer Quickstart Guide
 
@@ -28,7 +28,7 @@ Comprehensive guide covering:
 ### Position Summary
 
 ```
-GET /api/v1/positions/{address}/summary
+GET /v1/positions/{address}/summary
 ```
 
 Returns aggregated lending/borrowing metrics including total deposits, borrowed amounts, net return, and weighted average health factor.

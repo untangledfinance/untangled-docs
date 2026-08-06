@@ -9,6 +9,10 @@ sidebar_position: 3
 
 All endpoints are `GET` and read-only. Base URL: `https://api-evm-octopos-mainnet.crediolabs.ai`.
 
+For the interactive, always-current reference — request/response schemas and a
+try-it-out console across the Stellar, EVM, Portfolio and RMS surfaces — see
+https://octopos.untangled.finance/#/docs.
+
 ### `/v1/evm/supported-chains`
 
 Returns the list of chains OctoPos indexes, with per-endpoint `supported` flags.
