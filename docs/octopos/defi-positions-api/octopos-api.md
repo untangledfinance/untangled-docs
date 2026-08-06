@@ -1,6 +1,3 @@
----
-sidebar_position: 1
----
 # OctoPos API
 
 ## Interactive Documentation (Swagger UI)

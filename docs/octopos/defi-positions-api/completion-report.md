@@ -1,6 +1,3 @@
----
-sidebar_position: 1
----
 # OctoPos API — Completion Report
 
 **Date:** 2026-05-05
