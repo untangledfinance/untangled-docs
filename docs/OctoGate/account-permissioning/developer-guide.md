@@ -89,14 +89,15 @@ Nothing in this layer is Freighter-specific. That is what wallet-agnostic means 
 
 ## Using it from Claude
 
-There is no standalone Claude skill published to the Anthropic marketplace. What
-exists is the MCP server above, which Claude Desktop and other MCP clients load
-directly using the configuration in the previous section. Point a client at
-`policy-builder-mcp` and the eight tools appear.
+Point an MCP client at `policy-builder-mcp` using the configuration in the
+previous section and the eight tools appear. That is all a client needs.
 
-A skill that drives this flow conversationally does exist inside the OctoPos
-assistant, but it is part of that product rather than a separately installable
-package, so there is nothing to `npm install` for it today.
+A Claude skill ships in the repository at `.claude/skills/oz-policy-builder/`,
+and a Claude Code session working in a checkout loads it from there. It is an
+operating manual rather than a wrapper: which tool answers which intent, the
+failure modes that install cleanly and enforce less than you expect, and the
+interpreter's error codes. Nothing is published to the Anthropic marketplace, so
+there is no separate package to install.
 
 **How the user confirms.** The server advertises `capabilities: { tools: {} }`
 and does not use MCP elicitation. The confirmation step is the wallet signature:
