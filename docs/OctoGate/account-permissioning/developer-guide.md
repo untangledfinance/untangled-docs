@@ -67,9 +67,34 @@ policy-builder declare --fn transfer --max-amount 25 --token native
 | `declare_policy` | Turns a stated constraint into a proposed policy | No |
 | `simulate_policy` | Evaluates one call against a predicate and returns permit or deny with a reason | No |
 | `verify_policy` | Runs the permit case AND the generated deny battery | No |
-| `install_policy` | Builds the unsigned `add_context_rule` transaction | Simulates only |
+| `install_policy` | Builds the unsigned `add_context_rule` transaction, with an optional rolling total | Simulates only |
 | `revoke_policy` | Builds the unsigned revoke transaction | Simulates only |
 | `get_interpreter_info` | Returns the pinned interpreter address, grammar version and wasm hash | Reads |
+
+### Bounding a total, not just a call
+
+A predicate bounds one call. The interpreter is handed that call and keeps no
+state, so a per-call cap of 15.3 XLM authorises 15.3 XLM again on the very next
+call - which is not what anyone means by "15.3 XLM a day".
+
+A rolling total is an OpenZeppelin `spending_limit` policy on the same rule.
+Policies on one rule compose as all-of, so the predicate bounds each call and the
+built-in bounds the sum. Since 1.1.0, `install_policy` attaches both in one
+transaction:
+
+```json
+{
+  "smartAccount": "C...",
+  "sourceAccount": "G...",
+  "fromHash": { "transactionHash": "...", "signers": ["G..."] },
+  "spendingLimit": { "amount": "153000000", "periodLedgers": 17280 }
+}
+```
+
+`periodLedgers` counts **ledgers**, not seconds - a day is about 17,280 of them.
+The rule must be scoped to the token contract whose transfers the cap meters, and
+`install_policy` refuses a rolling total on a rule that is not, because the
+built-in would otherwise install and meter nothing.
 
 ### install_policy never signs
 
@@ -174,7 +199,7 @@ Deny codes come back from the account when it refuses. The ones you will see mos
 
 ## Limits worth knowing before you build on this
 
-- **Call frequency cannot be bounded.** A spend cap bounds how much, not how often. The synthesizer raises `FREQUENCY_BOUND_MISSING` when asked and has nothing to offer against it.
+- **Call frequency cannot be bounded.** A spend cap bounds how much, not how often, so a key capped at 100 a day can still make a thousand calls of 0.1. The synthesizer raises `FREQUENCY_BOUND_MISSING` when asked and has nothing to offer against it.
 - **A spend cap only meters `transfer`.** It reads the amount from the third argument of a call by that name.
 - **Spend-cap periods are ledger counts**, roughly five seconds each, so a "per day" window is approximate.
 - **A threshold is fixed at install** and is not told when the rule's signers change. Our interpreter notices the change and refuses with `#204`, so the rule stops working rather than quietly applying to a different set of people.
