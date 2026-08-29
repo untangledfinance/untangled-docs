@@ -180,7 +180,7 @@ A context rule can carry more than one policy, and OpenZeppelin composes them as
 
 Two things to know before relying on it:
 
-- The install builder in `@crediolabs/policy-synth` takes **interpreter policies only**. It refuses any other kind rather than dropping it, because a dropped policy is a missing restriction. Attaching an OpenZeppelin primitive is done at the account layer.
+- Before 1.1.0 the install builder in `@crediolabs/policy-synth` took **interpreter policies only** and attaching a primitive was an account-layer job. Since 1.1.0 it builds the `spending_limit` case too, via `install_policy`'s `spendingLimit` argument described above. Any other kind is still refused rather than dropped, because a dropped policy is a missing restriction.
 - The on-chain policies map is **sorted by contract address**, so which policy sits at index 0 is alphabetical accident. Read every policy on a rule, not the first one.
 
 ## Error codes
