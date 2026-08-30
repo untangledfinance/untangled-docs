@@ -36,28 +36,42 @@ The point is delegation without trust. You can hand a key to an automated agent,
 
 ## Three worked examples
 
-Each of these was installed on Stellar testnet and both its permit and its refusal were exercised. The transaction hashes are in the [Tranche #3 completion report](https://github.com/untangledfinance/oz-policy-builder) and can be read on any Stellar explorer.
+Each was installed on Stellar testnet and both its permit and its refusal were exercised. Each has a short recording below: the policy is asked for in plain English, the transaction is signed in a terminal, and the result is read back on a block explorer. Every transaction hash shown is real and can be checked on any Stellar explorer.
+
+In the first two the two calls are **identical** - same amount, same recipient, same key - and only the running total differs. That is the thing a per-call cap cannot do.
 
 ### 1. Delegating a yield claim
 
 You hold a position that pays yield and you want an agent to claim it for you, without being able to drain the account.
 
 - **Rule**: the agent key may call `transfer` on XLM only, and no more than **15.3 XLM per day** in total.
-- **What happened**: a 1 XLM transfer was permitted. A 20 XLM transfer was refused by the account with error `#3221`, the spend cap's own refusal code.
+- **What happened**: a 15.3 XLM claim was permitted. The same 15.3 XLM claim, repeated, was refused by the account with error `#3221` - the day's allowance was already spent.
+
+<video controls width="100%" preload="none" poster="/img/walkthroughs/walkthrough-1-poster.jpg" src="/video/walkthrough-1-blend-yield-claim-daily-total.mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### 2. A subscription that bills you
 
 A merchant needs to charge you monthly, and you want a hard ceiling on what they can take.
 
 - **Rule**: the merchant key may call `transfer` on one token only, and no more than **100 USDC per month** in total.
-- **What happened**: a 10 USDC charge was permitted. A 200 USDC charge was refused with `#3221`.
+- **What happened**: a 100 USDC charge was permitted. The identical charge, repeated, was refused with `#3221`.
+
+<video controls width="100%" preload="none" poster="/img/walkthroughs/walkthrough-2-poster.jpg" src="/video/walkthrough-2-subscription-monthly-cap.mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### 3. A bounded swap
 
 You want an agent to trade for you, but never at a bad price.
 
-- **Rule**: the agent may call the swap method on one router, and the amount out must be **at least 99% of the amount in**.
-- **What happened**: a swap returning 99.5% was permitted, one returning exactly 99.0% was permitted, and one returning 98.9999999% was refused. The floor is compared against the trade's own size, so a single rule covers every trade amount rather than pinning you to one.
+- **Rule**: the agent may call the swap method on one router, and the trade must return at least a set minimum.
+- **What happened**: against SoroSwap's live testnet router, a swap selling 10 XLM and demanding at least 1.5 USDC back was permitted and executed. The same swap, with the agent willing to accept **one stroop less**, was refused with `#107` and never reached the venue - the account would not let the key take a worse price than you allowed. The floor is compared against the trade's own size, so one rule covers every trade amount rather than pinning you to a single one.
+
+<video controls width="100%" preload="none" poster="/img/walkthroughs/walkthrough-3-poster.jpg" src="/video/walkthrough-3-bounded-swap-slippage-floor.mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## What your wallet shows you
 
