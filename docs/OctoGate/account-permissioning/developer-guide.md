@@ -2,7 +2,7 @@
 id: developer-guide
 title: Developer Guide - MCP Server, Skill, and Synthesizer
 sidebar_label: Developer Guide
-sidebar_position: 2
+sidebar_position: 3
 description: Installing the MCP server and the CLI, the eight tools they expose, choosing between the two synthesis front-ends, and how the deny-case harness gates an install.
 ---
 
@@ -12,13 +12,11 @@ Setting up the toolkit, the tool surface it exposes, and how to choose between t
 
 ## Packages
 
-All three are published on the public npm registry and version together.
-
-| Package | What it is | Entry point |
-|---|---|---|
-| `@crediolabs/policy-synth` | The synthesis core. Everything below is a front-end over it | library |
-| `@crediolabs/policy-builder-mcp` | MCP server for agent tool-use | `policy-builder-mcp` |
-| `@crediolabs/policy-builder-cli` | CLI for scripted authoring | `policy-builder` |
+Three, published on the public npm registry and versioned together:
+`@crediolabs/policy-synth` (the synthesis core), with
+`@crediolabs/policy-builder-mcp` and `@crediolabs/policy-builder-cli` as
+front-ends over it. They are needed to **author** a policy; using one needs
+nothing. See [Integration](integration.md).
 
 ## MCP server setup
 
