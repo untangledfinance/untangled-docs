@@ -2,7 +2,7 @@
 id: developer-guide
 title: Developer Guide - MCP Server, Skill, and Synthesizer
 sidebar_label: Developer Guide
-sidebar_position: 3
+sidebar_position: 2
 description: Installing the MCP server and the CLI, the eight tools they expose, choosing between the two synthesis front-ends, and how the deny-case harness gates an install.
 ---
 
@@ -15,8 +15,8 @@ Setting up the toolkit, the tool surface it exposes, and how to choose between t
 Three, published on the public npm registry and versioned together:
 `@crediolabs/policy-synth` (the synthesis core), with
 `@crediolabs/policy-builder-mcp` and `@crediolabs/policy-builder-cli` as
-front-ends over it. They are needed to **author** a policy; using one needs
-nothing. See [Integration](integration.md).
+front-ends over it. They are needed to **author** a policy; simply using a policy does not need
+any of these packages. See [Integration](integration.md).
 
 ## MCP server setup
 
@@ -170,7 +170,7 @@ Producing a policy that permits the intended call is the easy half. The harness 
 
 Coverage is derived from the predicate, so it is not a fixed number: a dimension the predicate does not constrain produces no case for it. `ok` means "nothing the harness could construct got through", not "this policy is tight".
 
-The synthesizer is replayed against a corpus of **33 real mainnet transaction envelopes covering 26 distinct call shapes**, well beyond the ten shapes the award asks for.
+The synthesizer is replayed against a corpus of **33 real mainnet transaction envelopes covering 26 distinct call shapes**, against the ten shapes required.
 
 ## Attaching an OpenZeppelin primitive alongside
 
