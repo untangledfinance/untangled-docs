@@ -8,7 +8,7 @@ description: What a policy is, how to delegate a key under one, what your wallet
 
 # User Guide: delegating a key under a policy
 
-This guide is for the person who owns the funds. It covers what a policy does, how to put a key under one, and - the part most guides skip - what a policy does **not** protect.
+This guide is for the person who owns the funds. It covers what a policy does, how to put a key under a policy, and what a policy does **not** protect.
 
 You do not need to read any code to follow it.
 
@@ -32,7 +32,7 @@ The point is delegation without trust. You can hand a key to an automated agent,
 | "The trade must return at least 99% of what it spends" | Yes | A slippage floor comparing one argument to another |
 | "Two people must approve" | On chain, not yet in the chat card | An OpenZeppelin `simple_threshold` alongside the policy |
 | "Stop working after 30 days" | On chain and in the CLI, not yet in the chat card | An expiry on the context rule |
-| "At most 10 calls a day" | **No** | Not expressible today. See [limits](#what-a-policy-does-not-protect) |
+| "At most 10 calls a day" | **No** | Not expressible today. Please note we already open an issue (before a PR) in OpenZeppelin [here](https://github.com/OpenZeppelin/stellar-contracts/issues/858) |
 
 ## Three worked examples
 
@@ -87,9 +87,7 @@ If you do not like what the review card says, do not sign. Nothing has happened 
 
 ## What a policy does not protect
 
-This section matters more than the rest of the page.
-
-**A key is only as constrained as the loosest rule it sits on.** The caller chooses which rule authorises a call. If the same key is also a signer on a rule with no policy attached, it can name that rule instead and the policy never runs. Put a delegated key on the policed rule and **nowhere else**.
+**A key is only as constrained as the loosest rule it sits on.** The caller chooses which rule authorises a call. If the same key is also a signer on a rule with no policy attached, it can name that rule instead and the policy never applies. Put a delegated key on the policed rule and **nowhere else**.
 
 **Adding a second signer does not create dual approval.** On an OpenZeppelin smart account, a rule with no policy requires every signer to approve. Attaching a policy changes that: any one signer on the rule can act alone. So adding a second signer to a policed rule gives you the opposite of "two approvals". Use a threshold policy for that, which is on chain but not yet offered in the chat card.
 
@@ -99,9 +97,9 @@ This section matters more than the rest of the page.
 
 **A total-spend cap only meters transfers.** The OpenZeppelin spend limit reads the amount from a call named `transfer`. It cannot see value moved by a method with another name.
 
-**Changing the signers stops the rule working.** If you add or remove a signer on a rule that carries a policy, the policy notices and starts refusing, rather than silently applying to a different set of people than you intended. It stops working rather than quietly meaning less. Reinstall the rule after changing signers.
+**Changing the signers stops the rule working.** If you add or remove a signer on a rule that carries a policy, the policy notices and starts refusing, rather than silently applying to a different set of people than you intended. Reinstall the rule after changing signers.
 
-**Call frequency cannot be bounded.** "At most ten times a day" is not expressible. A spend cap bounds *how much*, not *how often*: a key capped at 100 a day can still make a thousand calls of 0.1.
+**Call frequency cannot be bounded.** "At most ten times a day" is not expressible. A spend cap bounds *how much*, not *how often*: a key capped at 100 a day can still make a thousand calls of 0.1. Please note we already open an issue (before a PR) in OpenZeppelin [here](https://github.com/OpenZeppelin/stellar-contracts/issues/858) 
 
 ## Revoking
 
