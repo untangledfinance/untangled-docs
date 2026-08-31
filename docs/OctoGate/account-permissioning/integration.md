@@ -2,19 +2,19 @@
 id: integration
 title: Integration - What You Have To Build
 sidebar_label: Integration
-sidebar_position: 2
+sidebar_position: 3
 description: Nothing, on the wallet side. A policy is enforced by the smart account itself, so only the person creating a policy needs a tool. What your wallet needs to support, and what it does not.
 ---
 
 # Integration: what you have to build
 
-**Nothing, unless you are creating a policy.**
+**Nothing, even when you are creating a policy.**
 
 A policy is a rule your account checks before it approves anything. The account
 does the checking. So there is no library to add to your app, no service to run,
 and no change to how your wallet signs.
 
-Three things follow from that, and the rest of this page is those three things:
+Three things follow from that:
 
 1. **Your account enforces the policy, so your software does not.**
 2. **Only the person who creates a policy needs one of our tools.**
@@ -68,8 +68,6 @@ check.
 
 Using a policy needs nothing, because by then the rule is already on the account
 and the account does the work.
-
-If someone hands you a prepared transaction to sign, you install nothing at all.
 
 ## 3. Your wallet needs to understand smart accounts
 
