@@ -3,111 +3,131 @@ id: integration
 title: Integration - What You Have To Build
 sidebar_label: Integration
 sidebar_position: 2
-description: The Policy Builder extends an OpenZeppelin smart account rather than replacing it. Which roles need a package, which need only a wallet, and what a wallet must support.
+description: Nothing, on the wallet side. A policy is enforced by the smart account itself, so only the person creating a policy needs a tool. What your wallet needs to support, and what it does not.
 ---
 
 # Integration: what you have to build
 
-Short answer: **on the wallet side, nothing.**
+**Nothing, unless you are creating a policy.**
 
-A policy is enforced by the smart account, not by any client. Installing one
-changes what the account permits; it does not change what a client has to
-implement.
+A policy is a rule your account checks before it approves anything. The account
+does the checking. So there is no library to add to your app, no service to run,
+and no change to how your wallet signs.
 
-## The Policy Builder is an extension, not a replacement
+Three things follow from that, and the rest of this page is those three things:
 
-OpenZeppelin's smart account already has the concept of a **context rule**: a
-named slot carrying a set of signers and a set of policies. Before authorising a
-call, the account asks every policy on the matching rule whether the call may
-proceed.
+1. **Your account enforces the policy, so your software does not.**
+2. **Only the person who creates a policy needs one of our tools.**
+3. **Your wallet needs to understand smart accounts - which it already must, policy or not.**
 
-The Policy Builder supplies a policy for that slot. It is a contract the
-*account* calls. **A wallet never talks to it, never imports it, and does not
-need to know it exists.**
+---
+
+## 1. Your account enforces the policy
+
+An OpenZeppelin smart account already has numbered permission slots, called
+**context rules**. Each slot holds a list of keys, and a list of rules those keys
+must obey. Before the account approves anything, it checks the slot the caller is
+using.
+
+The Policy Builder writes one of those rules. The account reads it. Nothing else
+in the chain of custody changes:
 
 ```
-wallet  ──signs──▶  smart account  ──asks──▶  policy (interpreter)
-                          │
-                          └── refuses the call if the policy says no
+your wallet  ──signs──▶  your smart account  ──checks──▶  the policy
+                                  │
+                                  └── refuses if the policy says no
 ```
 
-The consequence is the one that matters for integration: **a wallet that can
-already act for an OpenZeppelin smart account can act under a policy with no
-changes.** Support is inherited from the account standard rather than added for
-us.
+Read that middle arrow carefully: **the account calls the policy, not your
+wallet.** Your wallet never contacts the policy, never imports anything from us,
+and does not need to know it exists.
 
-## Who needs what
+That is why there is nothing to integrate. A policy changes what your account
+will agree to; it does not change how anything talks to it.
 
-Three roles, and only one of them touches our packages.
+### The builder never touches your keys
 
-| Role | What they do | What they need |
+Every tool we ship stops at an **unsigned transaction**. It holds no key, asks
+for no key, and submits nothing. You review it in your wallet, you sign it, and
+your wallet submits it. If you do not like what you see, do not sign - nothing
+has happened yet.
+
+## 2. Only the policy's author needs a tool
+
+Three people are usually involved, and only the first installs anything:
+
+| Who | What they do | What they need |
 |---|---|---|
-| **Policy author** | Creates the policy and produces the install transaction | The SDK, CLI or MCP server |
-| **Account owner** | Reviews and signs the install | A wallet. No package |
-| **Delegated key** | Acts under the policy afterwards | A wallet. No package |
+| **The author** | Writes the policy and prepares the transaction | One of our tools |
+| **The owner** | Reads it and signs it | Just a wallet |
+| **The delegated key** | Works under the policy afterwards | Just a wallet |
 
-Creating a policy needs a tool because a policy is a compiled predicate
-document, not a form field. Using one needs nothing, because by then the rule is
-on chain and the account does the work.
+Creating a policy needs a tool because a policy is compiled, not typed into a
+form - the tool turns "at most 100 USDC a month" into something the chain can
+check.
 
-An owner who is handed an unsigned transaction by someone else never installs
-anything at all.
+Using a policy needs nothing, because by then the rule is already on the account
+and the account does the work.
 
-## What a wallet must support
+If someone hands you a prepared transaction to sign, you install nothing at all.
 
-One thing, and it is an OpenZeppelin requirement rather than ours.
+## 3. Your wallet needs to understand smart accounts
 
-To act *for* a smart account, a client builds the account's authorization entry:
-an `AuthPayload` carrying the signers and the **context rule ids** the call is
-made under, with the account's `__check_auth` verifying a digest over it. That
-requirement exists for every OpenZeppelin smart account, with or without a
-policy attached. A policy does not add to it.
+One requirement, and it comes from OpenZeppelin, not from us. It applies to every
+smart account whether or not a policy is attached.
 
-Two consequences worth stating plainly:
+**Signing the install is ordinary.** It is a standard Stellar transaction with
+nothing custom in it. Any wallet that signs Stellar smart-contract transactions
+can sign it.
 
-- **Signing an install needs nothing special.** The install is an ordinary
-  Soroban transaction: one `invokeHostFunction` operation, standard
-  authorization entries, resource footprint and fee already attached, no custom
-  or vendor field anywhere. Any wallet that signs Soroban transactions can sign
-  it.
-- **Acting under a policy needs smart-account support.** Not because of the
-  policy, but because the caller must name the context rule it is acting under.
-  A client that signs only as a plain account cannot do this and will fail
-  before the policy is ever consulted - the account has no way to tell which
-  rule was meant.
+**Acting under a policy afterwards needs a bit more.** A key can sit in several
+permission slots, so when it acts it has to say *which slot it is using*. A tool
+that only knows how to sign as a plain account cannot say that, and the account
+will turn it away before the policy is even consulted.
 
-That second point is the one to check when evaluating a client. A tool that
-treats every signer as a plain account is not a smart-account client, however
-well it handles Soroban. The reference `stellar` CLI is in that category today:
-it signs as a plain account and reports `Missing signing key for account C...`
-when handed a smart account, because it has no way to construct the payload.
-This is a property of the tooling ecosystem's maturity, not of the policy.
+That is the thing to check when choosing a wallet or library: not "does it
+support Stellar smart contracts", but **"can it act on behalf of a smart
+account?"**
 
-## Packages
+:::note Worth knowing
 
-Needed only to **author** a policy. All three are published on the public npm
-registry, version together, and live in
+Tooling here is still maturing. The standard `stellar` command-line tool cannot
+do this yet - it signs as a plain account and reports
+`Missing signing key for account C...` when given a smart account.
+
+That is a gap in the wider ecosystem's tooling, not something the policy causes,
+and it is the same for any OpenZeppelin smart account with or without a policy.
+
+:::
+
+<details>
+<summary>The protocol detail, for implementers</summary>
+
+To act for the account, a client builds an `AuthPayload` carrying the signers and
+the `context_rule_ids` for the call. The account's `__check_auth` verifies a
+digest over it. This is OpenZeppelin's own mechanism, defined in
+`stellar-contracts/packages/accounts/src/smart_account/`, and a policy adds
+nothing to it.
+
+</details>
+
+---
+
+## The packages
+
+Needed only to **author** a policy. Published on the public npm registry,
+versioned together, in
 [`untangledfinance/oz-policy-builder`](https://github.com/untangledfinance/oz-policy-builder).
 
 | Package | What it is | Entry point |
 |---|---|---|
-| `@crediolabs/policy-synth` | The synthesis core. Everything else is a front-end over it | library |
-| `@crediolabs/policy-builder-mcp` | MCP server for agent tool-use | `policy-builder-mcp` |
-| `@crediolabs/policy-builder-cli` | CLI for scripted authoring | `policy-builder` |
+| `@crediolabs/policy-synth` | The core. The other two are front-ends over it | library |
+| `@crediolabs/policy-builder-mcp` | For AI agents, over MCP | `policy-builder-mcp` |
+| `@crediolabs/policy-builder-cli` | For scripts and terminals | `policy-builder` |
 
-The on-chain interpreter is a Rust contract in the same repository, under
-`contracts/policy-interpreter`. It is deployed and pinned; you do not deploy it.
-
-## What the builder never does
-
-It holds no key, requests no key, and submits nothing. Every tool that changes
-on-chain state returns an **unsigned transaction** and stops. The wallet
-reviews, signs and submits, and that signature is the confirmation step.
-
-This is why the integration surface is so small: the builder is an authoring
-tool that emits a transaction, and the enforcement lives on chain.
+The on-chain part is already deployed and pinned. You do not deploy anything.
 
 ## Next
 
-- [User Guide](user-guide.md) - for the person who owns the funds
-- [Developer Guide](developer-guide.md) - authoring policies with the SDK, CLI or MCP server
+- [User Guide](user-guide.md) - if you own the funds
+- [Developer Guide](developer-guide.md) - if you are writing policies
