@@ -1,0 +1,9 @@
+{
+  "label": "Prime",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/prime",
+    "description": "Prime is your own smart account on Stellar, under rules you set: who can approve what it does, and how many must agree. Your funds stay in your custody wallet - Prime governs what can be done with them, not where they sit."
+  }
+}

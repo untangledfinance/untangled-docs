@@ -114,6 +114,12 @@ const config = {
          // },
           {
             type: "docSidebar",
+            sidebarId: "prime",
+            position: "left",
+            label: "Prime",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "gear",
             position: "left",
             label: "OctoGear",
