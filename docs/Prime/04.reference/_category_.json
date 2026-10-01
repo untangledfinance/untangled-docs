@@ -1,0 +1,9 @@
+{
+  "label": "Reference",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/prime/reference",
+    "description": "The parts of the Prime app in more detail: signers, policies, the Queue and co-signing, and the Apps, Accounts and Portfolio pages."
+  }
+}

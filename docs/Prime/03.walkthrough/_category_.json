@@ -1,0 +1,10 @@
+{
+  "label": "Walkthrough",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/prime/walkthrough",
+    "description": "Seven steps that take one Prime Account from nothing to an agent working inside its rules, each with a video recorded on the beta app on Stellar testnet. The videos use throwaway testnet accounts. Waits and repeated signing are sped up, and a badge in the corner shows the speed. The wallet pop-up in the videos stands in for the Freighter extension and signs with the selected account's testnet key."
+  }
+}
