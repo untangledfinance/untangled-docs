@@ -4,6 +4,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/prime",
-    "description": "Prime lets an institution use DeFi while its funds stay in its own custody, MPC or multisig. A Prime Account may use those funds only within rules the chain enforces."
+    "description": "Use DeFi with funds that stay in your own custody wallet."
   }
 }
