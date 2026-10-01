@@ -57,10 +57,8 @@ The permissioning itself lives in the wrapper's **transfer gate** — the venue-
 
 ## Current state
 
-OctoGate is **under active development** on Stellar testnet. It is not yet live on mainnet.
+OctoGate's custody contracts are live on Stellar mainnet through [Prime](/docs/Prime/welcome-to-prime), and an external audit is in progress.
 
 - The OZ Policy Builder — recorder, synthesizer, OZ Accounts adapter (Path A), MCP server, and CLI — are implemented and unit-test-covered.
 - The venue permissioning gate — venue-wrapper + venue-market + Blend v2 integration — is implemented and demonstrated on testnet.
 - Install, on-chain verify, simulate, and the Rust interpreter predicate are **later phases**.
-
-**Do not use on mainnet with significant funds.**
