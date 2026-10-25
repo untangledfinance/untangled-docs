@@ -14,10 +14,17 @@ import styles from './cards.module.css';
 Untangled Finance builds credit and yield infrastructure for institutions, on
 Stellar and EVM chains, and advises on yield strategies through our in-house
 credit investment management, risk modelling and smart contract work. We are
-backed by **Fasanara Capital**, an institutional asset manager.
+backed by **Fasanara Capital**, an institutional asset manager, and specialise
+in on-chain credit and delta-neutral yield strategies across RWAs and
+crypto-native assets.
 
-These docs come in two parts. **Products** are what clients use and pay for.
-**Protocols** are the contracts and services the products run on.
+We also turn data on risk, security and protocol incentives into risk
+analytics, real-time monitoring and risk oracles, including custom risk data
+delivered with zero-knowledge proofs.
+
+These docs come in two parts. **Products** are what we offer institutions.
+**Protocols** are the contracts and services underneath, some with their own
+apps.
 
 ## Products
 
@@ -50,13 +57,28 @@ These docs come in two parts. **Products** are what clients use and pay for.
 </Link>
 
 <Link className={styles.card} to="/docs/category/octovault">
-  <h3>OctoVault</h3>
-  <p>Strategy vaults and risk management on EVM and Stellar.</p>
+  <h3>OctoVault (EVM)</h3>
+  <p>Strategy vaults and risk management on EVM.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/category/octovault-stellar">
+  <h3>OctoVault (Stellar)</h3>
+  <p>Strategy vaults and risk management on Stellar.</p>
 </Link>
 
 <Link className={styles.card} to="/docs/OctoGear/intro">
   <h3>OctoGear</h3>
-  <p>A leveraged trading layer for prediction markets, from one Prime Account.</p>
+  <p>A leveraged trading layer for prediction markets: trade, borrow and earn across Polymarket and Hyperliquid from one Prime Account.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/guides/create-account">
+  <h3>OctoGear: get started</h3>
+  <p>Create a Prime Account and fund it to start trading.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/curator/curator-overview">
+  <h3>OctoGear: curator guide</h3>
+  <p>Deploy and manage a lending market on OctoGear.</p>
 </Link>
 
 <Link className={styles.card} to="/docs/octopos">

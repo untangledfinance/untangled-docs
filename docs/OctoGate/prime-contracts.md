@@ -12,63 +12,57 @@ description: The OctoGate contracts behind Untangled Prime on Stellar - custody 
 A Prime Account is an OpenZeppelin smart account on Stellar; OctoGate adds the
 custody gate, the execution contract and the policy interpreter that let an
 agent use custody's funds under rules the account checks on chain.
-[Prime PayFi](../payfi/01.introduction.md) uses the same contracts for its
-settlement account. This page describes how the contracts behave and lists the
-code they run on mainnet. The Prime pages cover how to set them up in the app.
+[How Prime works](../Prime/02.how-prime-works.md) explains what each one does
+for a user. This page lists the properties a reviewer needs and the code the
+contracts run on mainnet.
 
 ## Custody gate
-
-Custody deploys the gate and grants it an allowance per asset. The gate pays out
-to the addresses listed when it was created, up to the allowance, until the
-allowance expires.
 
 - **Fixed at creation:** the address list, the minimum wait and run window, and
   the optional recovery address. The gate has no admin and no settings, so a
   different list means a new gate.
 - **Changeable by custody at any time:** the allowance for each asset, which
-  custody can raise, lower or revoke.
+  custody can raise, lower or revoke. A move the allowance does not cover fails,
+  whatever the account's rules allow.
 - **One caller:** only one Prime Account's execution contract can call the
   gate.
 
-A move that custody's allowance does not cover fails, whatever the account's
-rules allow.
-
 ## Execution contract
 
-Each Prime Account has one execution contract. It runs a move, made of calls, as
-one transaction: if one call fails, none of them take effect. Prime Execution in
-the app builds moves of up to eight calls.
-
-A move that has to wait is stored on chain until its wait is over, and custody
-or the account's signers can cancel it before it runs. A move not run within the
-gate's run window lapses. A rule can ask for a longer wait than the gate's
-minimum.
+- **Atomic:** a move's calls run as one transaction, so if one call fails none
+  take effect.
+- **Stored moves:** a move that has to wait is stored on chain, can be cancelled
+  by custody or the account's signers, and lapses after the gate's run window.
+- **Paired with its gate:** the gate answers only to this execution contract.
 
 ## Policy interpreter
 
-A rule on a Prime Account lets a wallet, usually an agent's, act without the
-account's full approval count. The rule carries policies, and the account checks
-them before it lets the rule authorise anything. Spending limits and threshold
-approvals use OpenZeppelin's policy contracts. Conditions those cannot express,
-such as a venue, a method and an amount band per move, are judged by the policy
-interpreter, which is our own contract.
+Spending limits and threshold approvals use OpenZeppelin's policy contracts.
+Conditions those cannot express, such as a venue, a method and an amount band
+per move, are judged by the policy interpreter, which is our own contract.
 
-Prime PayFi's rules run on a later interpreter version on testnet whose rules
-can read the lending market's debt, token balances and oracle prices while the
-account authorises a call. Its payout rule uses those reads to check collateral
-cover and price age before every advance.
-
-## Recovery
-
-When the gate is created, custody can name a recovery address, such as a
-trustee's wallet. If custody's signers lose their keys, the Prime Account's
-signers can send custody's funds to that address.
+## Recovery path
 
 A recovery runs under the account's own authority, which no rule checks. The
-gate still pays only addresses on its list, but the list also holds the Prime
-Account, custody and the venues. So at the account's full approval count, its
-signers can draw custody's funds to any of those as well, within custody's
-allowance. Agents can't: their rules fix where funds go.
+gate still pays only addresses on its list, which also holds the Prime Account,
+custody and the venues, so at the account's full approval count its signers can
+draw custody's funds to any of those, within custody's allowance.
+[How Prime works](../Prime/02.how-prime-works.md#recovery) covers the user side.
+
+## Prime PayFi
+
+[Prime PayFi](../payfi/01.introduction.md) builds its settlement account and POT
+Mint Account as OpenZeppelin smart accounts with the same custody gate design
+and a gated execution contract. On testnet it also uses two parts that are not
+on mainnet yet:
+
+- a newer execution contract build that can run with no custody gate (the
+  gate-free execution contract), which carries liquidations and the take inside
+  a take-over;
+- a newer policy interpreter version whose rules can read the lending market's
+  debt, token balances and oracle prices while the account authorises a call.
+
+Neither appears in the mainnet table below.
 
 ## Third-party code
 

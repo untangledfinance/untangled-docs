@@ -57,7 +57,7 @@ The permissioning itself lives in the wrapper's **transfer gate**. The venue-mar
 
 ## Current state
 
-OctoGate's custody contracts are live on Stellar mainnet through [Prime](/docs/Prime/welcome-to-prime), and an external audit is in progress. [Prime contracts on Stellar](./prime-contracts.md) describes the custody gate, the execution contract and the policy interpreter, and lists their mainnet code. [Prime PayFi](/docs/payfi) runs its settlement accounts on the same contracts.
+OctoGate's custody contracts are live on Stellar mainnet through [Prime](/docs/Prime/welcome-to-prime), and an external audit is in progress. [Prime contracts on Stellar](./prime-contracts.md) describes the custody gate, the execution contract and the policy interpreter, and lists their mainnet code. [Prime PayFi](/docs/payfi) builds its settlement accounts from these contracts, using newer builds on testnet.
 
 - The OZ Policy Builder is implemented and unit-test-covered: the recorder, the synthesizer, the OZ Accounts adapter (Path A), the MCP server and the CLI.
 - The venue permissioning gate (venue-wrapper, venue-market and the Blend v2 integration) is implemented and demonstrated on testnet.

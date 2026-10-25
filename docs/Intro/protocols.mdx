@@ -13,7 +13,8 @@ import styles from './cards.module.css';
 # Protocols
 
 Protocols are the contracts and services Untangled's [products](/docs/products)
-run on. Each one is documented on its own, for builders and reviewers.
+run on, some with their own apps. Each one is documented on its own, for
+builders and reviewers.
 
 <div className={styles.cardGrid}>
 
@@ -28,8 +29,13 @@ run on. Each one is documented on its own, for builders and reviewers.
 </Link>
 
 <Link className={styles.card} to="/docs/category/octovault">
-  <h3>OctoVault</h3>
-  <p>Strategy vaults and risk management on EVM and Stellar.</p>
+  <h3>OctoVault (EVM)</h3>
+  <p>Strategy vaults and risk management on EVM.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/category/octovault-stellar">
+  <h3>OctoVault (Stellar)</h3>
+  <p>Strategy vaults and risk management on Stellar.</p>
 </Link>
 
 <Link className={styles.card} to="/docs/OctoGear/intro">
