@@ -25,8 +25,8 @@ const config = {
   organizationName: "", // Usually your GitHub org/user name.
   projectName: "", // Usually your repo name.
 
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -38,6 +38,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
   },
 
   presets: [
@@ -106,53 +109,35 @@ const config = {
           src: "img/small_logo.png",
         },
         items: [
-         // {
-           // type: "docSidebar",
-           // sidebarId: "intro",
-           // position: "left",
-           // label: "Welcome",
-         // },
           {
             type: "docSidebar",
-            sidebarId: "prime",
+            sidebarId: "intro",
             position: "left",
-            label: "Prime",
+            label: "Welcome",
           },
           {
-            type: "docSidebar",
-            sidebarId: "gear",
+            type: "dropdown",
+            label: "Products",
+            to: "/docs/products",
             position: "left",
-            label: "OctoGear",
+            items: [
+              { type: "docSidebar", sidebarId: "prime", label: "Untangled Prime" },
+              { type: "docSidebar", sidebarId: "payfi", label: "Prime PayFi" },
+            ],
           },
           {
-            type: "docSidebar",
-            sidebarId: "vault",
+            type: "dropdown",
+            label: "Protocols",
+            to: "/docs/protocols",
             position: "left",
-            label: "Vault",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "lend",
-            position: "left",
-            label: "OctoLend",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "loop",
-            position: "left",
-            label: "Loop",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "octopos",
-            position: "left",
-            label: "OctoPos",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "octogate",
-            position: "left",
-            label: "OctoGate",
+            items: [
+              { type: "docSidebar", sidebarId: "octogate", label: "OctoGate" },
+              { type: "docSidebar", sidebarId: "lend", label: "OctoLend" },
+              { type: "docSidebar", sidebarId: "vault", label: "OctoVault" },
+              { type: "docSidebar", sidebarId: "gear", label: "OctoGear" },
+              { type: "docSidebar", sidebarId: "octopos", label: "OctoPos" },
+              { type: "docSidebar", sidebarId: "loop", label: "Untangled Loop" },
+            ],
           },
           {
             href: "https://github.com/untangledfinance",
@@ -164,6 +149,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ["bash"],
       },
     }),
 };

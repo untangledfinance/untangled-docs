@@ -1,0 +1,35 @@
+---
+id: products
+slug: /products
+title: Products
+sidebar_label: Products
+sidebar_position: 0.1
+description: Untangled's products - Untangled Prime and Prime PayFi.
+---
+
+import Link from '@docusaurus/Link';
+import styles from './cards.module.css';
+
+# Products
+
+Products are what we offer institutions. Each runs on one or more of
+Untangled's [protocols](/docs/protocols).
+
+<div className={styles.cardGrid}>
+
+<Link className={styles.card} to="/docs/Prime/welcome-to-prime">
+  <h3>Untangled Prime</h3>
+  <p>A smart account for institutions and their agents. Custody keeps the funds; the account checks each agent's rules on chain. Live on Stellar mainnet, with an EVM version on testnet.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/payfi">
+  <h3>Prime PayFi</h3>
+  <p>Lends a payment orchestrator 90% of each payout while the sender's fiat clears, through a Prime account and an OctoLend market. Public beta on Stellar testnet.</p>
+</Link>
+
+</div>
+
+| Product | Status | Runs on |
+|---|---|---|
+| [Untangled Prime](/docs/Prime/welcome-to-prime) | Stellar mainnet and testnet; EVM on Base Sepolia testnet | [OctoGate](/docs/OctoGate/prime-contracts), OpenZeppelin smart accounts |
+| [Prime PayFi](/docs/payfi) | Public beta on Stellar testnet; Stellar mainnet and other networks planned | [OctoLend](/docs/OctoLend/lending-market), [OctoGate](/docs/OctoGate/prime-contracts), Prime accounts |

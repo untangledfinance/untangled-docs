@@ -2,7 +2,8 @@
 id: welcome-to-untangled
 title: Welcome to Untangled
 sidebar_label: Welcome
-description: Start here for an overview and quick links to key Untangled docs and resources.
+sidebar_position: 0
+description: Start here for Untangled's products, the protocols they run on, the apps and key resources.
 ---
 
 import Link from '@docusaurus/Link';
@@ -10,117 +11,136 @@ import styles from './cards.module.css';
 
 # Welcome to Untangled
 
-Untangled Finance builds and advises on yield strategies through our in-house credit investment management, risk modelling, and smart contract capabilities.
+Untangled Finance builds credit and yield infrastructure for institutions, on
+Stellar and EVM chains, and advises on yield strategies through our in-house
+credit investment management, risk modelling and smart contract work. We are
+backed by **Fasanara Capital**, an institutional asset manager, and specialise
+in on-chain credit and delta-neutral yield strategies across RWAs and
+crypto-native assets.
 
-### Robust yield infrastructure
-We designed and built: 
-- **OctoVault**, a cross-chain vault and risk management infrastructure that enables automated, institutional-grade structured yield strategies across both RWAs and crypto-native assets.
-- **OctoLend**, a Stellar-based curated lending market with collateral delegation that facilitates institutional liquidity for bluechip crypto-native and RWAs collaterals.
-- **OctoGear**, a leveraged trading layer for prediction markets — one Prime Account to trade, borrow, and earn across Polymarket and Hyperliquid.
+We also turn data on risk, security and protocol incentives into risk
+analytics, real-time monitoring and risk oracles, including custom risk data
+delivered with zero-knowledge proofs.
 
-### Superior risk monitoring
-We transform data on risk, security, and protocol incentives, using both quantitative and qualitative methods, into powerful analytics, real-time monitoring, and risk oracles—delivering custom risk data via zero-knowledge proof.
+These docs come in two parts. **Products** are what we offer institutions.
+**Protocols** are the contracts and services underneath, some with their own
+apps.
 
-### Proven credit strategies
-Backed by **Fasanara Capital**, a leading institutional asset manager and fintech investing pioneer, we specialise in creating on-chain credit and delta-neutral yield strategies involving both RWAs and crypto natives.
-
-## Get Started
-
-<div className={styles.cardGrid}>
-
-  <Link className={styles.card} to="https://app.untangled.finance" target="_blank" rel="noopener noreferrer">
-    <h3>Untangled App (EVM)</h3>
-    <p>Access our EVM-based yield and vault products.</p>
-  </Link>
-
-  <Link className={styles.card} to="https://stellar.untangled.finance" target="_blank" rel="noopener noreferrer">
-    <h3>Untangled App (Stellar)</h3>
-    <p>Access our Stellar-based yield and vault products.</p>
-  </Link>
-
-  <Link className={styles.card} to="https://stellar.untangled.finance/loop" target="_blank" rel="noopener noreferrer">
-    <h3>Untangled Loop (Stellar)</h3>
-    <p>Execution adapter to create, manage, and monitor synthetic perpetual positions on Stellar.</p>
-  </Link>
-
-  <Link className={styles.card} to="https://octogear.untangled.finance" target="_blank" rel="noopener noreferrer">
-    <h3>OctoGear</h3>
-    <p>Trade prediction markets, borrow against collateral, and earn yield — all from one Prime Account.</p>
-  </Link>
-
-</div>
-
-## OctoGear Docs
+## Products
 
 <div className={styles.cardGrid}>
 
-<Link className={styles.card} to="/docs/OctoGear/intro">
-  <h3>About OctoGear</h3>
-  <p>Leveraged trading for prediction markets — trade, borrow, and earn with one Prime Account.</p>
+<Link className={styles.card} to="/docs/Prime/welcome-to-prime">
+  <h3>Untangled Prime</h3>
+  <p>A smart account that lets institutions and their agents act under on-chain rules, with funds kept in their own custody.</p>
 </Link>
 
-<Link className={styles.card} to="/docs/OctoGear/guides/create-account">
-  <h3>Get Started</h3>
-  <p>Create a Prime Account and fund it to start trading on Polymarket and Hyperliquid.</p>
-</Link>
-
-<Link className={styles.card} to="/docs/OctoGear/curator/curator-overview">
-  <h3>Curator Guide</h3>
-  <p>Deploy and manage a lending market on OctoGear — configure risk parameters and earn fees.</p>
+<Link className={styles.card} to="/docs/payfi">
+  <h3>Prime PayFi</h3>
+  <p>Lends a payment orchestrator 90% of each payout while the sender's fiat clears. Public beta on Stellar testnet.</p>
 </Link>
 
 </div>
 
-## OctoVault Docs
+## Protocols
 
 <div className={styles.cardGrid}>
+
+<Link className={styles.card} to="/docs/OctoGate/intro">
+  <h3>OctoGate</h3>
+  <p>Permissioning: the custody gate, execution contract and policy interpreter behind Prime.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoLend/whitepaper">
+  <h3>OctoLend</h3>
+  <p>Curated lending markets with collateral delegation on Stellar.</p>
+</Link>
 
 <Link className={styles.card} to="/docs/category/octovault">
-  <h3>OctoVault EVM</h3>
-  <p>Strategy vault and risk management infrastructure on EVM.</p>
+  <h3>OctoVault (EVM)</h3>
+  <p>Strategy vaults and risk management on EVM.</p>
 </Link>
 
 <Link className={styles.card} to="/docs/category/octovault-stellar">
-  <h3>OctoVault Stellar</h3>
-  <p>Strategy vault and risk management infrastructure on Stellar.</p>
+  <h3>OctoVault (Stellar)</h3>
+  <p>Strategy vaults and risk management on Stellar.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/intro">
+  <h3>OctoGear</h3>
+  <p>A leveraged trading layer for prediction markets: trade, borrow and earn across Polymarket and Hyperliquid from one Prime Account.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/guides/create-account">
+  <h3>OctoGear: get started</h3>
+  <p>Create a Prime Account and fund it to start trading.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/curator/curator-overview">
+  <h3>OctoGear: curator guide</h3>
+  <p>Deploy and manage a lending market on OctoGear.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/octopos">
+  <h3>OctoPos</h3>
+  <p>Position tracking, risk monitoring, a NAV oracle and transaction building on Stellar and EVM.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/Loop/what-is-untangled-loop">
+  <h3>Untangled Loop</h3>
+  <p>Strategy execution adapters for synthetic perpetual positions.</p>
 </Link>
 
 </div>
 
-## OctoLend Docs
+## Apps
 
 <div className={styles.cardGrid}>
-  <Link className={styles.card} to="/docs/OctoLend/whitepaper">
-    <h3>OctoLend</h3>
-    <p>Curated lending markets with collateral delegation on Stellar.</p>
-  </Link>
-</div>
 
-## Strategy Adapter Docs
+<Link className={styles.card} to="https://app.untangled.finance" target="_blank" rel="noopener noreferrer">
+  <h3>Untangled App (EVM)</h3>
+  <p>EVM yield and vault products.</p>
+</Link>
 
-<div className={styles.cardGrid}>
-  <Link className={styles.card} to="/docs/Loop/what-is-untangled-loop">
-    <h3>Untangled Loop</h3>
-    <p>Strategy execution adapters on Stellar and EVM</p>
-  </Link>
+<Link className={styles.card} to="https://stellar.untangled.finance" target="_blank" rel="noopener noreferrer">
+  <h3>Untangled App (Stellar)</h3>
+  <p>Stellar yield and vault products.</p>
+</Link>
+
+<Link className={styles.card} to="https://stellar.untangled.finance/loop" target="_blank" rel="noopener noreferrer">
+  <h3>Untangled Loop (Stellar)</h3>
+  <p>Create, manage and monitor synthetic perpetual positions on Stellar.</p>
+</Link>
+
+<Link className={styles.card} to="https://octogear.untangled.finance" target="_blank" rel="noopener noreferrer">
+  <h3>OctoGear</h3>
+  <p>Trade prediction markets, borrow against collateral and earn yield.</p>
+</Link>
+
 </div>
 
 ## Resources
 
 <div className={styles.cardGrid}>
-  <Link className={styles.card} to="/docs/Intro/addresses">
-    <h3>Addresses</h3>
-    <p>Official deployment addresses.</p>
-  </Link>
 
-  <Link className={styles.card} to="/docs/Intro/security">
-    <h3>Audits</h3>
-    <p>Security audits and findings for Untangled smart contracts.</p>
-  </Link>
+<Link className={styles.card} to="/docs/Intro/Addresses">
+  <h3>Addresses</h3>
+  <p>Official deployment addresses.</p>
+</Link>
 
-  <Link className={styles.card} to="https://mirror.xyz/untangledcredio.eth" target="_blank" rel="noopener noreferrer">
-    <h3>Research</h3>
-    <p>DeFi and RWA research, strategy deep dives, and thought leadership.</p>
-  </Link>
+<Link className={styles.card} to="/docs/Intro/security">
+  <h3>Audits</h3>
+  <p>Security audits and findings for Untangled smart contracts.</p>
+</Link>
+
+<Link className={styles.card} to="https://mirror.xyz/untangledcredio.eth" target="_blank" rel="noopener noreferrer">
+  <h3>Research</h3>
+  <p>DeFi and RWA research and strategy deep dives.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/credio/introduction">
+  <h3>Credio risk curation (archive)</h3>
+  <p>Earlier curation work: onchain private credit, USDn and Symbiotic vaults.</p>
+</Link>
+
 </div>
-
