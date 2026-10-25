@@ -1,0 +1,9 @@
+{
+  "label": "Integrate",
+  "position": 6,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "payfi/integration/overview"
+  }
+}

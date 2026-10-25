@@ -1,0 +1,59 @@
+---
+id: protocols
+slug: /protocols
+title: Protocols
+sidebar_label: Protocols
+sidebar_position: 0.2
+description: The protocols Untangled's products run on - OctoGate, OctoLend, OctoVault, OctoGear, OctoPos and Untangled Loop.
+---
+
+import Link from '@docusaurus/Link';
+import styles from './cards.module.css';
+
+# Protocols
+
+Protocols are the contracts and services Untangled's [products](/docs/products)
+run on. Each one is documented on its own, for builders and reviewers.
+
+<div className={styles.cardGrid}>
+
+<Link className={styles.card} to="/docs/OctoGate/intro">
+  <h3>OctoGate</h3>
+  <p>Permissioning for smart accounts: the custody gate, execution contract and policy interpreter behind Prime, the OZ Policy Builder and the venue gate.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoLend/whitepaper">
+  <h3>OctoLend</h3>
+  <p>Curated lending markets with collateral delegation on Stellar. Prime PayFi's lending market.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/category/octovault">
+  <h3>OctoVault</h3>
+  <p>Strategy vaults and risk management on EVM and Stellar.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/OctoGear/intro">
+  <h3>OctoGear</h3>
+  <p>A leveraged trading layer for prediction markets: trade, borrow and earn from one Prime Account.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/octopos">
+  <h3>OctoPos</h3>
+  <p>Multi-chain position tracking, risk monitoring, a NAV oracle and transaction building.</p>
+</Link>
+
+<Link className={styles.card} to="/docs/Loop/what-is-untangled-loop">
+  <h3>Untangled Loop</h3>
+  <p>Stateless strategy execution adapters for synthetic perpetual positions on Stellar and EVM.</p>
+</Link>
+
+</div>
+
+| Protocol | Used by |
+|---|---|
+| [OctoGate](/docs/OctoGate/intro) | Untangled Prime, Prime PayFi |
+| [OctoLend](/docs/OctoLend/whitepaper) | Prime PayFi |
+| [OctoVault](/docs/category/octovault) | Untangled App vaults |
+| [OctoGear](/docs/OctoGear/intro) | OctoGear app |
+| [OctoPos](/docs/octopos) | Prime apps, portfolio and risk monitoring |
+| [Untangled Loop](/docs/Loop/what-is-untangled-loop) | Untangled Loop app |
