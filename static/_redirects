@@ -1,0 +1,4 @@
+# Products section renamed Solutions. Server-side 301s for Cloudflare Pages;
+# the client-redirects plugin emits fallback pages for other hosts.
+/docs/products /docs/solutions 301
+/docs/products/* /docs/solutions/:splat 301
