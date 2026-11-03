@@ -71,6 +71,22 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        // The Products section was renamed Solutions (/docs/products ->
+        // /docs/solutions). Keep old links working, including any subpath.
+        createRedirects(existingPath) {
+          if (existingPath.startsWith("/docs/solutions")) {
+            return [existingPath.replace("/docs/solutions", "/docs/products")];
+          }
+          return undefined;
+        },
+      },
+    ],
+  ],
+
   themes: [
     [
       "@docusaurus/theme-mermaid",
@@ -117,8 +133,8 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "Products",
-            to: "/docs/products",
+            label: "Solutions",
+            to: "/docs/solutions",
             position: "left",
             items: [
               { type: "docSidebar", sidebarId: "prime", label: "Untangled Prime" },
