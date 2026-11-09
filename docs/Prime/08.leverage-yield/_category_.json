@@ -1,0 +1,10 @@
+{
+  "label": "Leverage Yield",
+  "position": 8,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/prime/leverage-yield",
+    "description": "Borrow USDC against tXAU on Aave V4 and send it to Kamino on Solana or OctoLend on Stellar, from one Prime Account."
+  }
+}
